@@ -1,0 +1,40 @@
+# ============================================================
+# Phase 1 Requirements
+# Temporal-Semantic Gap-Guided Hypothesis Generation
+# in mHealth Research
+# ============================================================
+
+# Core Data & Numerics
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# PyTorch & Scientific Document Embeddings (SPECTER2)
+torch>=2.0.0
+transformers>=4.40.0
+sentence-transformers>=3.0.0
+
+# Official BERTopic & Clustering Pipeline
+bertopic>=0.16.0
+umap-learn>=0.5.5
+hdbscan>=0.8.33
+scikit-learn>=1.3.0
+safetensors>=0.4.0
+
+# Text Processing & Linguistics
+nltk>=3.8.0
+regex>=2023.0.0
+
+# Visualization & Plotting
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Execution & Utilities
+tqdm>=4.65.0
+pyyaml>=6.0.0
+nbconvert>=7.10.0
+nbformat>=5.9.0
+ipykernel>=6.25.0
+
+# PubMed / Bio Utilities (used by dataset extraction)
+biopython>=1.80

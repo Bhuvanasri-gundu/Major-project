@@ -1,0 +1,29 @@
+{
+  "total_before": 2786,
+  "blocked_by_heuristic": 175,
+  "removed_too_rare": 1874,
+  "removed_too_common": 0,
+  "kept": 737,
+  "blocked_examples": [
+    "humans",
+    "mhealth",
+    "telemedicine",
+    "female",
+    "mobile applications",
+    "male",
+    "adult",
+    "mobile health",
+    "middle aged",
+    "smartphone",
+    "aged",
+    "adolescent",
+    "young adult",
+    "digital health",
+    "mobile phone",
+    "surveys and questionnaires",
+    "ehealth",
+    "pilot projects",
+    "child",
+    "qualitative research"
+  ]
+}

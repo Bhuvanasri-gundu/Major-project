@@ -1,0 +1,7 @@
+﻿step,before,removed,after
+Remove duplicate PMIDs,14905,0,14905
+Remove short/missing titles,14905,0,14905
+Remove short/missing abstracts,14905,23,14882
+Filter year range 2015-2025,14882,0,14882
+Remove short documents,14882,0,14882
+Remove duplicate documents,14882,1,14881

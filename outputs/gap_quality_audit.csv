@@ -1,0 +1,51 @@
+﻿rank,concept_a,concept_b,gap_score,semantic_similarity,cooccurrence_score,temporal_growth_avg,papers_concept_a,papers_concept_b,papers_joint,quality_status,audit_note,has_supporting_evidence
+1,health services accessibility,rural health services,1.1809,0.8573,0.0586,0.4633,202,69,15,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+2,mobile health units,rural health services,1.1276,0.8126,0.0645,0.4834,96,69,10,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+3,community health workers,rural health services,1.1189,0.8641,0.07,0.3924,206,69,18,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+4,anti-hiv agents,hiv,1.0975,0.9413,0.059,0.239,75,320,22,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+5,health services accessibility,mobile health units,1.091,0.8716,0.1037,0.3966,202,96,28,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+6,health facilities,rural health services,1.0892,0.8543,0.0,0.275,38,69,0,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+7,community health services,rural health services,1.0805,0.8752,0.0317,0.275,61,69,4,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+8,maternal health services,rural health services,1.0797,0.8174,0.05,0.3904,78,69,7,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+9,mental disorders,mental health services,1.0778,0.9102,0.1151,0.3382,93,62,16,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+10,anti-hiv agents,hiv testing,1.0558,0.8683,0.0,0.2159,75,34,0,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+11,algorithms,deep learning,1.0507,0.8874,0.0591,0.2583,188,63,14,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+12,maternal-child health services,rural health services,1.0427,0.8178,0.0,0.275,20,69,3,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+13,"health knowledge, attitudes, practice",patient acceptance of health care,1.0384,0.7209,0.0396,0.4998,248,303,21,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+14,deep learning,machine learning,1.0368,0.8955,0.0549,0.225,63,225,15,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+15,anti-hiv agents,hiv infections,1.0331,0.9629,0.1585,0.2751,75,466,74,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+16,child health services,rural health services,1.0326,0.8475,0.0444,0.275,25,69,4,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+17,emotions,"stress, psychological",1.0326,0.7775,0.0,0.3281,48,83,1,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+18,anxiety,"stress, psychological",1.0285,0.802,0.0896,0.4087,209,83,24,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+19,ghana,rural health services,1.0281,0.78,0.0134,0.336,82,69,2,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+20,coping,"stress, psychological",1.0274,0.7736,0.0,0.3281,20,83,1,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+21,health services accessibility,urban population,1.0265,0.8784,0.0165,0.1883,202,44,4,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+22,drug monitoring,medication adherence,1.0242,0.9208,0.0824,0.2122,66,407,36,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+23,anti-hiv agents,hiv/aids,1.0214,0.9365,0.0667,0.1686,75,69,9,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+24,rct,treatment outcome,1.0166,0.8407,0.0056,0.2161,75,282,2,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+25,healthy lifestyle,life style,1.0144,0.9334,0.0603,0.1565,90,156,14,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+26,maternal mortality,rural health services,1.0111,0.793,0.0,0.275,22,69,3,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+27,wearable devices,wearable sensors,1.0107,0.885,0.0,0.1421,64,56,1,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+28,anti-hiv agents,prep,1.0102,0.8565,0.03,0.2159,75,28,3,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+29,reminder systems,sms,1.0095,0.8324,0.0311,0.2517,119,80,6,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+30,malawi,rural health services,1.008,0.8055,0.0185,0.275,41,69,2,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+31,anti-hiv agents,sexual and gender minorities,1.0068,0.8387,0.0578,0.2741,75,108,10,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+32,anti-hiv agents,pre-exposure prophylaxis,1.0056,0.8834,0.1349,0.3159,75,68,17,genuine_substantive_gap,"Valid candidate research gap with high semantic affinity, low co-occurrence, and positive growth",True
+33,anti-hiv agents,antiretroviral therapy,1.1393,0.937,0.0,0.2159,75,23,8,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+34,computer security,security,1.104,0.9492,0.0,0.1631,77,22,8,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+35,reproductive health,sexual and reproductive health,1.1021,0.9544,0.0,0.1547,73,22,12,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+36,stress management,"stress, psychological",1.0962,0.8254,0.0,0.3281,24,83,6,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+37,wearable devices,wearable electronic devices,1.0936,0.9531,0.0894,0.2601,64,265,27,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+38,stress,"stress, psychological",1.0822,0.9155,0.0784,0.2827,82,83,12,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+39,psychological distress,"stress, psychological",1.0744,0.8414,0.0385,0.3281,25,83,4,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+40,anti-hiv agents,anti-retroviral agents,1.0718,0.96,0.0818,0.2159,75,44,9,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+41,self efficacy,self-efficacy,1.0669,0.9113,0.1529,0.382,118,78,26,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+42,cbt,cognitive behavioral therapy,1.0553,0.9272,0.0,0.1381,20,168,18,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+43,healthy lifestyle,lifestyle,1.0506,0.9229,0.0341,0.1785,90,92,6,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+44,maternal health services,maternal-child health services,1.0503,0.9416,0.0,0.1154,78,20,3,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+45,maternal health services,maternal mortality,1.0487,0.9402,0.0,0.1154,78,22,8,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+46,glycated hemoglobin,hba1c,1.0308,0.95,0.0463,0.1378,89,24,5,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+47,access,health services accessibility,1.022,0.8885,0.032,0.1883,24,202,7,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+48,patient reported outcome measures,patient-reported outcome measures,1.0186,0.9313,0.0692,0.175,95,44,9,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+49,diabetes management,glycated hemoglobin,1.0183,0.9194,0.0265,0.1378,27,89,3,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True
+50,sexual and reproductive health,sexual health,1.0178,0.9205,0.0,0.1057,22,77,9,synonym_or_abbreviation_variant,Deprioritized - known synonym or lexical variant pair,True

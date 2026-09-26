@@ -1,0 +1,4 @@
+model: allenai/specter2_base
+dimensions: 768
+num_documents: 12642
+device: cuda

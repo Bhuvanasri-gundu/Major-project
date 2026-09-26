@@ -1,0 +1,301 @@
+﻿concept,total_mentions,recent_mentions,growth_rate,trend
+interviews as topic,157,68,0.7534,increasing
+"stress, psychological",83,44,0.6562,increasing
+patient education as topic,180,50,0.6017,increasing
+patient acceptance of health care,303,112,0.562,increasing
+middle aged,2439,1153,0.5546,increasing
+rural health services,69,17,0.55,increasing
+patient preference,64,29,0.5303,increasing
+attitude of health personnel,132,54,0.5238,increasing
+"aged, 80 and over",313,126,0.5132,increasing
+male,3604,1625,0.4969,increasing
+patient compliance,174,55,0.4924,increasing
+germany,74,43,0.49,increasing
+focus groups,320,134,0.4744,increasing
+patient satisfaction,191,61,0.474,increasing
+mental health services,62,30,0.4722,increasing
+self efficacy,118,57,0.4658,increasing
+adult,3226,1495,0.4567,increasing
+rural population,229,82,0.4486,increasing
+aged,1481,695,0.4392,increasing
+"health knowledge, attitudes, practice",248,67,0.4375,increasing
+anti-hiv agents,75,36,0.4318,increasing
+mobile health units,96,44,0.4167,increasing
+digital intervention,100,77,0.4062,increasing
+female,4448,1972,0.4061,increasing
+young adult,1184,455,0.3978,increasing
+reminder systems,119,29,0.3947,increasing
+universities,76,38,0.3942,increasing
+longitudinal studies,147,78,0.3939,increasing
+black or african american,115,53,0.3788,increasing
+health services accessibility,202,68,0.3765,increasing
+age factors,76,8,0.375,increasing
+health literacy,176,94,0.3655,increasing
+deep learning,63,40,0.35,increasing
+patient reported outcome measures,95,48,0.35,increasing
+canada,68,30,0.3289,increasing
+computer security,77,16,0.3261,increasing
+breast neoplasms,119,65,0.3253,increasing
+digital technology,125,82,0.3227,increasing
+qualitative research,670,300,0.3201,increasing
+applications,92,75,0.3193,increasing
+patient-centered care,88,32,0.3111,increasing
+reproductive health,73,30,0.3095,increasing
+research design,214,55,0.3014,increasing
+self-efficacy,78,44,0.2982,increasing
+united kingdom,72,24,0.2969,increasing
+china,254,123,0.2957,increasing
+artificial intelligence,259,160,0.2949,increasing
+mobile health app,64,43,0.2925,increasing
+application,155,116,0.2899,increasing
+surveys and questionnaires,1139,462,0.2897,increasing
+social support,174,62,0.2849,increasing
+wearable devices,64,32,0.2841,increasing
+single-blind method,109,49,0.2836,increasing
+exercise therapy,144,68,0.2835,increasing
+time factors,142,29,0.2805,increasing
+prenatal care,121,41,0.2778,increasing
+cognitive behavioral therapy,168,84,0.2763,increasing
+glycated hemoglobin,89,35,0.2755,increasing
+health promotion,512,180,0.2749,increasing
+students,122,53,0.2733,increasing
+women,77,38,0.2708,increasing
+hispanic or latino,80,36,0.2647,increasing
+follow-up studies,140,40,0.2627,increasing
+program evaluation,117,19,0.26,increasing
+drug monitoring,66,23,0.2593,increasing
+community-based participatory research,66,25,0.2571,increasing
+youth,99,59,0.2564,increasing
+behaviour change,62,30,0.25,increasing
+multicenter studies as topic,91,37,0.25,increasing
+randomized controlled trial,287,147,0.2449,increasing
+pain management,74,29,0.2444,increasing
+rct,75,45,0.2373,increasing
+wearable electronic devices,265,114,0.236,increasing
+community health workers,206,69,0.2347,increasing
+primary health care,215,76,0.2342,increasing
+risk assessment,69,20,0.2333,increasing
+cardiac rehabilitation,81,42,0.2333,increasing
+maternal health services,78,21,0.2308,increasing
+postpartum period,62,28,0.2308,increasing
+pilot projects,698,274,0.2293,increasing
+early detection of cancer,77,31,0.2234,increasing
+parenting,68,33,0.2188,increasing
+patient engagement,86,30,0.2128,increasing
+counseling,109,35,0.2128,increasing
+accelerometry,72,29,0.2125,increasing
+sexual health,77,37,0.2115,increasing
+confidentiality,69,17,0.2083,increasing
+"child, preschool",259,95,0.2059,increasing
+young adults,83,39,0.2054,increasing
+mental disorders,93,33,0.2041,increasing
+adolescent,1226,434,0.204,increasing
+digital health,1157,662,0.203,increasing
+united states,316,115,0.2022,increasing
+pre-exposure prophylaxis,68,44,0.2,increasing
+treatment outcome,282,91,0.1949,increasing
+health equity,74,45,0.1885,increasing
+lifestyle,92,38,0.1875,increasing
+cross-sectional studies,590,263,0.1818,increasing
+mass screening,93,29,0.1778,increasing
+cohort studies,128,55,0.1772,increasing
+user experience,64,34,0.1765,increasing
+older adults,156,83,0.176,increasing
+mobile applications,3752,1568,0.1755,increasing
+caregivers,242,101,0.1742,increasing
+pregnant people,74,33,0.1702,increasing
+healthy lifestyle,90,33,0.1696,increasing
+feasibility studies,646,257,0.1693,increasing
+acceptability,131,79,0.1682,increasing
+neoplasms,217,95,0.1667,increasing
+patient participation,154,41,0.1667,increasing
+spain,63,21,0.1667,increasing
+algorithms,188,60,0.1667,increasing
+chronic disease,260,86,0.1654,increasing
+medication adherence,407,144,0.1651,increasing
+anxiety,209,102,0.1612,increasing
+mobile health (mhealth),134,57,0.157,increasing
+diabetes mellitus,231,74,0.156,increasing
+user-centered design,189,93,0.1517,increasing
+mhealth app,87,49,0.15,increasing
+feeding behavior,64,19,0.1481,increasing
+hypertension,310,131,0.1459,increasing
+implementation science,91,44,0.1439,increasing
+life style,156,70,0.1435,increasing
+implementation,102,56,0.1402,increasing
+usability,320,175,0.1376,increasing
+"monitoring, physiologic",138,25,0.1375,increasing
+dementia,94,48,0.1316,increasing
+aging,94,52,0.1312,increasing
+cardiovascular diseases,145,53,0.131,increasing
+cost-benefit analysis,97,26,0.131,increasing
+randomized controlled trials as topic,499,234,0.131,increasing
+feasibility,188,101,0.1309,increasing
+prevention,168,76,0.1306,increasing
+wearables,123,66,0.1304,increasing
+pediatric obesity,64,25,0.1286,increasing
+stroke,147,67,0.1263,increasing
+telemedicine,4918,1752,0.1224,increasing
+ghana,82,25,0.122,increasing
+depression,446,194,0.1204,increasing
+self care,435,105,0.1196,increasing
+hiv infections,466,178,0.1183,increasing
+sexual and gender minorities,108,56,0.1163,increasing
+ecological momentary assessment,222,94,0.1141,increasing
+mothers,150,61,0.1105,increasing
+sms,80,30,0.1087,increasing
+mobile health application,81,43,0.1077,increasing
+quality of life,653,291,0.1076,increasing
+smartphone application,81,32,0.1058,increasing
+health education,150,58,0.1056,increasing
+parents,181,72,0.1053,increasing
+bangladesh,92,21,0.1029,increasing
+prospective studies,396,154,0.1028,increasing
+screening,81,31,0.102,increasing
+vaccination,74,36,0.1019,increasing
+cardiovascular disease,91,41,0.1016,increasing
+machine learning,225,108,0.1,increasing
+app,413,213,0.1,increasing
+electronic health records,129,31,0.1,increasing
+humans,7960,3018,0.0981,increasing
+mobile health,2987,1370,0.0977,increasing
+gamification,112,49,0.0974,increasing
+motivation,304,99,0.0969,increasing
+breast cancer,99,44,0.0942,increasing
+veterans,69,28,0.093,increasing
+exercise,788,306,0.0917,increasing
+socioeconomic factors,100,13,0.0909,increasing
+body mass index,101,31,0.09,increasing
+self-monitoring,90,36,0.0882,increasing
+treatment,67,34,0.0833,increasing
+asthma,152,49,0.0823,increasing
+cancer,159,76,0.0811,increasing
+apps,233,124,0.0776,increasing
+health personnel,239,85,0.0752,increasing
+wearable,96,54,0.0741,increasing
+infant,293,100,0.0728,increasing
+"homosexuality, male",107,43,0.0725,increasing
+sexual behavior,66,24,0.0676,increasing
+data collection,105,29,0.0667,increasing
+walking,93,40,0.0645,increasing
+heart failure,145,55,0.0581,increasing
+cognition,83,41,0.0565,increasing
+nigeria,78,31,0.0545,increasing
+prevalence,63,16,0.0536,increasing
+development,78,45,0.0522,increasing
+adolescents,142,55,0.0489,stable
+software,79,20,0.0484,stable
+cancer survivors,108,45,0.0473,stable
+mental health,586,252,0.047,stable
+blood pressure,196,81,0.0466,stable
+breast feeding,71,27,0.0465,stable
+co-design,69,33,0.0463,stable
+hiv,320,116,0.0462,stable
+diabetes,250,98,0.0443,stable
+self-management,711,248,0.0437,stable
+smartphones,139,46,0.0411,stable
+physical activity,523,205,0.0375,stable
+pregnancy,630,234,0.0373,stable
+social media,154,51,0.0366,stable
+self report,141,34,0.0357,stable
+retrospective studies,195,80,0.0346,stable
+internet,262,55,0.0337,stable
+substance-related disorders,90,34,0.0333,stable
+"infant, newborn",197,56,0.033,stable
+adherence,241,99,0.0325,stable
+behavior therapy,137,41,0.0308,stable
+blood glucose,110,36,0.0259,stable
+global health,99,20,0.025,stable
+maternal health,113,37,0.0242,stable
+telehealth,326,134,0.0229,stable
+mindfulness,134,53,0.0222,stable
+nutrition,105,42,0.0221,stable
+risk factors,169,50,0.0195,stable
+primary care,119,48,0.0192,stable
+perception,114,37,0.0179,stable
+rehabilitation,139,50,0.0174,stable
+monitoring,79,46,0.0143,stable
+behavior change,161,64,0.0138,stable
+developing countries,122,22,0.0135,stable
+health,63,22,0.0132,stable
+mhealth,5337,1992,0.0122,stable
+kenya,96,26,0.0111,stable
+india,177,54,0.0103,stable
+heart rate,114,34,0.0093,stable
+survey,70,35,0.0091,stable
+diet,233,73,0.0085,stable
+intention,101,41,0.0071,stable
+text messaging,638,131,0.0064,stable
+sleep,166,59,0.0048,stable
+engagement,155,64,0.0045,stable
+reproducibility of results,290,98,0.003,stable
+smartphone,1671,504,0.0023,stable
+clinical trial,65,28,0.0,stable
+mobile app,424,194,0.0,stable
+fatigue,74,31,0.0,stable
+education,92,29,0.0,stable
+remote monitoring,96,48,0.0,stable
+mobile health technology,74,27,0.0,stable
+qualitative,99,44,-0.0072,stable
+intervention,235,107,-0.0087,stable
+fitness trackers,90,26,-0.0104,stable
+health informatics,68,21,-0.0128,stable
+health behavior,415,105,-0.014,stable
+health communication,62,18,-0.0143,stable
+secondary prevention,63,19,-0.0167,stable
+australia,147,49,-0.0181,stable
+ehealth,793,268,-0.0204,stable
+type 2 diabetes,144,51,-0.0217,stable
+smoking cessation,264,87,-0.023,stable
+smartphone apps,67,24,-0.0238,stable
+chronic pain,107,37,-0.0282,stable
+well-being,67,31,-0.0339,stable
+schizophrenia,91,26,-0.0349,stable
+evaluation,64,25,-0.0465,stable
+health disparities,69,26,-0.05,stable
+"diabetes mellitus, type 2",281,82,-0.0545,declining
+smoking,129,42,-0.0571,declining
+child,687,243,-0.0637,declining
+feedback,63,23,-0.0641,declining
+pediatrics,91,27,-0.0648,declining
+children,109,39,-0.0685,declining
+disease management,109,28,-0.07,declining
+attitude,68,29,-0.07,declining
+communication,183,51,-0.07,declining
+obesity,323,95,-0.0743,declining
+smartphone app,146,63,-0.0885,declining
+uganda,91,34,-0.0887,declining
+"outcome assessment, health care",93,21,-0.0897,declining
+stress,82,38,-0.0909,declining
+hiv/aids,69,21,-0.0946,declining
+physicians,82,20,-0.0976,declining
+public health,251,82,-0.1006,declining
+weight loss,197,50,-0.1011,declining
+south africa,142,33,-0.1048,declining
+pain,112,47,-0.1098,declining
+mobile apps,368,104,-0.1119,declining
+electrocardiography,95,23,-0.1163,declining
+e-health,166,41,-0.1181,declining
+participatory design,64,21,-0.1184,declining
+africa,64,23,-0.119,declining
+mobile phone,1153,447,-0.1263,declining
+m-health,300,70,-0.1318,declining
+overweight,123,37,-0.1447,declining
+tuberculosis,86,26,-0.1455,declining
+privacy,123,37,-0.1507,declining
+sedentary behavior,107,30,-0.1515,declining
+user-computer interface,130,20,-0.1625,declining
+atrial fibrillation,134,45,-0.1667,declining
+mobile phones,75,13,-0.1852,declining
+sars-cov-2,210,73,-0.1995,declining
+medical informatics,96,13,-0.2121,declining
+covid-19,593,240,-0.2159,declining
+cell phone,606,81,-0.2179,declining
+referral and consultation,90,18,-0.2375,declining
+technology,395,101,-0.2489,declining
+mobile technology,71,21,-0.25,declining
+delivery of health care,334,62,-0.261,declining
+pandemics,260,90,-0.3089,declining
+bipolar disorder,62,11,-0.3857,declining
+biomedical technology,102,14,-0.4184,declining
+"computers, handheld",68,7,-0.46,declining

@@ -1,0 +1,158 @@
+# ============================================================
+# CONFIGURATION — Phase 1 Pipeline
+# Temporal-Semantic Gap-Guided Evidence-Grounded
+# Hypothesis Generation in mHealth Research
+# ============================================================
+
+# ------ Paths ------
+paths:
+  project_root: "."                        # relative; resolved at runtime
+  dataset: "data/pubmed_mhealth_2015_2025_proposed_final.xls"
+  data: "data"
+  outputs: "outputs"
+  figures: "figures"
+  models: "models"
+  logs: "logs"
+
+# ------ Reproducibility ------
+random_seed: 42
+
+# ------ Data Validation ------
+data_validation:
+  year_range: [2015, 2025]
+  min_title_length: 10
+  min_abstract_length: 50
+  min_document_length: 80
+
+# ------ Relevance Screening ------
+relevance_screening:
+  # Primary mHealth terms (case-insensitive matching)
+  primary_terms:
+    - "mhealth"
+    - "m-health"
+    - "mobile health"
+    - "mobile healthcare"
+    - "mobile health application"
+    - "mobile health applications"
+    - "mobile health app"
+    - "mobile health apps"
+    - "mobile intervention"
+    - "mobile health intervention"
+    - "smartphone health"
+    - "wearable health"
+  # Secondary terms (lower weight)
+  secondary_terms:
+    - "digital health"
+    - "ehealth"
+    - "e-health"
+    - "telemedicine"
+    - "telehealth"
+    - "mobile application"
+    - "mobile app"
+    - "smartphone"
+    - "wearable"
+    - "health app"
+    - "health technology"
+    - "mobile device"
+    - "mobile phone"
+    - "mobile technology"
+    - "remote monitoring"
+    - "fitness tracker"
+    - "smartwatch"
+  # Relevance thresholds (on 0-1 scale)
+  relevant_threshold: 0.3       # score >= this → "relevant"
+  borderline_threshold: 0.1     # score >= this → "borderline"
+  # Below borderline → "low_relevance"
+  primary_weight: 1.0
+  secondary_weight: 0.3
+  title_weight: 2.0
+  abstract_weight: 1.0
+
+# ------ Text Preprocessing ------
+preprocessing:
+  min_clean_doc_length: 50        # chars after cleaning
+  remove_urls: true
+  remove_emails: true
+  normalize_whitespace: true
+  lowercase: false                # preserve case for embeddings
+
+# ------ Embeddings ------
+embeddings:
+  model_name: "allenai/specter2_base"       # SPECTER2 base
+  fallback_model: "allenai/specter"         # fallback
+  batch_size: 32
+  max_length: 512
+  device: "auto"                            # auto-detect CPU/GPU
+  save_file: "document_embeddings.npy"
+  index_file: "document_embedding_index.csv"
+
+# ------ BERTopic ------
+bertopic:
+  min_topic_size: 30
+  nr_topics: "auto"
+  top_n_words: 15
+  n_gram_range: [1, 3]
+  # UMAP
+  umap:
+    n_neighbors: 15
+    n_components: 5
+    min_dist: 0.0
+    metric: "cosine"
+  # HDBSCAN
+  hdbscan:
+    min_cluster_size: 30
+    min_samples: 10
+    metric: "euclidean"
+    prediction_data: true
+
+# ------ Concept Extraction ------
+concepts:
+  min_concept_frequency: 5        # across entire corpus
+  max_concepts: 5000
+  use_mesh_terms: true
+  use_keywords: true
+  use_spacy_ner: false            # set true if scispaCy available
+  spacy_model: "en_core_web_sm"   # fallback if scispaCy unavailable
+
+# ------ MeSH Normalization ------
+mesh:
+  normalize_case: true
+  strip_qualifiers: false
+  use_external_api: false         # set true for BioPortal/UMLS
+  cache_file: "mesh_cache.json"
+
+# ------ Temporal Analysis ------
+temporal:
+  year_range: [2015, 2025]
+  recent_window: 3                # last N years for "recent" activity
+  growth_window: 5                # years for growth trend calculation
+  min_yearly_count: 2             # minimum count to include in trends
+
+# ------ Semantic Relationships ------
+semantic:
+  similarity_threshold: 0.30      # minimum cosine similarity (debiased space)
+  top_n_pairs: 5000               # max pairs to analyze
+  embedding_source: "concept"     # use concept-level embeddings
+
+# ------ Co-occurrence ------
+cooccurrence:
+  min_cooccurrence: 2             # minimum joint appearance
+  top_n_concepts: 600             # concepts for co-occurrence matrix
+  heatmap_top_n: 40               # concepts in heatmap figure
+
+# ------ Gap Detection ------
+gap_detection:
+  # GapScore = semantic_sim × (1 - norm_cooccurrence) × temporal_growth
+  top_n_gaps: 50
+  min_semantic_similarity: 0.4
+  max_normalized_cooccurrence: 0.8
+  min_temporal_growth: 0.0
+  require_supporting_papers: 3    # minimum supporting papers per concept
+
+# ------ Visualization ------
+visualization:
+  figure_dpi: 150
+  figure_format: "png"
+  colormap: "viridis"
+  max_topics_display: 25
+  max_concepts_display: 30

@@ -1,0 +1,946 @@
+﻿topic_id,rank,term,ctfidf_score
+0,1,health,0.017816
+0,2,maternal,0.016882
+0,3,workers,0.011732
+0,4,women,0.01101
+0,5,community,0.010954
+0,6,mobile,0.010771
+0,7,care,0.010683
+0,8,services,0.009945
+0,9,mhealth,0.009741
+0,10,health workers,0.009296
+0,11,data,0.009032
+0,12,study,0.008686
+0,13,healthcare,0.008539
+0,14,chws,0.008416
+0,15,intervention,0.008374
+1,1,hiv,0.048663
+1,2,men,0.016129
+1,3,prep,0.015562
+1,4,sexual,0.015282
+1,5,intervention,0.012773
+1,6,adherence,0.012182
+1,7,living hiv,0.01214
+1,8,sex,0.011613
+1,9,art,0.011533
+1,10,testing,0.010923
+1,11,hiv prevention,0.010897
+1,12,participants,0.010878
+1,13,living,0.010843
+1,14,prevention,0.010799
+1,15,msm,0.010101
+2,1,health,0.020544
+2,2,digital,0.018785
+2,3,research,0.016804
+2,4,data,0.016297
+2,5,mhealth,0.015744
+2,6,privacy,0.01456
+2,7,digital health,0.013542
+2,8,apps,0.013533
+2,9,design,0.012695
+2,10,technologies,0.01152
+2,11,care,0.010805
+2,12,development,0.010281
+2,13,mobile,0.010185
+2,14,healthcare,0.010182
+2,15,technology,0.009983
+3,1,apps,0.064309
+3,2,quality,0.026888
+3,3,app,0.019495
+3,4,store,0.018237
+3,5,mars,0.016968
+3,6,rating,0.015985
+3,7,google,0.014546
+3,8,stores,0.01433
+3,9,available,0.014219
+3,10,google play,0.013837
+3,11,mobile,0.013593
+3,12,user,0.013488
+3,13,search,0.013439
+3,14,mobile apps,0.012529
+3,15,play,0.012452
+4,1,cancer,0.049195
+4,2,patients,0.025284
+4,3,breast,0.022568
+4,4,breast cancer,0.021918
+4,5,survivors,0.015728
+4,6,cancer patients,0.014751
+4,7,app,0.013425
+4,8,symptom,0.01247
+4,9,patient,0.011752
+4,10,cancer survivors,0.011716
+4,11,quality life,0.011393
+4,12,care,0.011393
+4,13,treatment,0.011305
+4,14,chemotherapy,0.011181
+4,15,symptoms,0.010998
+5,1,smoking,0.079421
+5,2,cessation,0.064681
+5,3,smoking cessation,0.05093
+5,4,quit,0.03361
+5,5,smokers,0.033521
+5,6,tobacco,0.021772
+5,7,abstinence,0.020602
+5,8,participants,0.013606
+5,9,quitting,0.013303
+5,10,quit smoking,0.011247
+5,11,app,0.01096
+5,12,trial,0.0103
+5,13,intervention,0.010018
+5,14,day,0.010015
+5,15,text,0.009961
+6,1,pain,0.051058
+6,2,knee,0.016942
+6,3,chronic,0.016041
+6,4,patients,0.015617
+6,5,chronic pain,0.015102
+6,6,exercise,0.012345
+6,7,app,0.012166
+6,8,low pain,0.011978
+6,9,osteoarthritis,0.011681
+6,10,management,0.01126
+6,11,migraine,0.011166
+6,12,self,0.011146
+6,13,group,0.010197
+6,14,trial,0.010075
+6,15,lbp,0.01002
+7,1,intention,0.037154
+7,2,acceptance,0.026437
+7,3,use,0.023969
+7,4,perceived,0.023218
+7,5,model,0.021787
+7,6,intention use,0.020547
+7,7,mhealth,0.020433
+7,8,health,0.018475
+7,9,adoption,0.016304
+7,10,factors,0.015563
+7,11,influence,0.015219
+7,12,technology,0.014533
+7,13,trust,0.013083
+7,14,expectancy,0.013027
+7,15,perceived usefulness,0.01264
+8,1,children,0.02279
+8,2,parents,0.021465
+8,3,obesity,0.019355
+8,4,intervention,0.016525
+8,5,adolescents,0.01565
+8,6,healthy,0.014815
+8,7,child,0.01415
+8,8,app,0.01273
+8,9,school,0.011014
+8,10,physical,0.010654
+8,11,parent,0.01032
+8,12,activity,0.010206
+8,13,childrens,0.009951
+8,14,physical activity,0.009882
+8,15,behaviors,0.009447
+9,1,ecg,0.049005
+9,2,af,0.038702
+9,3,ppg,0.031347
+9,4,heart,0.025969
+9,5,pulse,0.025057
+9,6,bp,0.024768
+9,7,accuracy,0.02289
+9,8,detection,0.020799
+9,9,heart rate,0.019984
+9,10,rate,0.019843
+9,11,lead,0.01984
+9,12,signals,0.01929
+9,13,atrial,0.018625
+9,14,atrial fibrillation,0.017495
+9,15,fibrillation,0.017495
+10,1,weight,0.0625
+10,2,weight loss,0.044247
+10,3,loss,0.041924
+10,4,body,0.019853
+10,5,obesity,0.016932
+10,6,diet,0.016295
+10,7,group,0.015972
+10,8,intervention,0.015641
+10,9,dietary,0.014095
+10,10,activity,0.013674
+10,11,kg,0.013013
+10,12,overweight,0.012642
+10,13,months,0.012202
+10,14,physical,0.012194
+10,15,physical activity,0.012098
+11,1,diabetes,0.050082
+11,2,type diabetes,0.023856
+11,3,1c,0.022264
+11,4,type,0.022168
+11,5,hba1c,0.019753
+11,6,glucose,0.019582
+11,7,hba,0.017999
+11,8,hba 1c,0.017999
+11,9,control,0.016236
+11,10,patients,0.015612
+11,11,management,0.014855
+11,12,intervention,0.013699
+11,13,self,0.013463
+11,14,glycemic,0.013163
+11,15,t2dm,0.013069
+12,1,hypertension,0.0475
+12,2,bp,0.034078
+12,3,blood pressure,0.032194
+12,4,pressure,0.031083
+12,5,blood,0.029454
+12,6,control,0.016221
+12,7,systolic,0.014354
+12,8,adherence,0.013602
+12,9,intervention,0.013586
+12,10,patients,0.01337
+12,11,hg,0.012885
+12,12,mm hg,0.012785
+12,13,group,0.012663
+12,14,mm,0.012514
+12,15,medication,0.011655
+13,1,alcohol,0.046932
+13,2,cannabis,0.027463
+13,3,use,0.026136
+13,4,drinking,0.024076
+13,5,substance,0.020302
+13,6,treatment,0.018733
+13,7,alcohol use,0.017212
+13,8,substance use,0.01638
+13,9,cannabis use,0.0155
+13,10,consumption,0.014179
+13,11,alcohol consumption,0.013266
+13,12,app,0.012394
+13,13,participants,0.012373
+13,14,use disorder,0.01192
+13,15,intervention,0.010944
+14,1,mental,0.024895
+14,2,mental health,0.021628
+14,3,veterans,0.014675
+14,4,treatment,0.014074
+14,5,schizophrenia,0.013137
+14,6,psychosis,0.011743
+14,7,app,0.011742
+14,8,health,0.011684
+14,9,use,0.011664
+14,10,ptsd,0.011554
+14,11,disorder,0.0107
+14,12,care,0.010215
+14,13,symptoms,0.010107
+14,14,participants,0.010106
+14,15,support,0.009847
+15,1,diabetes,0.061386
+15,2,type diabetes,0.02315
+15,3,self management,0.022999
+15,4,management,0.022825
+15,5,type,0.021612
+15,6,self,0.01978
+15,7,diabetes self,0.015733
+15,8,diabetes self management,0.014784
+15,9,patients,0.012411
+15,10,t1d,0.012322
+15,11,app,0.011358
+15,12,t2dm,0.011283
+15,13,support,0.010864
+15,14,care,0.010346
+15,15,mhealth,0.010157
+16,1,anxiety,0.023693
+16,2,stress,0.021944
+16,3,depression,0.020889
+16,4,symptoms,0.019774
+16,5,mental,0.016486
+16,6,depressive,0.016025
+16,7,mental health,0.01571
+16,8,intervention,0.014185
+16,9,mindfulness,0.013707
+16,10,depressive symptoms,0.013555
+16,11,group,0.013499
+16,12,trial,0.012838
+16,13,burnout,0.012542
+16,14,app,0.012441
+16,15,participants,0.011231
+17,1,women,0.030924
+17,2,postpartum,0.02814
+17,3,pregnancy,0.026497
+17,4,pregnant,0.023571
+17,5,gdm,0.017487
+17,6,depression,0.014702
+17,7,pregnant women,0.014381
+17,8,perinatal,0.013311
+17,9,group,0.012661
+17,10,maternal,0.011842
+17,11,intervention,0.011657
+17,12,care,0.01145
+17,13,app,0.010583
+17,14,health,0.010401
+17,15,gestational,0.009567
+18,1,review,0.049202
+18,2,systematic,0.03334
+18,3,studies,0.031783
+18,4,systematic review,0.026628
+18,5,interventions,0.02229
+18,6,scoping,0.021288
+18,7,meta,0.019047
+18,8,scoping review,0.017533
+18,9,reviews,0.016342
+18,10,search,0.016246
+18,11,databases,0.015218
+18,12,articles,0.013978
+18,13,health,0.013945
+18,14,cochrane,0.013521
+18,15,literature,0.012933
+19,1,depression,0.034503
+19,2,sleep,0.025278
+19,3,stress,0.020809
+19,4,mood,0.020613
+19,5,phq,0.018273
+19,6,data,0.017789
+19,7,symptoms,0.017041
+19,8,daily,0.014991
+19,9,models,0.014808
+19,10,smartphone,0.014498
+19,11,depressive,0.014126
+19,12,severity,0.014008
+19,13,disorder,0.013327
+19,14,features,0.012703
+19,15,time,0.012359
+20,1,usability,0.028007
+20,2,app,0.014969
+20,3,application,0.014932
+20,4,patients,0.014536
+20,5,evaluation,0.014412
+20,6,user,0.012312
+20,7,mobile,0.01155
+20,8,problems,0.010458
+20,9,design,0.010391
+20,10,users,0.010311
+20,11,skin,0.010235
+20,12,study,0.010226
+20,13,patient,0.010067
+20,14,apps,0.009338
+20,15,results,0.009301
+21,1,children,0.023143
+21,2,scd,0.022353
+21,3,caregivers,0.021189
+21,4,pediatric,0.017477
+21,5,transplant,0.016366
+21,6,parents,0.016291
+21,7,cell,0.01534
+21,8,care,0.014779
+21,9,app,0.014725
+21,10,adherence,0.013829
+21,11,hydroxyurea,0.013096
+21,12,sickle,0.01215
+21,13,sickle cell,0.01196
+21,14,management,0.011728
+21,15,symptom,0.011325
+22,1,gait,0.027693
+22,2,pd,0.021502
+22,3,walking,0.021497
+22,4,motor,0.019194
+22,5,disease,0.016047
+22,6,parkinsons,0.015875
+22,7,parkinsons disease,0.015495
+22,8,wearable,0.01412
+22,9,reliability,0.01334
+22,10,sensor,0.013159
+22,11,test,0.012965
+22,12,mobility,0.012904
+22,13,monitoring,0.012327
+22,14,validity,0.012053
+22,15,correlation,0.011926
+23,1,health,0.024533
+23,2,use,0.022797
+23,3,ci,0.016478
+23,4,95,0.016205
+23,5,likely,0.015749
+23,6,95 ci,0.015652
+23,7,mhealth,0.015558
+23,8,apps,0.014969
+23,9,health information,0.013934
+23,10,survey,0.01391
+23,11,information,0.013718
+23,12,internet,0.012388
+23,13,odds,0.011175
+23,14,mobile,0.011024
+23,15,digital,0.010449
+24,1,fall,0.016575
+24,2,older,0.016466
+24,3,exercise,0.016368
+24,4,rehabilitation,0.01612
+24,5,usability,0.015854
+24,6,home,0.014081
+24,7,older adults,0.013845
+24,8,frailty,0.013732
+24,9,stroke,0.013521
+24,10,wheelchair,0.013311
+24,11,participants,0.012999
+24,12,adults,0.012592
+24,13,sci,0.012474
+24,14,app,0.011946
+24,15,training,0.0113
+25,1,data,0.028709
+25,2,time,0.026772
+25,3,model,0.024058
+25,4,causal,0.021645
+25,5,adaptive,0.020304
+25,6,interventions,0.020098
+25,7,micro randomized,0.019002
+25,8,longitudinal,0.018567
+25,9,modeling,0.017422
+25,10,micro,0.017225
+25,11,algorithm,0.017074
+25,12,rl,0.016843
+25,13,time varying,0.016608
+25,14,simulation,0.016297
+25,15,mobile health,0.016125
+26,1,community,0.028625
+26,2,covid 19,0.028071
+26,3,covid,0.028038
+26,4,19,0.026436
+26,5,vaccine,0.026008
+26,6,health,0.025019
+26,7,communities,0.024258
+26,8,vaccination,0.02129
+26,9,clinics,0.01869
+26,10,care,0.018309
+26,11,mobile health clinic,0.017142
+26,12,mhc,0.016571
+26,13,health clinic,0.016541
+26,14,mobile health,0.015991
+26,15,services,0.01559
+27,1,activity,0.033892
+27,2,physical activity,0.031075
+27,3,physical,0.029395
+27,4,pa,0.024284
+27,5,step,0.020033
+27,6,intervention,0.018928
+27,7,sedentary,0.017957
+27,8,steps,0.015312
+27,9,behavior,0.013979
+27,10,participants,0.013929
+27,11,sleep,0.012387
+27,12,adults,0.011429
+27,13,step count,0.011042
+27,14,behaviour,0.010767
+27,15,daily,0.010477
+28,1,dementia,0.046723
+28,2,caregivers,0.033248
+28,3,older,0.031878
+28,4,older adults,0.025178
+28,5,people dementia,0.019522
+28,6,adults,0.019341
+28,7,mhealth,0.015386
+28,8,carers,0.015258
+28,9,informal,0.015011
+28,10,support,0.014914
+28,11,family,0.014697
+28,12,people,0.01401
+28,13,caregiving,0.013496
+28,14,needs,0.013334
+28,15,family caregivers,0.013325
+29,1,pregnancy,0.046493
+29,2,women,0.033659
+29,3,gestational,0.030223
+29,4,weight,0.025051
+29,5,gwg,0.023452
+29,6,gdm,0.02293
+29,7,lifestyle,0.022083
+29,8,weight gain,0.021076
+29,9,gain,0.018207
+29,10,postpartum,0.018123
+29,11,intervention,0.017631
+29,12,pregnant,0.01718
+29,13,gestational weight,0.016126
+29,14,gestational weight gain,0.015765
+29,15,group,0.014846
+30,1,asthma,0.11763
+30,2,asthma control,0.02895
+30,3,adherence,0.019884
+30,4,control,0.01932
+30,5,children,0.018355
+30,6,management,0.01668
+30,7,medication,0.016346
+30,8,asthma management,0.01567
+30,9,adolescents,0.014824
+30,10,asthma self,0.014043
+30,11,asthma self management,0.013481
+30,12,self management,0.01335
+30,13,ics,0.012946
+30,14,self,0.012801
+30,15,intervention,0.012143
+31,1,images,0.028409
+31,2,sleep,0.027024
+31,3,skin,0.024455
+31,4,detection,0.023213
+31,5,image,0.023166
+31,6,learning,0.022036
+31,7,color,0.02199
+31,8,apnea,0.021989
+31,9,imaging,0.021569
+31,10,smartphone,0.018124
+31,11,algorithm,0.016929
+31,12,lesions,0.016599
+31,13,accuracy,0.016075
+31,14,based,0.014865
+31,15,wound,0.014674
+32,1,cr,0.046771
+32,2,cardiac rehabilitation,0.033649
+32,3,cardiac,0.033648
+32,4,rehabilitation,0.02963
+32,5,coronary,0.021942
+32,6,heart,0.018319
+32,7,disease,0.018113
+32,8,cardiovascular,0.017547
+32,9,heart disease,0.016535
+32,10,exercise,0.015462
+32,11,trial,0.014537
+32,12,intervention,0.014492
+32,13,patients,0.013737
+32,14,physical,0.013555
+32,15,physical activity,0.012414
+33,1,detection,0.039418
+33,2,sensing,0.038608
+33,3,point care,0.024401
+33,4,smartphone,0.023104
+33,5,sensor,0.023018
+33,6,monitoring,0.022517
+33,7,device,0.021911
+33,8,flow,0.021036
+33,9,devices,0.020024
+33,10,diagnostics,0.020007
+33,11,point,0.019757
+33,12,portable,0.019466
+33,13,flexible,0.019063
+33,14,concentration,0.018661
+33,15,based,0.018434
+34,1,validity,0.042624
+34,2,version,0.038308
+34,3,mauq,0.03322
+34,4,reliability,0.031863
+34,5,mars,0.03157
+34,6,items,0.029148
+34,7,scale,0.024708
+34,8,usability,0.024256
+34,9,factor,0.024182
+34,10,questionnaire,0.023229
+34,11,internal consistency,0.023139
+34,12,internal,0.021631
+34,13,consistency,0.021179
+34,14,psychometric,0.019495
+34,15,content validity,0.01902
+35,1,surgery,0.045119
+35,2,patients,0.03202
+35,3,postoperative,0.030438
+35,4,patient,0.023682
+35,5,surgical,0.022931
+35,6,recovery,0.018157
+35,7,perioperative,0.016834
+35,8,complications,0.015931
+35,9,eras,0.014426
+35,10,discharge,0.014376
+35,11,undergoing,0.013968
+35,12,colorectal,0.013703
+35,13,care,0.013605
+35,14,app,0.013513
+35,15,group,0.012318
+36,1,data,0.022423
+36,2,ema,0.020522
+36,3,participants,0.020352
+36,4,study,0.018518
+36,5,sleep,0.014379
+36,6,time,0.013629
+36,7,surveys,0.0131
+36,8,engagement,0.012907
+36,9,day,0.012509
+36,10,smartphone,0.012245
+36,11,participant,0.012223
+36,12,survey,0.011625
+36,13,app,0.011275
+36,14,completion,0.010624
+36,15,studies,0.010547
+37,1,af,0.083073
+37,2,atrial,0.046576
+37,3,fibrillation,0.046315
+37,4,atrial fibrillation,0.046315
+37,5,mafa,0.032479
+37,6,patients,0.027735
+37,7,anticoagulation,0.019669
+37,8,fibrillation af,0.017136
+37,9,atrial fibrillation af,0.017136
+37,10,patients af,0.016843
+37,11,af patients,0.015471
+37,12,heart,0.014175
+37,13,trial,0.013771
+37,14,integrated care,0.01245
+37,15,clinical,0.012379
+38,1,research,0.049423
+38,2,bibliometric,0.047837
+38,3,publications,0.038995
+38,4,trends,0.034721
+38,5,bibliometric analysis,0.027954
+38,6,articles,0.027897
+38,7,analysis,0.026251
+38,8,published,0.02518
+38,9,field,0.02429
+38,10,telemedicine,0.023146
+38,11,keywords,0.022384
+38,12,papers,0.021935
+38,13,journals,0.020397
+38,14,health,0.02011
+38,15,informatics,0.019808
+39,1,heart failure,0.040128
+39,2,failure,0.03807
+39,3,heart,0.032656
+39,4,hf,0.02939
+39,5,patients,0.028128
+39,6,self care,0.027799
+39,7,self,0.024297
+39,8,care,0.019042
+39,9,patient,0.016201
+39,10,management,0.015053
+39,11,self management,0.013316
+39,12,older,0.012241
+39,13,cardiac,0.011892
+39,14,health,0.011577
+39,15,app,0.010591
+40,1,copd,0.062546
+40,2,pulmonary,0.0418
+40,3,obstructive,0.028191
+40,4,exacerbations,0.02732
+40,5,chronic obstructive,0.025163
+40,6,pulmonary disease,0.024543
+40,7,obstructive pulmonary disease,0.024337
+40,8,chronic obstructive pulmonary,0.024246
+40,9,obstructive pulmonary,0.024217
+40,10,respiratory,0.023949
+40,11,pulmonary rehabilitation,0.021721
+40,12,chronic,0.019615
+40,13,patients,0.019431
+40,14,disease,0.018921
+40,15,rehabilitation,0.018446
+41,1,survivors,0.055392
+41,2,cancer,0.050138
+41,3,cancer survivors,0.046378
+41,4,pa,0.035002
+41,5,activity,0.032786
+41,6,physical,0.030163
+41,7,physical activity,0.030026
+41,8,intervention,0.022101
+41,9,exercise,0.019446
+41,10,breast,0.018932
+41,11,breast cancer,0.01806
+41,12,mvpa,0.017074
+41,13,breast cancer survivors,0.013724
+41,14,fitbit,0.011366
+41,15,interventions,0.010442
+42,1,data,0.041302
+42,2,iot,0.036884
+42,3,platform,0.028066
+42,4,sensors,0.021667
+42,5,monitoring,0.019864
+42,6,sensor,0.019335
+42,7,devices,0.019008
+42,8,framework,0.018446
+42,9,mobile,0.017226
+42,10,collection,0.016874
+42,11,radar,0.016661
+42,12,applications,0.016622
+42,13,sensing,0.01639
+42,14,health,0.01486
+42,15,data collection,0.013806
+43,1,rhinitis,0.080577
+43,2,allergic,0.06672
+43,3,air,0.048409
+43,4,mask,0.047156
+43,5,allergic rhinitis,0.04672
+43,6,asthma,0.046522
+43,7,mask air,0.045802
+43,8,hay fever,0.044665
+43,9,hay,0.044566
+43,10,fever,0.04011
+43,11,pollen,0.036531
+43,12,symptoms,0.031566
+43,13,vas,0.031235
+43,14,ar,0.027157
+43,15,allergy,0.022434
+44,1,learning,0.050965
+44,2,activity recognition,0.050416
+44,3,seizures,0.046553
+44,4,recognition,0.04635
+44,5,seizure,0.03763
+44,6,har,0.034326
+44,7,activity,0.032528
+44,8,human activity,0.032049
+44,9,data,0.028967
+44,10,human,0.028819
+44,11,eeg,0.028118
+44,12,deep,0.027518
+44,13,model,0.02558
+44,14,wearable,0.025118
+44,15,sensor,0.024172
+45,1,hearing,0.133589
+45,2,screening,0.05784
+45,3,audiometry,0.043965
+45,4,children,0.043133
+45,5,hearing loss,0.040834
+45,6,referral,0.026846
+45,7,loss,0.026612
+45,8,vision,0.023264
+45,9,noise,0.022573
+45,10,test,0.021744
+45,11,impairment,0.020014
+45,12,peek,0.019102
+45,13,community,0.018473
+45,14,visual,0.017387
+45,15,school,0.016663
+46,1,cost,0.089995
+46,2,costs,0.072559
+46,3,cost effectiveness,0.038107
+46,4,incremental,0.031195
+46,5,effectiveness,0.023353
+46,6,incremental cost,0.021752
+46,7,program,0.019926
+46,8,health,0.017297
+46,9,cost effective,0.016592
+46,10,estimated,0.016087
+46,11,economic,0.015293
+46,12,perspective,0.014808
+46,13,year,0.014409
+46,14,care,0.014395
+46,15,million,0.013664
+47,1,cervical,0.073938
+47,2,cervical cancer,0.066388
+47,3,screening,0.055448
+47,4,cancer,0.046639
+47,5,women,0.043484
+47,6,hpv,0.043464
+47,7,cervical cancer screening,0.038635
+47,8,cancer screening,0.036168
+47,9,sms,0.025257
+47,10,pap,0.020205
+47,11,uptake,0.018661
+47,12,positive,0.01366
+47,13,bc,0.013334
+47,14,breast,0.012807
+47,15,triage,0.012656
+48,1,oral,0.069787
+48,2,oral health,0.056208
+48,3,dental,0.044433
+48,4,caries,0.031914
+48,5,oral hygiene,0.030495
+48,6,plaque,0.029676
+48,7,hygiene,0.029267
+48,8,brushing,0.024565
+48,9,app,0.017732
+48,10,parents,0.01524
+48,11,health,0.014832
+48,12,children,0.013794
+48,13,childrens,0.013724
+48,14,index,0.011893
+48,15,mobile,0.010602
+49,1,food,0.081593
+49,2,intake,0.049091
+49,3,dietary,0.049058
+49,4,energy,0.026528
+49,5,dietary assessment,0.025461
+49,6,image,0.022053
+49,7,carbohydrate,0.021859
+49,8,nutrition,0.020641
+49,9,food intake,0.020467
+49,10,eating,0.01896
+49,11,assessment,0.018431
+49,12,dietary intake,0.017299
+49,13,accuracy,0.016323
+49,14,nutrient,0.015159
+49,15,foods,0.014949
+50,1,physicians,0.027733
+50,2,apps,0.027699
+50,3,gps,0.025632
+50,4,medical,0.024006
+50,5,survey,0.021608
+50,6,health,0.018918
+50,7,patients,0.01874
+50,8,use,0.017982
+50,9,telemedicine,0.015193
+50,10,germany,0.014965
+50,11,information,0.014192
+50,12,devices,0.014093
+50,13,medical apps,0.013361
+50,14,general,0.013309
+50,15,technologies,0.013124
+51,1,suicidal,0.060759
+51,2,suicide,0.052695
+51,3,suicidal ideation,0.02623
+51,4,ideation,0.025453
+51,5,mental,0.018352
+51,6,suicide risk,0.017308
+51,7,mental health,0.017061
+51,8,thoughts,0.015643
+51,9,app,0.013333
+51,10,trial,0.012846
+51,11,risk,0.012825
+51,12,study,0.012805
+51,13,safety,0.012793
+51,14,intervention,0.01276
+51,15,young,0.011901
+52,1,hf,0.07319
+52,2,heart failure,0.045813
+52,3,failure,0.043464
+52,4,heart,0.041097
+52,5,patients,0.025891
+52,6,self care,0.025447
+52,7,self,0.02007
+52,8,care,0.01976
+52,9,patients heart,0.017005
+52,10,patients heart failure,0.01507
+52,11,group,0.01505
+52,12,heart failure hf,0.014528
+52,13,failure hf,0.014528
+52,14,readmission,0.014102
+52,15,readmissions,0.014057
+53,1,tinnitus,0.043261
+53,2,data,0.035785
+53,3,ema,0.024504
+53,4,platform,0.017859
+53,5,users,0.016176
+53,6,sensors,0.016171
+53,7,sound,0.015428
+53,8,sensor,0.014468
+53,9,momentary,0.014271
+53,10,momentary assessments,0.014134
+53,11,mobile,0.013895
+53,12,hearing,0.01376
+53,13,study,0.013398
+53,14,ecological momentary assessments,0.013344
+53,15,monitoring,0.013193
+54,1,tb,0.107097
+54,2,tuberculosis,0.051753
+54,3,treatment,0.044961
+54,4,adherence,0.039972
+54,5,vdot,0.032847
+54,6,tb treatment,0.02826
+54,7,tb patients,0.024984
+54,8,patients,0.024582
+54,9,observed therapy,0.019516
+54,10,directly observed,0.019207
+54,11,medication,0.018215
+54,12,dot,0.01799
+54,13,treatment adherence,0.017985
+54,14,directly observed therapy,0.017571
+54,15,tuberculosis tb,0.017431
+55,1,mental,0.075774
+55,2,mental health,0.069424
+55,3,health,0.028183
+55,4,mobile mental,0.020018
+55,5,digital,0.018546
+55,6,apps,0.017611
+55,7,mobile mental health,0.017515
+55,8,digital mental health,0.017444
+55,9,digital mental,0.017422
+55,10,attitudes,0.01617
+55,11,mental health care,0.014758
+55,12,tools,0.014499
+55,13,mental health professionals,0.014361
+55,14,disorders,0.014126
+55,15,students,0.013477
+56,1,blockchain,0.079013
+56,2,scheme,0.048591
+56,3,privacy,0.047382
+56,4,security,0.046863
+56,5,data,0.045423
+56,6,encryption,0.041801
+56,7,authentication,0.040007
+56,8,healthcare,0.035026
+56,9,attacks,0.029493
+56,10,proposed,0.02843
+56,11,secure,0.027687
+56,12,systems,0.02439
+56,13,preserving,0.023609
+56,14,computing,0.022162
+56,15,cloud,0.020892
+57,1,transplant,0.066094
+57,2,kidney,0.063179
+57,3,recipients,0.05177
+57,4,medication,0.032517
+57,5,transplant recipients,0.030338
+57,6,transplantation,0.029003
+57,7,donor,0.026362
+57,8,kidney transplant,0.026342
+57,9,nonadherence,0.021269
+57,10,adherence,0.020462
+57,11,kidney transplant recipients,0.020219
+57,12,follow,0.01828
+57,13,pharmacist,0.017143
+57,14,donors,0.016502
+57,15,arm,0.015888
+58,1,eye,0.060459
+58,2,visual,0.041236
+58,3,vision,0.040519
+58,4,visual acuity,0.03529
+58,5,acuity,0.034084
+58,6,smartphone,0.030027
+58,7,screening,0.025196
+58,8,smartphone based,0.022346
+58,9,facial,0.021483
+58,10,imaging,0.019031
+58,11,images,0.018957
+58,12,detection,0.017677
+58,13,ocular,0.017645
+58,14,chart,0.016966
+58,15,diabetic,0.01646
+59,1,heart rhythm,0.21436
+59,2,rhythm,0.197275
+59,3,article,0.163789
+59,4,society,0.113441
+59,5,heart,0.113381
+59,6,correction,0.112673
+59,7,pacific,0.056814
+59,8,statement,0.056493
+59,9,noninvasive,0.055183
+59,10,arrhythmia,0.049536
+59,11,collaborative,0.043595
+59,12,management,0.035049
+59,13,international,0.031586
+59,14,mhealth,0.030521
+59,15,asia,0.028326
+60,1,diabetes,0.036516
+60,2,type diabetes,0.029591
+60,3,t2d,0.028029
+60,4,activity,0.02592
+60,5,type,0.025568
+60,6,physical activity,0.02506
+60,7,physical,0.024032
+60,8,prediabetes,0.020276
+60,9,12,0.01955
+60,10,intervention,0.017595
+60,11,months,0.01735
+60,12,trial,0.01634
+60,13,sedentary,0.015405
+60,14,primary,0.014411
+60,15,group,0.013747
+61,1,mental,0.044304
+61,2,mental health,0.039216
+61,3,health,0.020593
+61,4,workers,0.019366
+61,5,intervention,0.014875
+61,6,lhws,0.014233
+61,7,mobile,0.013169
+61,8,refugees,0.012701
+61,9,implementation,0.012387
+61,10,feasibility,0.012343
+61,11,india,0.012334
+61,12,barriers,0.012227
+61,13,nigeria,0.011877
+61,14,community,0.011609
+61,15,care workers,0.011008
+62,1,breastfeeding,0.191641
+62,2,mothers,0.062312
+62,3,exclusive,0.033578
+62,4,exclusive breastfeeding,0.032572
+62,5,milk,0.030259
+62,6,infants,0.019362
+62,7,support,0.017808
+62,8,group,0.016313
+62,9,postpartum,0.016136
+62,10,practices,0.01518
+62,11,knowledge,0.014986
+62,12,application,0.013642
+62,13,women,0.013495
+62,14,ebf,0.012922
+62,15,exclusively,0.01285
