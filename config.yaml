@@ -156,3 +156,102 @@ visualization:
   colormap: "viridis"
   max_topics_display: 25
   max_concepts_display: 30
+
+# ============================================================
+# CONFIGURATION — Phase 2 Pipeline
+# Evidence-Grounded Hypothesis Generation
+# ============================================================
+
+# ------ Phase 2: Gap Preparation ------
+phase2:
+  gap_preparation:
+    max_gaps_to_process: 20          # top-N gaps to send through the pipeline
+    min_gap_score: 0.3               # minimum gap score threshold
+    gap_categories:
+      - "high_similarity_low_cooccurrence"
+      - "emerging_concepts"
+      - "cross_topic_bridge"
+      - "temporal_divergence"
+
+  # ------ Chunking ------
+  chunking:
+    chunk_size: 512                  # characters per chunk
+    chunk_overlap: 128               # overlap between chunks
+    min_chunk_length: 50             # minimum chars to keep a chunk
+    content_type: "abstract"         # corpus contains abstracts only
+
+  # ------ Retrieval ------
+  retrieval:
+    embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+    index_type: "faiss_flat_ip"      # FAISS inner product (cosine on L2-normed)
+    top_k: 20                        # passages to retrieve per query
+    min_relevance_score: 0.20        # minimum cosine similarity
+    diversity_weight: 0.3            # penalty for same-paper passages
+    rerank: false                    # optional reranking stage
+    batch_size: 64                   # embedding batch size
+
+  # ------ LLM (Hypothesis Generation & Judge) ------
+  llm:
+    model_name: "gemini-2.0-flash"   # Gemini model for generation
+    temperature: 0.3                 # lower = more focused
+    max_output_tokens: 4096
+    max_hypotheses_per_gap: 3
+    retry_attempts: 3
+    retry_delay_seconds: 5
+    request_timeout: 60
+    use_mock: false                  # set true for testing without API
+
+  # ------ Evidence Verification ------
+  verification:
+    check_evidence_ids: true
+    check_metadata_consistency: true
+    check_evidence_content: true
+    min_evidence_coverage: 0.1       # minimum fraction of evidence cited
+
+  # ------ NLI Validation ------
+  nli:
+    model_name: "cross-encoder/nli-deberta-v3-small"
+    enabled: true                    # set false to skip NLI
+    batch_size: 16
+    support_threshold: 0.6           # entailment score threshold
+    contradiction_threshold: 0.6     # contradiction score threshold
+
+  # ------ LLM Judge ------
+  judge:
+    enabled: true
+    use_mock: false                  # set true for testing without API
+    rating_scale: [1, 5]             # min, max for dimension scores
+
+  # ------ Rule-Based Checks ------
+  rule_checks:
+    min_hypothesis_words: 20
+    max_hypothesis_words: 200
+    require_variables: true
+    require_population: true
+    flag_causal_language: true
+    flag_vague_wording: true
+
+  # ------ Ranking ------
+  ranking:
+    weights:
+      evidence_support: 0.25
+      judge_quality: 0.30
+      testability: 0.15
+      rule_compliance: 0.15
+      contradiction_penalty: 0.15
+    quality_tiers:
+      high: 0.7
+      medium: 0.4
+
+  # ------ Deduplication ------
+  deduplication:
+    similarity_threshold: 0.85
+    embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+    preserve_variable_differences: true
+    preserve_population_differences: true
+
+  # ------ Evaluation ------
+  evaluation:
+    retrieval_k_values: [5, 10, 20]
+    sample_size: 10                  # gaps to use for evaluation
+    random_seed: 42

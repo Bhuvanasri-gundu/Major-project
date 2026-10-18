@@ -1,0 +1,1217 @@
+{
+  "GAP-001_hyp_1": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-31702564-0",
+        "label": "neutral",
+        "entailment_score": 0.0019,
+        "contradiction_score": 0.0003,
+        "neutral_score": 0.9977
+      },
+      {
+        "evidence_id": "CHK-31899453-0",
+        "label": "neutral",
+        "entailment_score": 0.0016,
+        "contradiction_score": 0.0003,
+        "neutral_score": 0.9981
+      },
+      {
+        "evidence_id": "CHK-25940254-0",
+        "label": "neutral",
+        "entailment_score": 0.0002,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.9987
+      },
+      {
+        "evidence_id": "CHK-29538292-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9989
+      },
+      {
+        "evidence_id": "CHK-28925418-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.003,
+        "neutral_score": 0.9967
+      },
+      {
+        "evidence_id": "CHK-28292206-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0008,
+        "neutral_score": 0.9989
+      },
+      {
+        "evidence_id": "CHK-33915917-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0008,
+        "neutral_score": 0.9987
+      },
+      {
+        "evidence_id": "CHK-25980851-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.999
+      },
+      {
+        "evidence_id": "CHK-33635278-0",
+        "label": "neutral",
+        "entailment_score": 0.0008,
+        "contradiction_score": 0.0006,
+        "neutral_score": 0.9986
+      },
+      {
+        "evidence_id": "CHK-29184891-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.001,
+        "neutral_score": 0.9982
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4999,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-001_hyp_2": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-31702564-0",
+        "label": "neutral",
+        "entailment_score": 0.0027,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9968
+      },
+      {
+        "evidence_id": "CHK-31899453-0",
+        "label": "neutral",
+        "entailment_score": 0.0019,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9977
+      },
+      {
+        "evidence_id": "CHK-25940254-0",
+        "label": "neutral",
+        "entailment_score": 0.0006,
+        "contradiction_score": 0.0014,
+        "neutral_score": 0.998
+      },
+      {
+        "evidence_id": "CHK-29538292-0",
+        "label": "neutral",
+        "entailment_score": 0.0006,
+        "contradiction_score": 0.0006,
+        "neutral_score": 0.9988
+      },
+      {
+        "evidence_id": "CHK-28925418-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0034,
+        "neutral_score": 0.9962
+      },
+      {
+        "evidence_id": "CHK-28292206-0",
+        "label": "neutral",
+        "entailment_score": 0.0008,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9988
+      },
+      {
+        "evidence_id": "CHK-33915917-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.002,
+        "neutral_score": 0.9973
+      },
+      {
+        "evidence_id": "CHK-25980851-0",
+        "label": "neutral",
+        "entailment_score": 0.001,
+        "contradiction_score": 0.0009,
+        "neutral_score": 0.9981
+      },
+      {
+        "evidence_id": "CHK-33635278-0",
+        "label": "neutral",
+        "entailment_score": 0.0008,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9985
+      },
+      {
+        "evidence_id": "CHK-29184891-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0012,
+        "neutral_score": 0.9979
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.5,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-001_hyp_3": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-31702564-0",
+        "label": "neutral",
+        "entailment_score": 0.0011,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9985
+      },
+      {
+        "evidence_id": "CHK-31899453-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9987
+      },
+      {
+        "evidence_id": "CHK-25940254-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0094,
+        "neutral_score": 0.9901
+      },
+      {
+        "evidence_id": "CHK-29538292-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0008,
+        "neutral_score": 0.9987
+      },
+      {
+        "evidence_id": "CHK-28925418-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0033,
+        "neutral_score": 0.9964
+      },
+      {
+        "evidence_id": "CHK-28292206-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.9984
+      },
+      {
+        "evidence_id": "CHK-33915917-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0021,
+        "neutral_score": 0.9973
+      },
+      {
+        "evidence_id": "CHK-25980851-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.999
+      },
+      {
+        "evidence_id": "CHK-33635278-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0017,
+        "neutral_score": 0.9978
+      },
+      {
+        "evidence_id": "CHK-29184891-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.001,
+        "neutral_score": 0.9983
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4993,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-002_hyp_1": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-34787590-0",
+        "label": "neutral",
+        "entailment_score": 0.0002,
+        "contradiction_score": 0.0012,
+        "neutral_score": 0.9986
+      },
+      {
+        "evidence_id": "CHK-35107427-0",
+        "label": "neutral",
+        "entailment_score": 0.0022,
+        "contradiction_score": 0.0023,
+        "neutral_score": 0.9955
+      },
+      {
+        "evidence_id": "CHK-31298566-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0003,
+        "neutral_score": 0.999
+      },
+      {
+        "evidence_id": "CHK-39881127-0",
+        "label": "neutral",
+        "entailment_score": 0.0037,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9955
+      },
+      {
+        "evidence_id": "CHK-25650838-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0016,
+        "neutral_score": 0.9982
+      },
+      {
+        "evidence_id": "CHK-38233908-0",
+        "label": "neutral",
+        "entailment_score": 0.0022,
+        "contradiction_score": 0.0014,
+        "neutral_score": 0.9964
+      },
+      {
+        "evidence_id": "CHK-35349466-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0012,
+        "neutral_score": 0.9979
+      },
+      {
+        "evidence_id": "CHK-29406429-0",
+        "label": "neutral",
+        "entailment_score": 0.0016,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.998
+      },
+      {
+        "evidence_id": "CHK-29299790-0",
+        "label": "entailment",
+        "entailment_score": 0.9571,
+        "contradiction_score": 0.0008,
+        "neutral_score": 0.042
+      },
+      {
+        "evidence_id": "CHK-35113030-0",
+        "label": "neutral",
+        "entailment_score": 0.0008,
+        "contradiction_score": 0.0003,
+        "neutral_score": 0.999
+      }
+    ],
+    "support_count": 1,
+    "contradiction_count": 0,
+    "neutral_count": 9,
+    "overall_alignment": "supported",
+    "alignment_score": 0.548,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-002_hyp_2": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-34787590-0",
+        "label": "neutral",
+        "entailment_score": 0.0002,
+        "contradiction_score": 0.0012,
+        "neutral_score": 0.9987
+      },
+      {
+        "evidence_id": "CHK-35107427-0",
+        "label": "neutral",
+        "entailment_score": 0.0031,
+        "contradiction_score": 0.0032,
+        "neutral_score": 0.9937
+      },
+      {
+        "evidence_id": "CHK-31298566-0",
+        "label": "neutral",
+        "entailment_score": 0.0008,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9988
+      },
+      {
+        "evidence_id": "CHK-39881127-0",
+        "label": "neutral",
+        "entailment_score": 0.0012,
+        "contradiction_score": 0.0008,
+        "neutral_score": 0.998
+      },
+      {
+        "evidence_id": "CHK-25650838-0",
+        "label": "neutral",
+        "entailment_score": 0.0002,
+        "contradiction_score": 0.0018,
+        "neutral_score": 0.9979
+      },
+      {
+        "evidence_id": "CHK-38233908-0",
+        "label": "neutral",
+        "entailment_score": 0.0027,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.9962
+      },
+      {
+        "evidence_id": "CHK-35349466-0",
+        "label": "neutral",
+        "entailment_score": 0.0008,
+        "contradiction_score": 0.0015,
+        "neutral_score": 0.9977
+      },
+      {
+        "evidence_id": "CHK-29406429-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9984
+      },
+      {
+        "evidence_id": "CHK-29299790-0",
+        "label": "neutral",
+        "entailment_score": 0.0046,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9946
+      },
+      {
+        "evidence_id": "CHK-35113030-0",
+        "label": "neutral",
+        "entailment_score": 0.0012,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9984
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.5002,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-002_hyp_3": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-34787590-0",
+        "label": "neutral",
+        "entailment_score": 0.0002,
+        "contradiction_score": 0.0012,
+        "neutral_score": 0.9986
+      },
+      {
+        "evidence_id": "CHK-35107427-0",
+        "label": "neutral",
+        "entailment_score": 0.0016,
+        "contradiction_score": 0.0034,
+        "neutral_score": 0.995
+      },
+      {
+        "evidence_id": "CHK-31298566-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.9991
+      },
+      {
+        "evidence_id": "CHK-39881127-0",
+        "label": "neutral",
+        "entailment_score": 0.0006,
+        "contradiction_score": 0.0008,
+        "neutral_score": 0.9986
+      },
+      {
+        "evidence_id": "CHK-25650838-0",
+        "label": "neutral",
+        "entailment_score": 0.0002,
+        "contradiction_score": 0.0018,
+        "neutral_score": 0.998
+      },
+      {
+        "evidence_id": "CHK-38233908-0",
+        "label": "neutral",
+        "entailment_score": 0.0012,
+        "contradiction_score": 0.0014,
+        "neutral_score": 0.9974
+      },
+      {
+        "evidence_id": "CHK-35349466-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0014,
+        "neutral_score": 0.9978
+      },
+      {
+        "evidence_id": "CHK-29406429-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0009,
+        "neutral_score": 0.9984
+      },
+      {
+        "evidence_id": "CHK-29299790-0",
+        "label": "neutral",
+        "entailment_score": 0.0011,
+        "contradiction_score": 0.0009,
+        "neutral_score": 0.998
+      },
+      {
+        "evidence_id": "CHK-35113030-0",
+        "label": "neutral",
+        "entailment_score": 0.0006,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9991
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4997,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-003_hyp_1": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-31702564-0",
+        "label": "neutral",
+        "entailment_score": 0.0025,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9971
+      },
+      {
+        "evidence_id": "CHK-28925418-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.003,
+        "neutral_score": 0.9966
+      },
+      {
+        "evidence_id": "CHK-36160638-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.999
+      },
+      {
+        "evidence_id": "CHK-33244426-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0008,
+        "neutral_score": 0.9987
+      },
+      {
+        "evidence_id": "CHK-28292206-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0009,
+        "neutral_score": 0.9988
+      },
+      {
+        "evidence_id": "CHK-25980851-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.999
+      },
+      {
+        "evidence_id": "CHK-33635278-0",
+        "label": "neutral",
+        "entailment_score": 0.001,
+        "contradiction_score": 0.0006,
+        "neutral_score": 0.9984
+      },
+      {
+        "evidence_id": "CHK-29184891-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.001,
+        "neutral_score": 0.9981
+      },
+      {
+        "evidence_id": "CHK-38913992-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.9985
+      },
+      {
+        "evidence_id": "CHK-35076401-0",
+        "label": "neutral",
+        "entailment_score": 0.0065,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9929
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.5002,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-003_hyp_2": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-31702564-0",
+        "label": "neutral",
+        "entailment_score": 0.0021,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9975
+      },
+      {
+        "evidence_id": "CHK-28925418-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0034,
+        "neutral_score": 0.9962
+      },
+      {
+        "evidence_id": "CHK-36160638-0",
+        "label": "neutral",
+        "entailment_score": 0.0002,
+        "contradiction_score": 0.0009,
+        "neutral_score": 0.9989
+      },
+      {
+        "evidence_id": "CHK-33244426-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0014,
+        "neutral_score": 0.9978
+      },
+      {
+        "evidence_id": "CHK-28292206-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.9988
+      },
+      {
+        "evidence_id": "CHK-25980851-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.998
+      },
+      {
+        "evidence_id": "CHK-33635278-0",
+        "label": "neutral",
+        "entailment_score": 0.0006,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9988
+      },
+      {
+        "evidence_id": "CHK-29184891-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0013,
+        "neutral_score": 0.9978
+      },
+      {
+        "evidence_id": "CHK-38913992-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0012,
+        "neutral_score": 0.9982
+      },
+      {
+        "evidence_id": "CHK-35076401-0",
+        "label": "neutral",
+        "entailment_score": 0.0028,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.9967
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4999,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-003_hyp_3": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-31702564-0",
+        "label": "neutral",
+        "entailment_score": 0.0012,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9984
+      },
+      {
+        "evidence_id": "CHK-28925418-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0032,
+        "neutral_score": 0.9964
+      },
+      {
+        "evidence_id": "CHK-36160638-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0013,
+        "neutral_score": 0.9984
+      },
+      {
+        "evidence_id": "CHK-33244426-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0012,
+        "neutral_score": 0.9983
+      },
+      {
+        "evidence_id": "CHK-28292206-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.001,
+        "neutral_score": 0.9985
+      },
+      {
+        "evidence_id": "CHK-25980851-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0006,
+        "neutral_score": 0.999
+      },
+      {
+        "evidence_id": "CHK-33635278-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0012,
+        "neutral_score": 0.9983
+      },
+      {
+        "evidence_id": "CHK-29184891-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.001,
+        "neutral_score": 0.9983
+      },
+      {
+        "evidence_id": "CHK-38913992-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.9986
+      },
+      {
+        "evidence_id": "CHK-35076401-0",
+        "label": "neutral",
+        "entailment_score": 0.0035,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.996
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4998,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-004_hyp_1": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-31702564-0",
+        "label": "neutral",
+        "entailment_score": 0.0019,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9977
+      },
+      {
+        "evidence_id": "CHK-28925418-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0031,
+        "neutral_score": 0.9965
+      },
+      {
+        "evidence_id": "CHK-28283148-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0013,
+        "neutral_score": 0.9979
+      },
+      {
+        "evidence_id": "CHK-26353025-0",
+        "label": "neutral",
+        "entailment_score": 0.0001,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9994
+      },
+      {
+        "evidence_id": "CHK-28292206-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9989
+      },
+      {
+        "evidence_id": "CHK-31431598-0",
+        "label": "neutral",
+        "entailment_score": 0.0006,
+        "contradiction_score": 0.0001,
+        "neutral_score": 0.9993
+      },
+      {
+        "evidence_id": "CHK-33635278-0",
+        "label": "neutral",
+        "entailment_score": 0.001,
+        "contradiction_score": 0.0006,
+        "neutral_score": 0.9984
+      },
+      {
+        "evidence_id": "CHK-25980851-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.999
+      },
+      {
+        "evidence_id": "CHK-29184891-0",
+        "label": "neutral",
+        "entailment_score": 0.0008,
+        "contradiction_score": 0.0009,
+        "neutral_score": 0.9982
+      },
+      {
+        "evidence_id": "CHK-38913992-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.9986
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4999,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-004_hyp_2": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-31702564-0",
+        "label": "neutral",
+        "entailment_score": 0.0019,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9977
+      },
+      {
+        "evidence_id": "CHK-28925418-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0035,
+        "neutral_score": 0.9961
+      },
+      {
+        "evidence_id": "CHK-28283148-0",
+        "label": "neutral",
+        "entailment_score": 0.003,
+        "contradiction_score": 0.0016,
+        "neutral_score": 0.9954
+      },
+      {
+        "evidence_id": "CHK-26353025-0",
+        "label": "neutral",
+        "entailment_score": 0.0001,
+        "contradiction_score": 0.0008,
+        "neutral_score": 0.999
+      },
+      {
+        "evidence_id": "CHK-28292206-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9989
+      },
+      {
+        "evidence_id": "CHK-31431598-0",
+        "label": "neutral",
+        "entailment_score": 0.001,
+        "contradiction_score": 0.0002,
+        "neutral_score": 0.9989
+      },
+      {
+        "evidence_id": "CHK-33635278-0",
+        "label": "neutral",
+        "entailment_score": 0.0006,
+        "contradiction_score": 0.0006,
+        "neutral_score": 0.9988
+      },
+      {
+        "evidence_id": "CHK-25980851-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.001,
+        "neutral_score": 0.9981
+      },
+      {
+        "evidence_id": "CHK-29184891-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0013,
+        "neutral_score": 0.9979
+      },
+      {
+        "evidence_id": "CHK-38913992-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.9984
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.5,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-004_hyp_3": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-31702564-0",
+        "label": "neutral",
+        "entailment_score": 0.0012,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9984
+      },
+      {
+        "evidence_id": "CHK-28925418-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0033,
+        "neutral_score": 0.9963
+      },
+      {
+        "evidence_id": "CHK-28283148-0",
+        "label": "neutral",
+        "entailment_score": 0.0012,
+        "contradiction_score": 0.0012,
+        "neutral_score": 0.9976
+      },
+      {
+        "evidence_id": "CHK-26353025-0",
+        "label": "neutral",
+        "entailment_score": 0.0002,
+        "contradiction_score": 0.0006,
+        "neutral_score": 0.9992
+      },
+      {
+        "evidence_id": "CHK-28292206-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0009,
+        "neutral_score": 0.9986
+      },
+      {
+        "evidence_id": "CHK-31431598-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0002,
+        "neutral_score": 0.9995
+      },
+      {
+        "evidence_id": "CHK-33635278-0",
+        "label": "neutral",
+        "entailment_score": 0.0006,
+        "contradiction_score": 0.0013,
+        "neutral_score": 0.9982
+      },
+      {
+        "evidence_id": "CHK-25980851-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.999
+      },
+      {
+        "evidence_id": "CHK-29184891-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.001,
+        "neutral_score": 0.9983
+      },
+      {
+        "evidence_id": "CHK-38913992-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.9986
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4997,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-005_hyp_1": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-28344359-0",
+        "label": "neutral",
+        "entailment_score": 0.0014,
+        "contradiction_score": 0.0238,
+        "neutral_score": 0.9748
+      },
+      {
+        "evidence_id": "CHK-30672738-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0018,
+        "neutral_score": 0.9977
+      },
+      {
+        "evidence_id": "CHK-25940254-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0024,
+        "neutral_score": 0.9972
+      },
+      {
+        "evidence_id": "CHK-30990458-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0006,
+        "neutral_score": 0.9988
+      },
+      {
+        "evidence_id": "CHK-29046271-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0019,
+        "neutral_score": 0.9974
+      },
+      {
+        "evidence_id": "CHK-32015795-0",
+        "label": "neutral",
+        "entailment_score": 0.0026,
+        "contradiction_score": 0.0011,
+        "neutral_score": 0.9963
+      },
+      {
+        "evidence_id": "CHK-36862494-0",
+        "label": "neutral",
+        "entailment_score": 0.0009,
+        "contradiction_score": 0.0017,
+        "neutral_score": 0.9974
+      },
+      {
+        "evidence_id": "CHK-27147515-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9989
+      },
+      {
+        "evidence_id": "CHK-34338763-0",
+        "label": "neutral",
+        "entailment_score": 0.001,
+        "contradiction_score": 0.0584,
+        "neutral_score": 0.9406
+      },
+      {
+        "evidence_id": "CHK-27640159-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.9988
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4958,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-005_hyp_2": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-28344359-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9988
+      },
+      {
+        "evidence_id": "CHK-30672738-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0019,
+        "neutral_score": 0.9976
+      },
+      {
+        "evidence_id": "CHK-25940254-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.003,
+        "neutral_score": 0.9963
+      },
+      {
+        "evidence_id": "CHK-30990458-0",
+        "label": "neutral",
+        "entailment_score": 0.001,
+        "contradiction_score": 0.0004,
+        "neutral_score": 0.9987
+      },
+      {
+        "evidence_id": "CHK-29046271-0",
+        "label": "neutral",
+        "entailment_score": 0.001,
+        "contradiction_score": 0.002,
+        "neutral_score": 0.997
+      },
+      {
+        "evidence_id": "CHK-32015795-0",
+        "label": "neutral",
+        "entailment_score": 0.0031,
+        "contradiction_score": 0.001,
+        "neutral_score": 0.996
+      },
+      {
+        "evidence_id": "CHK-36862494-0",
+        "label": "neutral",
+        "entailment_score": 0.001,
+        "contradiction_score": 0.0021,
+        "neutral_score": 0.9969
+      },
+      {
+        "evidence_id": "CHK-27147515-0",
+        "label": "neutral",
+        "entailment_score": 0.0019,
+        "contradiction_score": 0.0007,
+        "neutral_score": 0.9973
+      },
+      {
+        "evidence_id": "CHK-34338763-0",
+        "label": "neutral",
+        "entailment_score": 0.0006,
+        "contradiction_score": 0.0069,
+        "neutral_score": 0.9924
+      },
+      {
+        "evidence_id": "CHK-27640159-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0008,
+        "neutral_score": 0.9987
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4996,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  },
+  "GAP-005_hyp_3": {
+    "hypothesis_id": "unknown_hyp",
+    "passage_results": [
+      {
+        "evidence_id": "CHK-28344359-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.3286,
+        "neutral_score": 0.6711
+      },
+      {
+        "evidence_id": "CHK-30672738-0",
+        "label": "neutral",
+        "entailment_score": 0.0004,
+        "contradiction_score": 0.0018,
+        "neutral_score": 0.9978
+      },
+      {
+        "evidence_id": "CHK-25940254-0",
+        "label": "neutral",
+        "entailment_score": 0.001,
+        "contradiction_score": 0.0417,
+        "neutral_score": 0.9573
+      },
+      {
+        "evidence_id": "CHK-30990458-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0006,
+        "neutral_score": 0.9989
+      },
+      {
+        "evidence_id": "CHK-29046271-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0021,
+        "neutral_score": 0.9972
+      },
+      {
+        "evidence_id": "CHK-32015795-0",
+        "label": "neutral",
+        "entailment_score": 0.0013,
+        "contradiction_score": 0.0015,
+        "neutral_score": 0.9972
+      },
+      {
+        "evidence_id": "CHK-36862494-0",
+        "label": "neutral",
+        "entailment_score": 0.0007,
+        "contradiction_score": 0.0016,
+        "neutral_score": 0.9978
+      },
+      {
+        "evidence_id": "CHK-27147515-0",
+        "label": "neutral",
+        "entailment_score": 0.0005,
+        "contradiction_score": 0.0009,
+        "neutral_score": 0.9986
+      },
+      {
+        "evidence_id": "CHK-34338763-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0239,
+        "neutral_score": 0.9758
+      },
+      {
+        "evidence_id": "CHK-27640159-0",
+        "label": "neutral",
+        "entailment_score": 0.0003,
+        "contradiction_score": 0.0005,
+        "neutral_score": 0.9992
+      }
+    ],
+    "support_count": 0,
+    "contradiction_count": 0,
+    "neutral_count": 10,
+    "overall_alignment": "neutral",
+    "alignment_score": 0.4801,
+    "model_used": "cross-encoder/nli-deberta-v3-small"
+  }
+}

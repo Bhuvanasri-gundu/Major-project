@@ -29,3 +29,14 @@ ehthumbs.db
 # IDE / Editor folders
 .vscode/
 .idea/
+
+# Phase 2 — Large generated artifacts (reproducible from pipeline)
+outputs/faiss_index/
+outputs/chunks.json
+outputs/retrieved_gap_evidence.json
+outputs/generated_hypotheses.json
+outputs/phase2_*.json
+
+# Large model caches
+.cache/
+huggingface/

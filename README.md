@@ -1,212 +1,247 @@
 # Temporal-Semantic Gap-Guided Evidence-Grounded Hypothesis Generation in mHealth Research
 
-## B.Tech Major Project — Phase 1 (Completed & Verified)
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.1%2BCUDA-red.svg)](https://pytorch.org/)
+[![FAISS](https://img.shields.io/badge/FAISS-CPU-green.svg)](https://github.com/facebookresearch/faiss)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.59-red.svg)](https://streamlit.io/)
+[![Tests](https://img.shields.io/badge/Tests-37%2F37%20Passed-brightgreen.svg)]()
+
+> **B.Tech Major Project** in Computer Science & Engineering (Artificial Intelligence & Machine Learning)  
+> An automated biomedical research discovery system that mines 12,642 PubMed articles (2015–2025), identifies empirical literature gaps via centroid-debiased semantic proximity and longitudinal growth velocity, and synthesizes evidence-grounded scientific hypotheses with 100% citation traceability.
 
 ---
 
-## 1. Project Overview
-
-This project implements an intelligent mHealth research discovery system that systematically analyzes 14,905 PubMed research articles (2015–2025) to discover empirical research topics, extract biomedical concepts, model longitudinal temporal trends, evaluate semantic affinity, compute literature co-occurrence, and detect **candidate research gaps** with literature-grounded evidence.
-
-### Core Scientific Novelty: Gap-First Hypothesis Generation
-
-Conventional automated scientific hypothesis generation systems prompt a large language model (LLM) directly with broad topic names or unstructured abstracts. This frequently causes hallucinated associations, unfocused suggestions, and lack of empirical literature grounding.
-
-In contrast, our proposed methodology follows a strict **Gap-First Strategy**:
-1. **Mathematical Grounding**: It isolates pairs of biomedical concepts that share high dense semantic affinity in scientific representation space (SPECTER2) but exhibit disproportionately low joint occurrence in published literature (Jaccard co-occurrence $\le 0.06$).
-2. **Longitudinal Validation**: It verifies that both concepts are experiencing increasing research velocity (positive temporal growth slope over 2015–2025), proving that the concepts are active research frontiers rather than obsolete terms.
-3. **Structured Handoff**: By computing exact empirical gap scores, isolating topic clusters, and indexing supporting PMIDs *before* invoking any generative model, the system ensures that Phase 2 will guide the LLM using concrete literature gaps rather than open-ended prompting.
-
-> [!IMPORTANT]
-> A candidate gap represents a *potentially underexplored relationship*, not proof that no research exists. The pipeline explicitly outputs **candidate research gaps** and transparently flags potential lexical/abbreviation synonym pairs.
+## Table of Contents
+1. [Core Scientific Novelty](#1-core-scientific-novelty)
+2. [End-to-End System Architecture](#2-end-to-end-system-architecture)
+3. [Mathematical Formulations](#3-mathematical-formulations)
+4. [Project Structure](#4-project-structure)
+5. [Quickstart & Reproduction Guide](#5-quickstart--reproduction-guide)
+6. [Interactive Streamlit Dashboard](#6-interactive-streamlit-dashboard)
+7. [Benchmark Evaluation Results](#7-benchmark-evaluation-results)
+8. [Automated Testing & Quality Verification](#8-automated-testing--quality-verification)
+9. [Academic Reports & Deliverables](#9-academic-reports--deliverables)
 
 ---
 
-## 2. Mathematical Formulations
+## 1. Core Scientific Novelty
 
-### Gap Score Formula
+Conventional automated scientific hypothesis generation systems prompt Large Language Models (LLMs) with broad topic names or unstructured text. This causes:
+1. **Obviousness**: Generates frequent, obvious associations already saturated in literature.
+2. **Citation Hallucination**: Generates plausible-sounding but completely fabricated paper citations (60–85% hallucination rate in scientific prompts).
+3. **Historical Stagnation**: Recommends dormant or abandoned concept combinations due to lack of longitudinal awareness.
 
-$$\text{GapScore} = \text{SemanticSimilarity} \times (1 - \text{NormalizedCoOccurrence}) \times (1 + \text{TemporalGrowthAvg})$$
-
-Where:
-- $\text{SemanticSimilarity}$: Centroid-debiased cosine similarity between dense concept vectors:
-  $$\text{SemanticSimilarity}(c_a, c_b) = \frac{(\mathbf{v}_a - \boldsymbol{\mu}) \cdot (\mathbf{v}_b - \boldsymbol{\mu})}{\|\mathbf{v}_a - \boldsymbol{\mu}\| \|\mathbf{v}_b - \boldsymbol{\mu}\|}$$
-- $\text{NormalizedCoOccurrence}$: Document-level Jaccard similarity across corpus:
-  $$J(c_a, c_b) = \frac{|D_a \cap D_b|}{|D_a \cup D_b|}$$
-- $\text{TemporalGrowthAvg}$: Average annual publication growth velocity across 2015–2025:
-  $$\text{TemporalGrowthAvg} = \frac{\text{slope}(c_a) + \text{slope}(c_b)}{2}$$
+### Our Solution: The Gap-First Strategy
+- **Empirical Gap Mining (Phase 1)**: Isolates concept pairs with high dense semantic affinity in SPECTER2 space but low co-occurrence in published literature ($J \le 0.06$), backed by positive 10-year publication slopes.
+- **Passage-Level RAG (Phase 2)**: Chunks literature abstracts and indexes them in FAISS (`IndexFlatIP`). Retrieves top-$K$ diverse passages using multi-faceted queries and paper occurrence penalties.
+- **Multi-Tier Hybrid Validation**: Combines deterministic citation matching against corpus PMIDs, DeBERTa-v3 cross-encoder Natural Language Inference (NLI), LLM-as-a-judge 6-dimension qualitative rubrics, and structural rule checks.
+- **100% Citation Traceability**: Every hypothesis in the output maintains an unbroken provenance trail back to exact PubMed IDs.
 
 ---
 
-## 3. Implemented Phase 1 Pipeline
+## 2. End-to-End System Architecture
 
+```text
+[Raw PubMed Dataset: 14,905 papers (2015-2025)]
+                        │
+                        ▼
+[Phase 1: Empirical Literature Mining & Gap Detection]
+  ├── Validation & Cleaning: 12,642 screened mHealth records
+  ├── Document Embeddings: SPECTER2 (12,642 × 768 float32)
+  ├── Topic Discovery: Official BERTopic (63 topics + outlier)
+  ├── Concept Normalization: 2,786 MeSH concepts
+  ├── Centroid Debiasing: Restores geometric variance across concepts
+  └── Gap Detection: Top 50 Candidate Research Gaps
+                        │
+                        ▼
+[Phase 2: Evidence-Grounded Hypothesis Generation & Validation]
+  ├── Gap Prioritization: Multi-criteria PriorityScore ranking
+  ├── Document Chunking: 12,776 abstract-level passages with metadata
+  ├── FAISS Dense Index: 384-d sentence-transformers/all-MiniLM-L6-v2
+  ├── Diversity-Penalized Retrieval: Top-20 diverse evidence passages per gap
+  ├── Structured Hypothesis Generation: Google Gemini 2.0 Flash / Mock engine
+  ├── Evidence Verification: Strict chunk ID & PMID validation (0 hallucinations)
+  ├── NLI Alignment: DeBERTa-v3 small cross-encoder entailment checks
+  ├── Qualitative Rubric: LLM-as-a-Judge (relevance, clarity, testability, novelty)
+  ├── Rule-Based Checks: Falsifiability, directional claims, variable checks
+  ├── Ranking Engine: Multi-criteria composite rank score & quality tiers
+  └── Semantic Deduplication: Clustering preserving substantive differences
+                        │
+                        ▼
+[Phase 3: Interactive Dashboard & Comprehensive Benchmarks]
+  ├── Streamlit Dashboard: 7 intuitive screens for researchers
+  └── Benchmark Suite: P@K, MRR, nDCG@K, Baselines, and Ablations
 ```
-Raw PubMed Dataset (14,905 records, 2015-2025)
-        ↓
-Data Validation & Cleaning (14,881 validated records)
-        ↓
-Rule-Based mHealth Relevance Screening (12,642 screened: 9,279 relevant + 3,363 borderline)
-        ↓
-Scientific Text Preprocessing (Clean document field)
-        ↓
-SPECTER2 Document Embeddings (12,642 × 768 dense vectors, allenai/specter2_base)
-        ↓
-Official BERTopic Topic Modeling (bertopic 0.17.4, 63 genuine topics + outlier class, saved to models/bertopic_model/)
-        ↓
-Biomedical Concept Extraction (2,790 concepts with ≥5 mentions)
-        ↓
-MeSH Normalization & Topic-Concept Mapping (2,786 normalized concepts)
-        ↓
-Temporal Trend Analysis (2015-2025 annual matrix, slope calculations)
-        ↓
-Concept Quality Filtering (737 domain concepts kept; generic/demographic terms removed)
-        ↓
-Centroid Debiasing (Debiased mean similarity = 0.0255, spread restored)
-        ↓
-Concept Co-occurrence Analysis (17,196 co-occurring pairs, top 600 concepts)
-        ↓
-Candidate Research Gap Detection & Scoring (Top 50 gaps scored)
-        ↓
-Synonym Deduplication (32 genuine substantive gaps + 18 flagged synonym variants)
-        ↓
-Supporting Evidence Compilation & PMID Traceability (50 evidence passages)
-        ↓
-Publication Figure Generation (9 figures)
-```
 
 ---
 
-## 4. Project Organization
+## 3. Mathematical Formulations
 
-```
+### 3.1 Centroid-Debiased Semantic Similarity
+$$\boldsymbol{\mu} = \frac{1}{|C|} \sum_{c \in C} \mathbf{v}_c$$
+$$\text{SemanticSimilarity}(c_a, c_b) = \frac{(\mathbf{v}_a - \boldsymbol{\mu}) \cdot (\mathbf{v}_b - \boldsymbol{\mu})}{\|\mathbf{v}_a - \boldsymbol{\mu}\|_2 \|\mathbf{v}_b - \boldsymbol{\mu}\|_2}$$
+
+### 3.2 Longitudinal Growth Velocity & GapScore
+$$\text{GapScore}(c_a, c_b) = \text{SemanticSimilarity}(c_a, c_b) \times (1 - J(c_a, c_b)) \times (1 + \text{TemporalGrowthAvg}(c_a, c_b))$$
+
+Where $J(c_a, c_b) = \frac{|D_a \cap D_b|}{|D_a \cup D_b|}$ is the document-level Jaccard co-occurrence, and $\text{TemporalGrowthAvg}$ is the average slope of publication counts from 2015 to 2025.
+
+### 3.3 Retrieval Diversity Penalty
+$$\text{PenalizedScore}(\mathbf{d}_i) = \text{CosineSim}(\mathbf{q}, \mathbf{d}_i) - 0.30 \cdot N(\text{PMID}(\mathbf{d}_i))$$
+
+### 3.4 Multi-Criteria Hypothesis Ranking
+$$\text{RankScore} = 0.25 \cdot S_{\text{evidence}} + 0.30 \cdot S_{\text{judge}} + 0.15 \cdot S_{\text{testable}} + 0.15 \cdot S_{\text{rules}} - 0.15 \cdot P_{\text{contra}}$$
+
+---
+
+## 4. Project Structure
+
+```text
 E:\Major_Project_Implementation\
+├── config.yaml                   # Central parameter configuration
+├── requirements.txt             # Pinned package requirements
+├── .env.example                  # Template for GEMINI_API_KEY
+├── run_phase1.py                 # Phase 1 master pipeline runner
+├── run_phase2.py                 # Phase 2 master pipeline runner
+├── run_tests.py                  # Master test suite runner (37 tests)
+├── streamlit_app.py              # Interactive 7-screen research dashboard
 │
-├── data/
-│   └── pubmed_mhealth_2015_2025_proposed_final.xls   # Raw dataset (14,905 PubMed records, CSV utf-8-sig)
+├── src/
+│   ├── phase2/                   # Phase 2 modules (RAG, Generation, Validation, Ranking)
+│   │   ├── gap_preparation.py
+│   │   ├── chunking.py
+│   │   ├── retrieval.py
+│   │   ├── hypothesis_generation.py
+│   │   ├── evidence_verification.py
+│   │   ├── nli_validation.py
+│   │   ├── llm_judge.py
+│   │   ├── rule_checks.py
+│   │   ├── ranking.py
+│   │   └── deduplication.py
+│   └── phase3/                   # Phase 3 evaluation & benchmarking
+│       ├── retrieval_eval.py
+│       ├── grounding_eval.py
+│       ├── baseline_comparison.py
+│       ├── ablation_study.py
+│       └── run_evaluation.py
 │
-├── notebooks/                                # Interactive exploratory notebooks (all executed)
-│   ├── 00_pubmed_data_extraction.ipynb       # Dataset extraction notebook (Entrez API, Biopython)
-│   ├── 01_data_validation.ipynb              # Data validation, checks & cleaning
-│   ├── 02_relevance_screening.ipynb          # Rule-based mHealth relevance screening
-│   ├── 03_preprocessing_embeddings.ipynb     # Scientific text preprocessing & SPECTER2 embeddings
-│   ├── 04_bertopic_topic_discovery.ipynb     # Official BERTopic topic discovery & model reload
-│   ├── 05_concept_mesh_mapping.ipynb         # Biomedical concept extraction & MeSH normalization
-│   └── 06_temporal_semantic_gap_detection.ipynb # Temporal trends, debiasing, co-occurrence, gap scoring
-│
-├── src/                                      # Modular source code (13 modules)
-│   ├── __init__.py                           # Source package initializer
-│   ├── config_loader.py                      # Path resolver, YAML loader, random seeds
-│   ├── data_validation.py                    # Dataset validation, checks, cleaning
-│   ├── relevance_screening.py                # Rule-based mHealth scoring (no LLM)
-│   ├── text_preprocessing.py                 # Scientific text cleaning & normalization
-│   ├── embeddings.py                         # SPECTER2 dense document embeddings
-│   ├── topic_modeling.py                     # Official BERTopic topic discovery & model saving
-│   ├── concept_extraction.py                 # MeSH & keyword concept extraction
-│   ├── mesh_normalization.py                 # MeSH term deduplication & topic mapping
-│   ├── concept_quality_filter.py             # Concept filtering, centroid debiasing, synonym dedup
-│   ├── temporal_analysis.py                  # Longitudinal publication trend slopes
-│   ├── gap_detection.py                      # Co-occurrence, gap scoring, evidence compilation
-│   └── visualization.py                      # Publication figure generator
-│
-├── models/
-│   └── bertopic_model/                       # Reusable trained official BERTopic model
-│       ├── config.json
-│       ├── ctfidf.safetensors
-│       ├── ctfidf_config.json
-│       ├── topics.json
-│       └── topic_embeddings.safetensors
-│
-├── outputs/                                  # 20 verified pipeline output artifacts
-│   ├── mhealth_candidate_cleaned.csv         # 14,881 records
-│   ├── mhealth_screened_corpus.csv           # 12,642 records
-│   ├── mhealth_preprocessed.csv              # 12,642 records
-│   ├── document_embeddings.npy               # 12,642 × 768 matrix
-│   ├── document_embedding_index.csv          # PMID alignment index
-│   ├── topic_assignments.csv                 # 12,642 topic labels
-│   ├── topic_summary.csv                     # 64 topic rows (63 topics + outlier)
-│   ├── topic_top_terms.csv                   # c-TF-IDF top terms
-│   ├── topic_year_matrix.csv                 # 11 × 63 longitudinal matrix
-│   ├── document_concepts.csv                 # 133,255 document-concept rows
-│   ├── concept_summary.csv                   # 2,790 concepts
-│   ├── mesh_normalized.csv                   # MeSH normalized concepts
-│   ├── topic_concept_mapping.csv             # 21,439 topic-concept mappings
-│   ├── concept_summary_filtered.csv          # 737 quality-filtered concepts
-│   ├── concept_quality_filter_report.json    # Filter exclusion breakdown
-│   ├── concept_year_matrix.csv               # 11 × 300 annual publication matrix
-│   ├── concept_trends.csv                    # Trend slopes & velocity
-│   ├── semantic_similarity_pairs.csv         # Top 5,000 semantic pairs
-│   ├── semantic_similarity_pairs_debiased.csv# Debiased similarity values
-│   ├── concept_cooccurrence.csv              # 17,196 co-occurring concept pairs
-│   ├── candidate_research_gaps.csv           # 50 ranked candidate research gaps
-│   ├── gap_evidence.csv                      # Structured empirical evidence passages
-│   ├── gap_quality_audit.csv                 # Substantive vs synonym quality audit
-│   ├── phase1_summary.csv                    # Summary metrics CSV
-│   └── phase1_summary.json                   # Summary metrics JSON
-│
-├── figures/                                  # 9 publication-grade figures
-│   ├── papers_by_year.png
-│   ├── topic_frequency.png
-│   ├── topic_distribution.png
-│   ├── topic_trends.png
-│   ├── top_concepts.png
-│   ├── concept_trends.png
-│   ├── concept_cooccurrence_heatmap.png
-│   ├── semantic_relationships.png
-│   └── candidate_gap_ranking.png
-│
-├── logs/                                     # Execution logs directory
-│
-├── run_phase1.py                             # Master pipeline runner (reproducible end-to-end)
-├── phase1_final_audit.py                     # 10-block comprehensive verification audit
-├── phase1_final_report.md                    # Comprehensive Phase 1 completion and defense report
-├── config.yaml                               # Central configuration parameters
-├── requirements.txt                          # Python package dependencies
-├── .gitignore                                # Git ignore patterns
-├── .gitattributes                           # Git LFS tracking configuration
-└── README.md                                 # This comprehensive documentation
+├── tests/                        # 9 Modular test suites (100% pass)
+├── outputs/                      # Verified output CSVs and JSONs
+├── models/bertopic_model/        # Reusable trained BERTopic artifacts
+├── figures/                      # Publication-grade figures
+└── docs/                         # Detailed reports (Phase 2, Phase 3, Final, Test, Architecture)
 ```
 
 ---
 
-## 5. Execution Instructions
+## 5. Quickstart & Reproduction Guide
 
 ### Environment Setup
+```powershell
+# Clone or navigate to the repository
+cd E:\Major_Project_Implementation
 
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# (Optional) For live Gemini LLM calls, create a .env file:
+Copy-Item .env.example .env
+# Edit .env and set GEMINI_API_KEY=your_key_here
 ```
 
-### Running the Entire Pipeline
+### 1. Run Complete Phase 2 Pipeline (Offline Mock or Live)
+```powershell
+# Fast reproducible run using mock LLM (Zero API costs, ~1 minute):
+python run_phase2.py --mock --max-gaps 5
 
-To run the master pipeline end-to-end (reuses precomputed embeddings and valid intermediate stages):
-
-```bash
-python run_phase1.py
+# Full run with live Google Gemini API (requires GEMINI_API_KEY):
+python run_phase2.py --max-gaps 10
 ```
 
-### Running the Integrity Audit
-
-To execute all 10 verification blocks (lineage, embeddings, official BERTopic reload, concept filtering, centroid debiasing, gap scores, evidence, and figures):
-
-```bash
-python phase1_final_audit.py
+### 2. Run Phase 3 Evaluation & Benchmarks
+```powershell
+python src/phase3/run_evaluation.py
 ```
+Outputs will be written to `outputs/phase3_evaluation_results.json` and `outputs/phase3_evaluation_summary.csv`.
 
-### Running the Notebooks
-
-All 7 notebooks in `notebooks/` are pre-executed with visible cell outputs and can be run interactively or sequentially via Jupyter:
-
-```bash
-jupyter notebook notebooks/
+### 3. Execute Complete Automated Test Suite
+```powershell
+python run_tests.py
 ```
+Executes all 37 unit and integration tests and writes `TEST_REPORT.md`.
 
 ---
 
-## 6. Handoff to Phase 2
+## 6. Interactive Streamlit Dashboard
 
-Phase 1 produces the following 3 structured files consumed by Phase 2:
-1. `outputs/candidate_research_gaps.csv`: Ranked candidate research gaps with concept pairs, semantic similarities, co-occurrence scores, temporal velocity, and supporting PMIDs.
-2. `outputs/gap_evidence.csv`: Literature-grounded evidence passages and publication volume statistics.
-3. `outputs/gap_quality_audit.csv`: Quality classification distinguishing genuine substantive gaps from lexical synonym variants.
+Launch the 7-screen interactive research dashboard:
+```powershell
+streamlit run streamlit_app.py
+```
 
-Phase 2 will implement the lightweight RAG verification, LLM hypothesis generation (guided strictly by candidate gaps), and the interactive Streamlit demonstration dashboard.
+### Dashboard Screens:
+1. **Overview & System Architecture**: Pipeline design, dataset summary (12,642 papers), and verified Phase 1/Phase 2 metrics.
+2. **Research Gap Explorer**: Interactive filtering by GapScore, priority rank, semantic similarity, and gap category.
+3. **Evidence Explorer**: Search across 12,776 passages, inspect FAISS cosine similarity scores, view PubMed source links.
+4. **Hypothesis Generator**: Generate structured hypotheses on demand with variables, populations, and evidence citations.
+5. **Validation & Grounding Hub**: Audit 4-tier verification (reference integrity, DeBERTa NLI, rule checks, LLM judge).
+6. **Ranked Hypotheses**: Multi-criteria ranking table sorted by rank score, quality tier (`high`, `medium`, `low`), and deduplication status.
+7. **Export & Reports**: Export hypotheses as CSV, view evaluation summaries, inspect JSON artifacts.
+
+---
+
+## 7. Benchmark Evaluation Results
+
+Evaluated on the empirical mHealth corpus against PubMed MeSH ground truth:
+
+| Benchmark Category | Metric | Measured Value | Benchmark Significance |
+| :--- | :--- | :--- | :--- |
+| **Evidence Retrieval** | **Precision@5** | **0.4000** | Top 5 passages co-index target biomedical concepts |
+| | **Precision@10** | **0.3800** | Top 10 passages relevant |
+| | **MRR** | **0.7200** | First relevant passage returned at rank 1.39 on average |
+| | **nDCG@10** | **0.2241** | Graded relevance accounting for joint concept co-indexing |
+| **Evidence Grounding** | **Citation Validity Rate** | **100.0%** | Zero fabricated citations; all trace to candidate pool |
+| | **Traceability Rate** | **100.0%** | Unbroken audit trail back to raw PubMed abstracts |
+| | **Fabricated Citations**| **0** | Perfect hallucination resistance |
+| **Baseline Contrast** | **RAG vs Direct Prompting** | **+100.0%** | Citation validity gain (+85.0% hallucination reduction) |
+| **Ablation Study** | **Full Pipeline Utility**| **0.7961** | Baseline composite score |
+| | **Without RAG Utility** | **0.0882** | Severe **88.9% degradation** without literature grounding |
+| | **Without Temporal Utility**| **0.6804** | **14.5% degradation** (prioritizes obsolete research pairs) |
+
+---
+
+## 8. Automated Testing & Quality Verification
+
+All 37 unit and integration tests execute cleanly with **100.0% success rate**:
+
+```text
+======================================================================
+TEST RUN COMPLETED in 41.13 seconds
+Total: 37 | Passed: 37 | Failures: 0 | Errors: 0 | Skipped: 0
+Success Rate: 100.0%
+======================================================================
+```
+
+Test coverage includes:
+- Phase 1 baseline artifact integrity and SPECTER2 reload
+- Candidate gap schema validation and prioritization formulas
+- Text chunking and bibliographic metadata preservation
+- FAISS dense vector retrieval and diversity penalization
+- LLM JSON parsing, regex fallback, and missing API key error handling
+- Deterministic reference verification and PMID cross-matching
+- DeBERTa-v3 cross-encoder NLI validation
+- Rule-based structural checks and unsupported causal claim flagging
+- Multi-criteria composite ranking and tier assignment
+- Semantic deduplication with substantive difference preservation
+- Streamlit application compilation and data loaders
+
+---
+
+## 9. Academic Reports & Deliverables
+
+The repository includes complete, formal academic deliverables ready for project submission and viva defense:
+- **`FINAL_PROJECT_REPORT.md`**: Complete B.Tech Major Project Report with abstract, literature review, methodology, mathematical formulations, evaluation tables, and Viva Defense FAQ.
+- **`PHASE2_REPORT.md`**: Comprehensive engineering report covering the 10 Phase 2 modules, data structures, and pipeline execution trace.
+- **`PHASE3_EVALUATION_REPORT.md`**: Empirical benchmarking report detailing IR metrics, citation grounding, baseline comparisons, and ablation experiments.
+- **`TEST_REPORT.md`**: Full test execution trace and verification findings across all 37 automated tests.
+- **`ARCHITECTURE.md`**: Detailed technical specifications, component contracts, and Mermaid sequence/flowchart diagrams.

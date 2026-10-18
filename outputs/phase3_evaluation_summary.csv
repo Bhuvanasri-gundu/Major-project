@@ -1,0 +1,17 @@
+﻿metric_category,metric_name,value,benchmark_note
+Retrieval,Precision@5,0.4,PubMed MeSH ground truth
+Retrieval,Precision@10,0.38,PubMed MeSH ground truth
+Retrieval,Recall@10,0.0268,Corpus relevant pool
+Retrieval,Mean Reciprocal Rank (MRR),0.72,First relevant hit rank
+Retrieval,nDCG@10,0.2241,"Graded relevance 2=joint, 1=single"
+Grounding,Citation Validity Rate,1.0,Cited IDs matching candidate pool
+Grounding,Traceability Rate,1.0,Hypotheses with 100% valid citations
+Grounding,Evidence Coverage,0.0667,Fraction of retrieved chunks cited
+Grounding,NLI Entailment Rate,6.67,DeBERTa-v3 cross-encoder
+Grounding,Fabricated Citations,0,Hallucinated reference count
+Baseline,Paper Diversity Gain,+0.0%,vs Standard Dense (no diversity)
+Baseline,Hallucination Reduction,85.0%,RAG vs Direct Prompting (No RAG)
+Ablation,Full Pipeline Utility,0.7961,Composite metric
+Ablation,Without RAG Utility,0.0882,Direct Prompting ablation
+Ablation,Without NLI Utility,0.7726,No cross-encoder ablation
+Ablation,Without Temporal Utility,0.6804,Static gap score ablation

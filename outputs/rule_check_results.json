@@ -1,0 +1,812 @@
+{
+  "GAP-001_hyp_1": {
+    "hypothesis_id": "GAP-001_hyp_1",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Daily active engagement score in health services accessibility application', DV='Standardized utilization and efficacy metrics in rural health services'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Adult patient cohort indicated for health services accessibility and rural health services management'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'association'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-31702564-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-001_hyp_2": {
+    "hypothesis_id": "GAP-001_hyp_2",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Multi-modal biometric and self-report trend patterns collected via health services accessibility', DV='Incident acute exacerbation or referral requirement for rural health services within 30 days'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'High-risk ambulatory patients transitioning between primary care and rural health services'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'prediction'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-31899453-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-001_hyp_3": {
+    "hypothesis_id": "GAP-001_hyp_3",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Automated closed-loop algorithmic feedback delivered via health services accessibility interface', DV='Primary clinical endpoint and access equity in rural health services'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Underserved or rural populations requiring access to rural health services'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'causal'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-25940254-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "warning",
+        "message": "Hypothesis notes 1 contradictory evidence items, but limitations section does not explicitly discuss conflicting findings."
+      }
+    ],
+    "passed_count": 5,
+    "failed_count": 3,
+    "warning_count": 1,
+    "overall_status": "fail"
+  },
+  "GAP-002_hyp_1": {
+    "hypothesis_id": "GAP-002_hyp_1",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Daily active engagement score in anti-hiv agents application', DV='Standardized utilization and efficacy metrics in antiretroviral therapy'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Adult patient cohort indicated for anti-hiv agents and antiretroviral therapy management'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'association'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-34787590-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-002_hyp_2": {
+    "hypothesis_id": "GAP-002_hyp_2",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Multi-modal biometric and self-report trend patterns collected via anti-hiv agents', DV='Incident acute exacerbation or referral requirement for antiretroviral therapy within 30 days'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'High-risk ambulatory patients transitioning between primary care and antiretroviral therapy'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'prediction'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-35107427-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-002_hyp_3": {
+    "hypothesis_id": "GAP-002_hyp_3",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Automated closed-loop algorithmic feedback delivered via anti-hiv agents interface', DV='Primary clinical endpoint and access equity in antiretroviral therapy'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Underserved or rural populations requiring access to antiretroviral therapy'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'causal'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-31298566-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "warning",
+        "message": "Hypothesis notes 1 contradictory evidence items, but limitations section does not explicitly discuss conflicting findings."
+      }
+    ],
+    "passed_count": 5,
+    "failed_count": 3,
+    "warning_count": 1,
+    "overall_status": "fail"
+  },
+  "GAP-003_hyp_1": {
+    "hypothesis_id": "GAP-003_hyp_1",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Daily active engagement score in mobile health units application', DV='Standardized utilization and efficacy metrics in rural health services'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Adult patient cohort indicated for mobile health units and rural health services management'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'association'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-31702564-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-003_hyp_2": {
+    "hypothesis_id": "GAP-003_hyp_2",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Multi-modal biometric and self-report trend patterns collected via mobile health units', DV='Incident acute exacerbation or referral requirement for rural health services within 30 days'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'High-risk ambulatory patients transitioning between primary care and rural health services'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'prediction'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-28925418-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-003_hyp_3": {
+    "hypothesis_id": "GAP-003_hyp_3",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Automated closed-loop algorithmic feedback delivered via mobile health units interface', DV='Primary clinical endpoint and access equity in rural health services'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Underserved or rural populations requiring access to rural health services'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'causal'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-36160638-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "warning",
+        "message": "Hypothesis notes 1 contradictory evidence items, but limitations section does not explicitly discuss conflicting findings."
+      }
+    ],
+    "passed_count": 5,
+    "failed_count": 3,
+    "warning_count": 1,
+    "overall_status": "fail"
+  },
+  "GAP-004_hyp_1": {
+    "hypothesis_id": "GAP-004_hyp_1",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Daily active engagement score in community health workers application', DV='Standardized utilization and efficacy metrics in rural health services'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Adult patient cohort indicated for community health workers and rural health services management'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'association'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-31702564-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-004_hyp_2": {
+    "hypothesis_id": "GAP-004_hyp_2",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Multi-modal biometric and self-report trend patterns collected via community health workers', DV='Incident acute exacerbation or referral requirement for rural health services within 30 days'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'High-risk ambulatory patients transitioning between primary care and rural health services'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'prediction'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-28925418-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-004_hyp_3": {
+    "hypothesis_id": "GAP-004_hyp_3",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Automated closed-loop algorithmic feedback delivered via community health workers interface', DV='Primary clinical endpoint and access equity in rural health services'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Underserved or rural populations requiring access to rural health services'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'causal'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-28283148-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "warning",
+        "message": "Hypothesis notes 1 contradictory evidence items, but limitations section does not explicitly discuss conflicting findings."
+      }
+    ],
+    "passed_count": 5,
+    "failed_count": 3,
+    "warning_count": 1,
+    "overall_status": "fail"
+  },
+  "GAP-005_hyp_1": {
+    "hypothesis_id": "GAP-005_hyp_1",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Daily active engagement score in computer security application', DV='Standardized utilization and efficacy metrics in security'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Adult patient cohort indicated for computer security and security management'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'association'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-28344359-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-005_hyp_2": {
+    "hypothesis_id": "GAP-005_hyp_2",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Multi-modal biometric and self-report trend patterns collected via computer security', DV='Incident acute exacerbation or referral requirement for security within 30 days'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'High-risk ambulatory patients transitioning between primary care and security'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'prediction'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-30672738-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "pass",
+        "message": "No contradictory evidence identified for this hypothesis."
+      }
+    ],
+    "passed_count": 6,
+    "failed_count": 3,
+    "warning_count": 0,
+    "overall_status": "fail"
+  },
+  "GAP-005_hyp_3": {
+    "hypothesis_id": "GAP-005_hyp_3",
+    "checks": [
+      {
+        "check_name": "has_variables",
+        "status": "pass",
+        "message": "Variables specified: IV='Automated closed-loop algorithmic feedback delivered via computer security interface', DV='Primary clinical endpoint and access equity in security'."
+      },
+      {
+        "check_name": "has_population",
+        "status": "pass",
+        "message": "Target population specified: 'Underserved or rural populations requiring access to security'."
+      },
+      {
+        "check_name": "falsifiability",
+        "status": "fail",
+        "message": "Hypothesis statement is empty; cannot evaluate falsifiability."
+      },
+      {
+        "check_name": "causal_language",
+        "status": "pass",
+        "message": "Language alignment verified for relationship type 'causal'."
+      },
+      {
+        "check_name": "evidence_references",
+        "status": "pass",
+        "message": "Hypothesis references 1 supporting evidence items: CHK-25940254-0."
+      },
+      {
+        "check_name": "evidence_coverage",
+        "status": "pass",
+        "message": "All 1 cited evidence IDs confirmed in the retrieved evidence pool."
+      },
+      {
+        "check_name": "specificity",
+        "status": "fail",
+        "message": "Hypothesis lacks measurable or operational terminology (no quantitative endpoints, clinical outcomes, or sensor metrics detected)."
+      },
+      {
+        "check_name": "hypothesis_length",
+        "status": "fail",
+        "message": "Hypothesis statement is empty (0 words)."
+      },
+      {
+        "check_name": "conflicting_evidence_acknowledged",
+        "status": "warning",
+        "message": "Hypothesis notes 1 contradictory evidence items, but limitations section does not explicitly discuss conflicting findings."
+      }
+    ],
+    "passed_count": 5,
+    "failed_count": 3,
+    "warning_count": 1,
+    "overall_status": "fail"
+  }
+}
