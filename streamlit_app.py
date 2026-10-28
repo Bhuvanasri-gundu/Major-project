@@ -134,6 +134,20 @@ st.sidebar.warning(
     "They are NOT validated scientific claims."
 )
 
+# API Configuration in Sidebar
+with st.sidebar.expander("🔑 Gemini API Settings", expanded=False):
+    st.caption("Optional: Set your key here or via `.env` file / environment variable.")
+    sidebar_key = st.text_input(
+        "GEMINI_API_KEY",
+        value=os.environ.get("GEMINI_API_KEY", ""),
+        type="password",
+        help="Get a free key from https://aistudio.google.com/app/apikey",
+        key="sidebar_gemini_key"
+    )
+    if sidebar_key:
+        os.environ["GEMINI_API_KEY"] = sidebar_key
+        st.success("API key loaded!")
+
 # Pipeline status
 p2_summary = load_json(OUTPUTS_DIR / "phase2_summary.json")
 if p2_summary:
@@ -462,8 +476,9 @@ elif page == "⚡ Hypothesis Generation":
         selected_row = gaps.iloc[selected_idx].to_dict()
 
         col_g1, col_g2 = st.columns(2)
+        has_key = bool(os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY"))
         with col_g1:
-            use_mock = st.checkbox("Use mock generator (fast offline demo)", value=True, key="use_mock_box")
+            use_mock = st.checkbox("Use mock generator (fast offline demo)", value=not has_key, key="use_mock_box")
         with col_g2:
             num_hyp = st.slider("Number of Hypotheses", 1, 3, 2, key="num_hyp_slider")
 
@@ -477,7 +492,10 @@ elif page == "⚡ Hypothesis Generation":
                     retriever = EvidenceRetriever(index_path=index_dir) if index_dir.exists() else None
                     evidence = retriever.retrieve_for_gap(selected_row, top_k=10) if retriever else []
 
-                    generator = HypothesisGenerator(use_mock=use_mock)
+                    generator = HypothesisGenerator(
+                        use_mock=use_mock,
+                        api_key=os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+                    )
                     live_hyps = generator.generate_hypotheses(selected_row, evidence, max_hypotheses=num_hyp)
 
                     st.success(f"Successfully generated {len(live_hyps)} hypotheses for [{selected_row.get('concept_a')}] ↔ [{selected_row.get('concept_b')}]!")
