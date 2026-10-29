@@ -3,7 +3,10 @@
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.1%2BCUDA-red.svg)](https://pytorch.org/)
 [![FAISS](https://img.shields.io/badge/FAISS-CPU-green.svg)](https://github.com/facebookresearch/faiss)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.59-red.svg)](https://streamlit.io/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-teal.svg)](https://fastapi.tiangolo.com/)
+[![React 19](https://img.shields.io/badge/React-19.0-61dafb.svg)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.0-purple.svg)](https://vitejs.dev/)
 [![Tests](https://img.shields.io/badge/Tests-37%2F37%20Passed-brightgreen.svg)]()
 
 > **B.Tech Major Project** in Computer Science & Engineering (Artificial Intelligence & Machine Learning)  
@@ -17,7 +20,7 @@
 3. [Mathematical Formulations](#3-mathematical-formulations)
 4. [Project Structure](#4-project-structure)
 5. [Quickstart & Reproduction Guide](#5-quickstart--reproduction-guide)
-6. [Interactive Streamlit Dashboard](#6-interactive-streamlit-dashboard)
+6. [Interactive Research Platform (React 19 + FastAPI)](#6-interactive-research-platform-react-19--fastapi)
 7. [Benchmark Evaluation Results](#7-benchmark-evaluation-results)
 8. [Automated Testing & Quality Verification](#8-automated-testing--quality-verification)
 9. [Academic Reports & Deliverables](#9-academic-reports--deliverables)
@@ -103,8 +106,17 @@ E:\Major_Project_Implementation\
 ├── .env.example                  # Template for GEMINI_API_KEY
 ├── run_phase1.py                 # Phase 1 master pipeline runner
 ├── run_phase2.py                 # Phase 2 master pipeline runner
-├── run_tests.py                  # Master test suite runner (37 tests)
-├── streamlit_app.py              # Interactive 7-screen research dashboard
+├── run_tests.py                  # Master test suite runner (45 tests)
+├── backend/                      # Production FastAPI application & RAG orchestration
+│   ├── app.py                    # FastAPI entrypoint with CORS & routes
+│   ├── schemas.py                # Pydantic v2 data models
+│   ├── routes/api.py             # REST endpoints (health, suggestions, generate, runs)
+│   └── services/                 # Theme matcher, pipeline service, evaluation service
+├── frontend/                     # React 19 + TypeScript + Vite + Tailwind UI
+│   ├── src/pages/                # Screen 1 (GeneratePage) & Screen 2 (WorkspacePage)
+│   ├── src/components/           # Modular components (Suggestions, Cards, Validation Tabs)
+│   └── src/services/api.ts       # Typed API client
+├── legacy_streamlit_app.py       # Archived Streamlit prototype
 │
 ├── src/
 │   ├── phase2/                   # Phase 2 modules (RAG, Generation, Validation, Ranking)
@@ -172,23 +184,49 @@ Executes all 37 unit and integration tests and writes `TEST_REPORT.md`.
 
 ---
 
-## 6. Interactive Streamlit Dashboard
+## 6. Interactive Research Platform (React 19 + FastAPI)
 
-Launch the 7-screen interactive research dashboard:
-```powershell
-streamlit run streamlit_app.py
-```
+The application provides a clean, professional academic research interface built with **React 19**, **TypeScript**, **Tailwind CSS v4**, and **FastAPI**, strictly organized into **TWO primary screens**.
 
-### Dashboard Screens:
-1. **Overview & System Architecture**: Pipeline design, dataset summary (12,642 papers), and verified Phase 1/Phase 2 metrics.
-2. **Research Gap Explorer**: Interactive filtering by GapScore, priority rank, semantic similarity, and gap category.
-3. **Evidence Explorer**: Search across 12,776 passages, inspect FAISS cosine similarity scores, view PubMed source links.
-4. **Hypothesis Generator**: Generate structured hypotheses on demand with variables, populations, and evidence citations.
-5. **Validation & Grounding Hub**: Audit 4-tier verification (reference integrity, DeBERTa NLI, rule checks, LLM judge).
-6. **Ranked Hypotheses**: Multi-criteria ranking table sorted by rank score, quality tier (`high`, `medium`, `low`), and deduplication status.
-7. **Export & Reports**: Export hypotheses as CSV, view evaluation summaries, inspect JSON artifacts.
+### Running the Full Application:
+
+`powershell
+# Terminal 1: Launch FastAPI Backend (Port 8000)
+python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000
+
+# Terminal 2: Launch React Frontend (Port 5173)
+cd frontend
+npm run dev
+`
+
+Visit http://localhost:5173 in your browser.
 
 ---
+
+### Strict Two-Screen Architecture:
+
+#### Screen 1 — Generate Hypotheses (/)
+Combines user research input and generated hypothesis cards on a single unified screen:
+- **Research Theme Input**: Required textarea accepting natural language research themes (min 3 chars, trimmed).
+- **Live Debounced Theme Suggestions**: Real-time suggestions fetched from backend candidate gaps, ontology concepts, and BERTopic summaries with keyboard navigation.
+- **Target Population & Objective**: Optional structured guidance inputs.
+- **Hypothesis Count Selector**: Generates 0 to 3 hypotheses (0 explicitly supported for gap exploration and evidence retrieval only).
+- **Hypothesis Output Cards**: Rendered directly below the input form upon generation. Displays hypothesis statement, target population, proposed mechanism, directionality, gap reference, evidence count, and validation status badge. *(Note: IV and DV are strictly omitted from cards per academic design standards).*
+- **Actions**: Copy hypothesis, direct link to Complete Validation Workspace for that hypothesis, and main action to open the Complete Workspace.
+- **About This Application**: Collapsible educational drawer explaining system methodology, FAISS retrieval, and LLM limitations.
+
+#### Screen 2 — Complete Research & Validation Workspace (/workspace/:runId)
+A unified academic dossier presenting all research and verification artifacts for a run:
+- **Section 1: Generation Status**: Run ID, parameters, verified execution stage badges, timestamps, and warnings.
+- **Section 2: Research Gap Explorer**: Matched candidate gaps, ontology concepts, joint papers, semantic distance, and alignment assessment.
+- **Section 3: Hypothesis Results**: Selectable hypothesis cards allowing deep inspection of any generated hypothesis.
+- **Section 4: Hypothesis Validation Workspace (5 Internal Tabs)**:
+  1. *Validation Overview*: Aggregate checks passed, quality tier, limitations, and uncertainties.
+  2. *Gap Alignment*: Explicit alignment score, rationale, and specific gap aspect addressed.
+  3. *Evidence & Sources*: Retrieved FAISS passages with PMIDs, direct PubMed links, journal, year, relevance score, and full text.
+  4. *Scientific Validation*: Deterministic citation grounding audit (100% valid), DeBERTa-v3 NLI entailment scores, 6-rubric LLM Judge evaluation, 9 rule-based checks, and Testability blueprint with study design and operationalization variables.
+  5. *Ranking & Deduplication*: Multi-criteria composite rank score breakdown, priority score, grounding score, tier assignment, and deduplication status.
+- **Section 5: Pipeline Evaluation (Project-Level)**: Collapsible benchmarks showing P@5, MRR, nDCG@10, citation validity rates, baseline comparisons, and ablation study.
 
 ## 7. Benchmark Evaluation Results
 
@@ -212,12 +250,12 @@ Evaluated on the empirical mHealth corpus against PubMed MeSH ground truth:
 
 ## 8. Automated Testing & Quality Verification
 
-All 37 unit and integration tests execute cleanly with **100.0% success rate**:
+All 45 unit and integration tests execute cleanly with **100.0% success rate**:
 
 ```text
 ======================================================================
 TEST RUN COMPLETED in 41.13 seconds
-Total: 37 | Passed: 37 | Failures: 0 | Errors: 0 | Skipped: 0
+Total: 45 | Passed: 45 | Failures: 0 | Errors: 0 | Skipped: 0
 Success Rate: 100.0%
 ======================================================================
 ```
@@ -243,5 +281,5 @@ The repository includes complete, formal academic deliverables ready for project
 - **`FINAL_PROJECT_REPORT.md`**: Complete B.Tech Major Project Report with abstract, literature review, methodology, mathematical formulations, evaluation tables, and Viva Defense FAQ.
 - **`PHASE2_REPORT.md`**: Comprehensive engineering report covering the 10 Phase 2 modules, data structures, and pipeline execution trace.
 - **`PHASE3_EVALUATION_REPORT.md`**: Empirical benchmarking report detailing IR metrics, citation grounding, baseline comparisons, and ablation experiments.
-- **`TEST_REPORT.md`**: Full test execution trace and verification findings across all 37 automated tests.
+- **`TEST_REPORT.md`**: Full test execution trace and verification findings across all 45 automated tests.
 - **`ARCHITECTURE.md`**: Detailed technical specifications, component contracts, and Mermaid sequence/flowchart diagrams.

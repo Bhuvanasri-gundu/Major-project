@@ -1,55 +1,11 @@
 {
-  "total_input": 15,
-  "total_output": 12,
-  "duplicate_groups": [
-    {
-      "representative_id": "GAP-003_hyp_1",
-      "duplicate_ids": [
-        "GAP-004_hyp_1"
-      ],
-      "similarity_scores": {
-        "GAP-004_hyp_1": 0.8808
-      },
-      "reason": "Semantic similarity >= 0.85 with no substantive difference in variables, target cohort, or relationship direction."
-    },
-    {
-      "representative_id": "GAP-003_hyp_2",
-      "duplicate_ids": [
-        "GAP-004_hyp_2"
-      ],
-      "similarity_scores": {
-        "GAP-004_hyp_2": 0.8781
-      },
-      "reason": "Semantic similarity >= 0.85 with no substantive difference in variables, target cohort, or relationship direction."
-    },
-    {
-      "representative_id": "GAP-001_hyp_3",
-      "duplicate_ids": [
-        "GAP-004_hyp_3"
-      ],
-      "similarity_scores": {
-        "GAP-004_hyp_3": 0.8568
-      },
-      "reason": "Semantic similarity >= 0.85 with no substantive difference in variables, target cohort, or relationship direction."
-    }
-  ],
+  "total_input": 3,
+  "total_output": 3,
+  "duplicate_groups": [],
   "kept_ids": [
-    "GAP-001_hyp_1",
-    "GAP-002_hyp_1",
-    "GAP-003_hyp_1",
-    "GAP-005_hyp_1",
     "GAP-001_hyp_2",
-    "GAP-002_hyp_2",
-    "GAP-003_hyp_2",
-    "GAP-005_hyp_2",
     "GAP-001_hyp_3",
-    "GAP-002_hyp_3",
-    "GAP-003_hyp_3",
-    "GAP-005_hyp_3"
+    "GAP-001_hyp_1"
   ],
-  "removed_ids": [
-    "GAP-004_hyp_1",
-    "GAP-004_hyp_2",
-    "GAP-004_hyp_3"
-  ]
+  "removed_ids": []
 }

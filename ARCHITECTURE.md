@@ -1,7 +1,7 @@
 # System Architecture & Technical Specifications
 
 **Project Title:** Temporal-Semantic Gap-Guided Evidence-Grounded Hypothesis Generation in mHealth Research  
-**Target Platform:** Python 3.11+ / PyTorch / CUDA / Streamlit / Windows 11  
+**Target Platform:** Python 3.11+ / FastAPI / React 19 / TypeScript / Vite / FAISS / Windows 11  
 **Project Root:** `E:\Major_Project_Implementation`  
 
 ---
@@ -34,8 +34,9 @@ flowchart TD
         P8 --> P9["Multi-Criteria Ranking &\nSemantic Deduplication"]
     end
 
-    subgraph Phase3["Phase 3: Interactive UI & Empirical Benchmarking"]
-        P9 --> UI["Streamlit Dashboard\n(7 Comprehensive Screens)"]
+    subgraph Phase3["Phase 3: Production Web Platform & Empirical Benchmarking"]
+        P9 --> API["FastAPI Backend Engine\n(REST Endpoints & Async RAG)"]
+        API --> UI["React 19 + TypeScript UI\n(Strict 2-Screen Academic Interface)"]
         P9 --> EV["Phase 3 Evaluation Suite\n(IR, Baselines, Ablations)"]
     end
 ```
@@ -50,11 +51,20 @@ E:\Major_Project_Implementation\
 │
 ├── config.yaml                   # Central parameter registry (Phases 1, 2, 3)
 ├── requirements.txt             # Pinned package dependencies
-├── .env.example                  # Template for API credentials
+├── .env                          # Local credentials (GEMINI_API_KEY)
 ├── run_phase1.py                 # Phase 1 master pipeline runner
 ├── run_phase2.py                 # Phase 2 master pipeline runner
-├── run_tests.py                  # Master test suite runner
-├── streamlit_app.py              # Interactive 7-screen research dashboard
+├── run_tests.py                  # Master test suite runner (45 tests)
+├── backend/                      # Production FastAPI application & RAG orchestration
+│   ├── app.py                    # FastAPI entrypoint with CORS & routes
+│   ├── schemas.py                # Pydantic v2 data models
+│   ├── routes/api.py             # REST endpoints (health, suggestions, generate, runs)
+│   └── services/                 # Theme matcher, pipeline service, evaluation service
+├── frontend/                     # React 19 + TypeScript + Vite + Tailwind UI
+│   ├── src/pages/                # Screen 1 (GeneratePage) & Screen 2 (WorkspacePage)
+│   ├── src/components/           # Modular components (Suggestions, Cards, Validation Tabs)
+│   └── src/services/api.ts       # Typed API client
+├── legacy_streamlit_app.py       # Preserved Streamlit prototype
 │
 ├── src/                          # Modular Python source packages
 │   ├── config_loader.py          # Path resolver, YAML loader, random seeds
@@ -100,7 +110,8 @@ E:\Major_Project_Implementation\
 │   ├── test_validation.py
 │   ├── test_ranking_deduplication.py
 │   ├── test_end_to_end_pipeline.py
-│   └── test_streamlit_app.py
+│   ├── test_api_endpoints.py
+│   └── test_react_frontend.py
 │
 ├── outputs/                      # Intermediate and final verified artifacts
 ├── models/bertopic_model/        # Reusable trained BERTopic artifacts
@@ -116,30 +127,35 @@ E:\Major_Project_Implementation\
 sequenceDiagram
     autonumber
     actor User as Researcher / User
-    participant App as Streamlit Dashboard
-    participant P2 as Phase 2 Orchestrator
+    participant UI as React 19 Frontend (2 Screens)
+    participant API as FastAPI Backend (/api/*)
+    participant Pipe as PipelineService Orchestrator
     participant Ret as EvidenceRetriever (FAISS)
-    participant LLM as Google Gemini / Mock
-    participant Ver as Evidence Verification
-    participant NLI as NLI Validator (DeBERTa)
-    participant Judge as LLM Judge & Rules
-    participant Rank as Ranking & Dedup Engine
+    participant LLM as Google Gemini (gemini-3.1-flash-lite)
+    participant Ver as Citation Grounding Audit
+    participant NLI as DeBERTa-v3 NLI Validator
+    participant Judge as LLM Judge & 9 Rule Checks
+    participant Rank as Ranking & Semantic Dedup
 
-    User->>App: Launch Dashboard / Select Research Gap
-    App->>P2: Request Prioritized Gap & Context
-    P2->>Ret: Query Evidence (Concept A + Concept B)
-    Ret-->>P2: Top-K Diverse Grounded Chunks (PMIDs)
-    P2->>LLM: Generate Structured Hypothesis (Prompt + Chunks)
-    LLM-->>P2: JSON Hypotheses (IV, DV, Cohort, Cited IDs)
-    P2->>Ver: Verify Cited IDs against Retrieved Pool
-    Ver-->>P2: Valid Citations (0 Hallucinations)
-    P2->>NLI: Validate Alignment (Passage vs Hypothesis)
-    NLI-->>P2: Entailment / Contradiction Probabilities
-    P2->>Judge: Evaluate Rubric (1-5) & Rule Checks
-    Judge-->>P2: Qualitative Scores & Structural Flags
-    P2->>Rank: Compute RankScore & Cluster Duplicates
-    Rank-->>App: Display Ranked, Grounded Hypotheses
-    App-->>User: Interactive 7-Screen Exploration & CSV Export
+    User->>UI: Enter Research Theme & Target Population (Screen 1)
+    UI->>API: GET /api/suggestions?query=... (Debounced)
+    API-->>UI: Live Candidate Gaps & Ontology Terms
+    User->>UI: Click "Generate Hypotheses" (0-3 count)
+    UI->>API: POST /api/generate
+    API->>Pipe: Execute Async Grounded Pipeline
+    Pipe->>Ret: Retrieve Top Diverse Passages from FAISS (12,776 chunks)
+    Ret-->>Pipe: Grounded Passages with PMIDs & Cosine Similarities
+    Pipe->>LLM: Generate Hypotheses conditioned on Passages & Cohort
+    LLM-->>Pipe: JSON Structured Hypotheses with Cited PMIDs
+    Pipe->>Ver: Verify Cited PMIDs against Retrieved Chunks (100% trace)
+    Pipe->>NLI: Run Entailment vs Premise Passages
+    Pipe->>Judge: Run 6-Rubric Evaluation & 9 Deterministic Rule Checks
+    Pipe->>Rank: Compute RankScore & Deduplicate Substantively
+    Pipe-->>API: Persist Run Artifact (outputs/runs/{run_id}.json)
+    API-->>UI: Return Verified Run Data & Hypotheses
+    UI-->>User: Render Grounded Hypotheses on Screen 1 (No IV/DV)
+    User->>UI: Click "View Complete Validation Workspace"
+    UI-->>User: Render Screen 2 (5-Section Unified Workspace & Tabs)
 ```
 
 ---

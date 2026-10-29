@@ -162,7 +162,7 @@ class HypothesisGenerator:
         self.model_name = (
             model_name
             or llm_cfg.get("model_name")
-            or "gemini-2.0-flash"
+            or "gemini-3.1-flash-lite"
         )
 
         # Hyperparameters
@@ -305,6 +305,9 @@ class HypothesisGenerator:
         gap: Union[Dict[str, Any], Any],
         evidence: List[Union[Dict[str, Any], Any]],
         max_hypotheses: int = 3,
+        user_theme: str = "",
+        target_population: str = "",
+        research_objective: str = "",
     ) -> str:
         """Build the complete, structured prompt for Gemini.
 
@@ -316,6 +319,12 @@ class HypothesisGenerator:
             List of evidence passages/chunks.
         max_hypotheses : int, default 3
             Number of hypotheses requested.
+        user_theme : str, optional
+            Natural language research theme from user.
+        target_population : str, optional
+            User-specified target population.
+        research_objective : str, optional
+            User-specified research objective.
 
         Returns
         -------
@@ -342,6 +351,19 @@ class HypothesisGenerator:
 
         evidence_block = "\n".join(evidence_section_lines)
 
+        user_context_block = ""
+        if user_theme or target_population or research_objective:
+            context_lines = ["=== USER-SPECIFIED RESEARCH CONTEXT ==="]
+            if user_theme:
+                context_lines.append(f"- Research Theme: {user_theme}")
+            if target_population:
+                context_lines.append(f"- Target Population Constraint: {target_population} (MANDATORY: You MUST focus the hypothesis and target_population on this specific cohort)")
+            else:
+                context_lines.append("- Target Population: Unspecified by user (derive a realistic, clinically grounded patient cohort directly from the retrieved evidence)")
+            if research_objective:
+                context_lines.append(f"- Research Objective: {research_objective}")
+            user_context_block = "\n".join(context_lines) + "\n\n"
+
         prompt = f"""You are an elite biomedical informatics and mHealth research methodologist.
 Your task is to generate {max_hypotheses} novel, scientifically rigorous, testable, and evidence-grounded hypotheses that bridge a specific literature gap in mobile health (mHealth).
 
@@ -354,7 +376,7 @@ CRITICAL: The underlying corpus contains ONLY peer-reviewed scientific paper ABS
   * Use "causal" ONLY if the intervention design and biological/behavioral mechanism permit causal inference (e.g. prospective randomized controlled trial designs).
   * Otherwise, categorize relationship as "association" or "prediction".
 
-=== RESEARCH GAP CONTEXT ===
+{user_context_block}=== RESEARCH GAP CONTEXT ===
 - Gap Identifier: {g['gap_id']}
 - Concept A: {g['concept_a']} (Found in {g['papers_concept_a']} papers; Growth Trend: {g['trend_a']})
 - Concept B: {g['concept_b']} (Found in {g['papers_concept_b']} papers; Growth Trend: {g['trend_b']})
@@ -545,6 +567,9 @@ Follow this exact schema:
         gap: Union[Dict[str, Any], Any],
         evidence_passages: List[Union[Dict[str, Any], Any]],
         max_hypotheses: Optional[int] = None,
+        user_theme: str = "",
+        target_population: str = "",
+        research_objective: str = "",
     ) -> List[Hypothesis]:
         """Generate structured hypotheses for a single research gap using Gemini.
 
@@ -556,6 +581,12 @@ Follow this exact schema:
             List of evidence chunk dictionaries or objects.
         max_hypotheses : int, optional
             Number of hypotheses to generate. Defaults to self.max_hypotheses_per_gap.
+        user_theme : str, optional
+            Natural language research theme from user.
+        target_population : str, optional
+            User-specified target population.
+        research_objective : str, optional
+            User-specified research objective.
 
         Returns
         -------
@@ -585,7 +616,14 @@ Follow this exact schema:
                 "To generate offline test hypotheses without an API key, use generate_mock_hypotheses()."
             )
 
-        prompt = self._build_prompt(gap, evidence_passages, max_hypotheses=k)
+        prompt = self._build_prompt(
+            gap,
+            evidence_passages,
+            max_hypotheses=k,
+            user_theme=user_theme,
+            target_population=target_population,
+            research_objective=research_objective,
+        )
 
         last_exception = None
         for attempt in range(1, self.retry_attempts + 1):

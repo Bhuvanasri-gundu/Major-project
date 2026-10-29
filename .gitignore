@@ -36,6 +36,11 @@ outputs/chunks.json
 outputs/retrieved_gap_evidence.json
 outputs/generated_hypotheses.json
 outputs/phase2_*.json
+outputs/runs/run_20*.json
+
+# Frontend dependencies & build
+frontend/node_modules/
+frontend/dist/
 
 # Large model caches
 .cache/

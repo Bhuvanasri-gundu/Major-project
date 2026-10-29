@@ -1,9 +1,9 @@
 # Comprehensive Test Execution Report
 
 **Project:** Temporal-Semantic Gap-Guided Evidence-Grounded Hypothesis Generation in mHealth Research  
-**Execution Date:** 2026-10-18 11:16:12  
+**Execution Date:** 2026-10-29 13:45:48  
 **Test Runner:** Python Standard `unittest` Suite  
-**Total Execution Time:** 41.13 seconds  
+**Total Execution Time:** 117.62 seconds  
 
 ---
 
@@ -11,8 +11,8 @@
 
 | Metric | Result |
 | :--- | :--- |
-| **Total Tests Executed** | **37** |
-| **Tests Passed** | **37** |
+| **Total Tests Executed** | **45** |
+| **Tests Passed** | **45** |
 | **Tests Failed** | **0** |
 | **Errors** | **0** |
 | **Skipped** | **0** |
@@ -40,6 +40,14 @@
 ## 3. Detailed Test Log
 
 ```text
+test_evaluation_endpoint (test_api_endpoints.TestAPIEndpoints.test_evaluation_endpoint) ... ok
+test_get_gaps_endpoint (test_api_endpoints.TestAPIEndpoints.test_get_gaps_endpoint) ... ok
+test_get_latest_run_endpoint (test_api_endpoints.TestAPIEndpoints.test_get_latest_run_endpoint) ... ok
+test_health_endpoint (test_api_endpoints.TestAPIEndpoints.test_health_endpoint) ... ok
+test_live_suggestions_endpoint (test_api_endpoints.TestAPIEndpoints.test_live_suggestions_endpoint) ... ok
+test_suggestions_empty_query (test_api_endpoints.TestAPIEndpoints.test_suggestions_empty_query) ... ok
+test_zero_hypothesis_generation_request (test_api_endpoints.TestAPIEndpoints.test_zero_hypothesis_generation_request)
+Verify the 0-count hypothesis case: gap exploration and retrieval only. ... ok
 test_chunk_statistics (test_chunking.TestChunking.test_chunk_statistics) ... ok
 test_create_chunks_preserves_metadata (test_chunking.TestChunking.test_create_chunks_preserves_metadata) ... ok
 test_single_vs_multi_chunk (test_chunking.TestChunking.test_single_vs_multi_chunk) ... ok
@@ -65,12 +73,13 @@ test_preprocessed_corpus_clean_document (test_phase1_artifacts.TestPhase1Artifac
 test_deduplication_preserves_substantive_differences (test_ranking_deduplication.TestRankingDeduplication.test_deduplication_preserves_substantive_differences) ... ok
 test_ranking_formula_weights (test_ranking_deduplication.TestRankingDeduplication.test_ranking_formula_weights) ... ok
 test_semantic_deduplication_merges_identical (test_ranking_deduplication.TestRankingDeduplication.test_semantic_deduplication_merges_identical) ... ok
+test_compiled_dist_exists (test_react_frontend.TestReactFrontend.test_compiled_dist_exists) ... ok
+test_frontend_directory_exists (test_react_frontend.TestReactFrontend.test_frontend_directory_exists) ... ok
+test_react_19_dependency (test_react_frontend.TestReactFrontend.test_react_19_dependency) ... ok
+test_two_primary_screens_implemented (test_react_frontend.TestReactFrontend.test_two_primary_screens_implemented) ... ok
 test_duplicate_passage_removal (test_retrieval.TestRetrieval.test_duplicate_passage_removal) ... ok
 test_index_is_loaded (test_retrieval.TestRetrieval.test_index_is_loaded) ... ok
 test_retrieval_relevance (test_retrieval.TestRetrieval.test_retrieval_relevance) ... ok
-test_streamlit_app_compiles (test_streamlit_app.TestStreamlitApp.test_streamlit_app_compiles) ... ok
-test_streamlit_loads_phase1_data (test_streamlit_app.TestStreamlitApp.test_streamlit_loads_phase1_data) ... ok
-test_streamlit_loads_phase2_data (test_streamlit_app.TestStreamlitApp.test_streamlit_loads_phase2_data) ... ok
 test_evidence_reference_verification_fabricated (test_validation.TestValidation.test_evidence_reference_verification_fabricated) ... ok
 test_evidence_reference_verification_valid (test_validation.TestValidation.test_evidence_reference_verification_valid) ... ok
 test_llm_judge_mock_evaluation (test_validation.TestValidation.test_llm_judge_mock_evaluation) ... ok
@@ -79,7 +88,7 @@ test_rule_checks_flag_unsupported_causal (test_validation.TestValidation.test_ru
 test_rule_checks_pass (test_validation.TestValidation.test_rule_checks_pass) ... ok
 
 ----------------------------------------------------------------------
-Ran 37 tests in 31.003s
+Ran 45 tests in 107.294s
 
 OK
 ```

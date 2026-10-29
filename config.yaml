@@ -192,7 +192,7 @@ phase2:
 
   # ------ LLM (Hypothesis Generation & Judge) ------
   llm:
-    model_name: "gemini-2.0-flash"   # Gemini model for generation
+    model_name: "gemini-3.1-flash-lite"   # Gemini model for generation
     temperature: 0.3                 # lower = more focused
     max_output_tokens: 4096
     max_hypotheses_per_gap: 3

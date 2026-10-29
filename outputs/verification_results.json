@@ -3,900 +3,171 @@
     "hypothesis_id": "GAP-001_hyp_1",
     "reference_result": {
       "hypothesis_id": "GAP-001_hyp_1",
-      "valid_ids": [
-        "CHK-31702564-0"
-      ],
+      "valid_ids": [],
       "invalid_ids": [],
       "missing_ids": [
-        "CHK-33635278-0",
-        "CHK-35076401-0",
-        "CHK-38024907-0",
         "CHK-28722558-0",
         "CHK-35309632-0",
+        "CHK-29516055-0",
         "CHK-31899453-0",
+        "CHK-29184891-0",
+        "CHK-35076401-0",
+        "CHK-31155655-0",
+        "CHK-29538292-0",
+        "CHK-28292206-0",
+        "CHK-32012085-0",
+        "CHK-29159919-0",
+        "CHK-33915917-0",
+        "CHK-28925418-0",
+        "CHK-38024907-0",
+        "CHK-33635278-0",
+        "CHK-25980851-0",
         "CHK-25940254-0",
         "CHK-38913992-0",
-        "CHK-29516055-0",
-        "CHK-26301170-0",
-        "CHK-28292206-0",
-        "CHK-28925418-0",
-        "CHK-32012085-0",
-        "CHK-31155655-0",
-        "CHK-29159919-0",
-        "CHK-25980851-0",
-        "CHK-29538292-0",
-        "CHK-29184891-0",
-        "CHK-33915917-0"
+        "CHK-31702564-0",
+        "CHK-26301170-0"
       ],
       "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
+      "verification_status": "failed",
+      "total_cited": 0,
       "total_pool": 20,
       "details": {
-        "supporting_cited": [
-          "CHK-31702564-0"
-        ],
+        "supporting_cited": [],
         "contradictory_cited": []
       }
     },
     "content_grounded": false,
     "content_similarity": 0.0,
     "corpus_pmid_check": {
-      "real_pmids": [
-        "31702564"
-      ],
+      "real_pmids": [],
       "unknown_pmids": [],
       "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
+      "total_checked": 0,
+      "consistency_score": 1.0,
+      "note": "No explicit PMIDs extracted from cited IDs or text."
     },
-    "evidence_coverage": 0.05,
+    "evidence_coverage": 0.0,
     "overall_passed": false,
-    "overall_score": 0.5625,
+    "overall_score": 0.2,
     "flags": [
-      "insufficient_content_grounding"
+      "no_valid_evidence_cited",
+      "insufficient_content_grounding",
+      "low_evidence_coverage"
     ],
-    "timestamp": "2026-10-18T05:35:31.402008+00:00"
+    "timestamp": "2026-10-29T06:32:01.716595+00:00"
   },
   "GAP-001_hyp_2": {
     "hypothesis_id": "GAP-001_hyp_2",
     "reference_result": {
       "hypothesis_id": "GAP-001_hyp_2",
-      "valid_ids": [
-        "CHK-31899453-0"
-      ],
+      "valid_ids": [],
       "invalid_ids": [],
       "missing_ids": [
-        "CHK-33635278-0",
-        "CHK-35076401-0",
-        "CHK-38024907-0",
         "CHK-28722558-0",
         "CHK-35309632-0",
+        "CHK-29516055-0",
+        "CHK-31899453-0",
+        "CHK-29184891-0",
+        "CHK-35076401-0",
+        "CHK-31155655-0",
+        "CHK-29538292-0",
+        "CHK-28292206-0",
+        "CHK-32012085-0",
+        "CHK-29159919-0",
+        "CHK-33915917-0",
+        "CHK-28925418-0",
+        "CHK-38024907-0",
+        "CHK-33635278-0",
+        "CHK-25980851-0",
         "CHK-25940254-0",
         "CHK-38913992-0",
-        "CHK-29516055-0",
         "CHK-31702564-0",
-        "CHK-26301170-0",
-        "CHK-28292206-0",
-        "CHK-28925418-0",
-        "CHK-32012085-0",
-        "CHK-31155655-0",
-        "CHK-29159919-0",
-        "CHK-25980851-0",
-        "CHK-29538292-0",
-        "CHK-29184891-0",
-        "CHK-33915917-0"
+        "CHK-26301170-0"
       ],
       "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
+      "verification_status": "failed",
+      "total_cited": 0,
       "total_pool": 20,
       "details": {
-        "supporting_cited": [
-          "CHK-31899453-0"
-        ],
+        "supporting_cited": [],
         "contradictory_cited": []
       }
     },
     "content_grounded": false,
     "content_similarity": 0.0,
     "corpus_pmid_check": {
-      "real_pmids": [
-        "31899453"
-      ],
+      "real_pmids": [],
       "unknown_pmids": [],
       "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
+      "total_checked": 0,
+      "consistency_score": 1.0,
+      "note": "No explicit PMIDs extracted from cited IDs or text."
     },
-    "evidence_coverage": 0.05,
+    "evidence_coverage": 0.0,
     "overall_passed": false,
-    "overall_score": 0.5625,
+    "overall_score": 0.2,
     "flags": [
-      "insufficient_content_grounding"
+      "no_valid_evidence_cited",
+      "insufficient_content_grounding",
+      "low_evidence_coverage"
     ],
-    "timestamp": "2026-10-18T05:35:31.421625+00:00"
+    "timestamp": "2026-10-29T06:32:01.741289+00:00"
   },
   "GAP-001_hyp_3": {
     "hypothesis_id": "GAP-001_hyp_3",
     "reference_result": {
       "hypothesis_id": "GAP-001_hyp_3",
-      "valid_ids": [
-        "CHK-25940254-0",
-        "CHK-29538292-0"
-      ],
+      "valid_ids": [],
       "invalid_ids": [],
       "missing_ids": [
-        "CHK-33635278-0",
-        "CHK-35076401-0",
-        "CHK-38024907-0",
         "CHK-28722558-0",
         "CHK-35309632-0",
+        "CHK-29516055-0",
         "CHK-31899453-0",
-        "CHK-38913992-0",
-        "CHK-29516055-0",
-        "CHK-31702564-0",
-        "CHK-26301170-0",
-        "CHK-28292206-0",
-        "CHK-28925418-0",
-        "CHK-32012085-0",
+        "CHK-29184891-0",
+        "CHK-35076401-0",
         "CHK-31155655-0",
+        "CHK-29538292-0",
+        "CHK-28292206-0",
+        "CHK-32012085-0",
         "CHK-29159919-0",
-        "CHK-25980851-0",
-        "CHK-29184891-0",
-        "CHK-33915917-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 2,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-25940254-0"
-        ],
-        "contradictory_cited": [
-          "CHK-29538292-0"
-        ]
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "25940254",
-        "29538292"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 2,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.1,
-    "overall_passed": false,
-    "overall_score": 0.575,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.434034+00:00"
-  },
-  "GAP-002_hyp_1": {
-    "hypothesis_id": "GAP-002_hyp_1",
-    "reference_result": {
-      "hypothesis_id": "GAP-002_hyp_1",
-      "valid_ids": [
-        "CHK-34787590-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-27535717-0",
-        "CHK-27028183-0",
-        "CHK-35107427-0",
-        "CHK-25650838-0",
-        "CHK-29299790-0",
-        "CHK-37856173-0",
-        "CHK-35113030-0",
-        "CHK-40173448-0",
-        "CHK-29986845-0",
-        "CHK-31298566-0",
-        "CHK-38233908-0",
-        "CHK-35349466-0",
-        "CHK-29406429-0",
-        "CHK-39881127-0",
-        "CHK-32519966-0",
-        "CHK-30021706-0",
-        "CHK-35254270-0",
-        "CHK-31738174-0",
-        "CHK-37104001-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-34787590-0"
-        ],
-        "contradictory_cited": []
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "34787590"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.05,
-    "overall_passed": false,
-    "overall_score": 0.5625,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.450556+00:00"
-  },
-  "GAP-002_hyp_2": {
-    "hypothesis_id": "GAP-002_hyp_2",
-    "reference_result": {
-      "hypothesis_id": "GAP-002_hyp_2",
-      "valid_ids": [
-        "CHK-35107427-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-27535717-0",
-        "CHK-27028183-0",
-        "CHK-34787590-0",
-        "CHK-25650838-0",
-        "CHK-29299790-0",
-        "CHK-37856173-0",
-        "CHK-35113030-0",
-        "CHK-40173448-0",
-        "CHK-29986845-0",
-        "CHK-31298566-0",
-        "CHK-38233908-0",
-        "CHK-35349466-0",
-        "CHK-29406429-0",
-        "CHK-39881127-0",
-        "CHK-32519966-0",
-        "CHK-30021706-0",
-        "CHK-35254270-0",
-        "CHK-31738174-0",
-        "CHK-37104001-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-35107427-0"
-        ],
-        "contradictory_cited": []
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "35107427"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.05,
-    "overall_passed": false,
-    "overall_score": 0.5625,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.466787+00:00"
-  },
-  "GAP-002_hyp_3": {
-    "hypothesis_id": "GAP-002_hyp_3",
-    "reference_result": {
-      "hypothesis_id": "GAP-002_hyp_3",
-      "valid_ids": [
-        "CHK-31298566-0",
-        "CHK-39881127-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-27535717-0",
-        "CHK-27028183-0",
-        "CHK-35107427-0",
-        "CHK-34787590-0",
-        "CHK-25650838-0",
-        "CHK-29299790-0",
-        "CHK-37856173-0",
-        "CHK-35113030-0",
-        "CHK-40173448-0",
-        "CHK-29986845-0",
-        "CHK-38233908-0",
-        "CHK-35349466-0",
-        "CHK-29406429-0",
-        "CHK-32519966-0",
-        "CHK-30021706-0",
-        "CHK-35254270-0",
-        "CHK-31738174-0",
-        "CHK-37104001-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 2,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-31298566-0"
-        ],
-        "contradictory_cited": [
-          "CHK-39881127-0"
-        ]
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "31298566",
-        "39881127"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 2,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.1,
-    "overall_passed": false,
-    "overall_score": 0.575,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.482602+00:00"
-  },
-  "GAP-003_hyp_1": {
-    "hypothesis_id": "GAP-003_hyp_1",
-    "reference_result": {
-      "hypothesis_id": "GAP-003_hyp_1",
-      "valid_ids": [
-        "CHK-31702564-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-33635278-0",
-        "CHK-35076401-0",
-        "CHK-32012092-0",
-        "CHK-24824311-0",
-        "CHK-28722558-0",
-        "CHK-35309632-0",
-        "CHK-36160638-0",
-        "CHK-25940254-0",
-        "CHK-38913992-0",
-        "CHK-29516055-0",
-        "CHK-26301170-0",
-        "CHK-26965099-0",
-        "CHK-28292206-0",
+        "CHK-33915917-0",
         "CHK-28925418-0",
-        "CHK-32012085-0",
-        "CHK-31155655-0",
-        "CHK-25980851-0",
-        "CHK-29184891-0",
-        "CHK-33244426-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-31702564-0"
-        ],
-        "contradictory_cited": []
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "31702564"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.05,
-    "overall_passed": false,
-    "overall_score": 0.5625,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.498586+00:00"
-  },
-  "GAP-003_hyp_2": {
-    "hypothesis_id": "GAP-003_hyp_2",
-    "reference_result": {
-      "hypothesis_id": "GAP-003_hyp_2",
-      "valid_ids": [
-        "CHK-28925418-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
+        "CHK-38024907-0",
         "CHK-33635278-0",
-        "CHK-35076401-0",
-        "CHK-32012092-0",
-        "CHK-24824311-0",
-        "CHK-28722558-0",
-        "CHK-35309632-0",
-        "CHK-36160638-0",
+        "CHK-25980851-0",
         "CHK-25940254-0",
         "CHK-38913992-0",
-        "CHK-29516055-0",
         "CHK-31702564-0",
-        "CHK-26301170-0",
-        "CHK-26965099-0",
-        "CHK-28292206-0",
-        "CHK-32012085-0",
-        "CHK-31155655-0",
-        "CHK-25980851-0",
-        "CHK-29184891-0",
-        "CHK-33244426-0"
+        "CHK-26301170-0"
       ],
       "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
+      "verification_status": "failed",
+      "total_cited": 0,
       "total_pool": 20,
       "details": {
-        "supporting_cited": [
-          "CHK-28925418-0"
-        ],
+        "supporting_cited": [],
         "contradictory_cited": []
       }
     },
     "content_grounded": false,
     "content_similarity": 0.0,
     "corpus_pmid_check": {
-      "real_pmids": [
-        "28925418"
-      ],
+      "real_pmids": [],
       "unknown_pmids": [],
       "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
+      "total_checked": 0,
+      "consistency_score": 1.0,
+      "note": "No explicit PMIDs extracted from cited IDs or text."
     },
-    "evidence_coverage": 0.05,
+    "evidence_coverage": 0.0,
     "overall_passed": false,
-    "overall_score": 0.5625,
+    "overall_score": 0.2,
     "flags": [
-      "insufficient_content_grounding"
+      "no_valid_evidence_cited",
+      "insufficient_content_grounding",
+      "low_evidence_coverage"
     ],
-    "timestamp": "2026-10-18T05:35:31.514583+00:00"
-  },
-  "GAP-003_hyp_3": {
-    "hypothesis_id": "GAP-003_hyp_3",
-    "reference_result": {
-      "hypothesis_id": "GAP-003_hyp_3",
-      "valid_ids": [
-        "CHK-36160638-0",
-        "CHK-33244426-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-33635278-0",
-        "CHK-35076401-0",
-        "CHK-32012092-0",
-        "CHK-24824311-0",
-        "CHK-28722558-0",
-        "CHK-35309632-0",
-        "CHK-25940254-0",
-        "CHK-38913992-0",
-        "CHK-29516055-0",
-        "CHK-31702564-0",
-        "CHK-26301170-0",
-        "CHK-26965099-0",
-        "CHK-28292206-0",
-        "CHK-28925418-0",
-        "CHK-32012085-0",
-        "CHK-31155655-0",
-        "CHK-25980851-0",
-        "CHK-29184891-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 2,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-36160638-0"
-        ],
-        "contradictory_cited": [
-          "CHK-33244426-0"
-        ]
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "33244426",
-        "36160638"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 2,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.1,
-    "overall_passed": false,
-    "overall_score": 0.575,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.531353+00:00"
-  },
-  "GAP-004_hyp_1": {
-    "hypothesis_id": "GAP-004_hyp_1",
-    "reference_result": {
-      "hypothesis_id": "GAP-004_hyp_1",
-      "valid_ids": [
-        "CHK-31702564-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-33635278-0",
-        "CHK-35076401-0",
-        "CHK-26353025-0",
-        "CHK-28722558-0",
-        "CHK-38913992-0",
-        "CHK-28283148-0",
-        "CHK-29516055-0",
-        "CHK-29584773-0",
-        "CHK-40241942-0",
-        "CHK-26301170-0",
-        "CHK-31431598-0",
-        "CHK-28292206-0",
-        "CHK-28925418-0",
-        "CHK-32012085-0",
-        "CHK-31155655-0",
-        "CHK-36789405-0",
-        "CHK-25980851-0",
-        "CHK-40231271-0",
-        "CHK-29184891-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-31702564-0"
-        ],
-        "contradictory_cited": []
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "31702564"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.05,
-    "overall_passed": false,
-    "overall_score": 0.5625,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.539628+00:00"
-  },
-  "GAP-004_hyp_2": {
-    "hypothesis_id": "GAP-004_hyp_2",
-    "reference_result": {
-      "hypothesis_id": "GAP-004_hyp_2",
-      "valid_ids": [
-        "CHK-28925418-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-33635278-0",
-        "CHK-35076401-0",
-        "CHK-26353025-0",
-        "CHK-28722558-0",
-        "CHK-38913992-0",
-        "CHK-28283148-0",
-        "CHK-29516055-0",
-        "CHK-31702564-0",
-        "CHK-29584773-0",
-        "CHK-40241942-0",
-        "CHK-26301170-0",
-        "CHK-31431598-0",
-        "CHK-28292206-0",
-        "CHK-32012085-0",
-        "CHK-31155655-0",
-        "CHK-36789405-0",
-        "CHK-25980851-0",
-        "CHK-40231271-0",
-        "CHK-29184891-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-28925418-0"
-        ],
-        "contradictory_cited": []
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "28925418"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.05,
-    "overall_passed": false,
-    "overall_score": 0.5625,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.555578+00:00"
-  },
-  "GAP-004_hyp_3": {
-    "hypothesis_id": "GAP-004_hyp_3",
-    "reference_result": {
-      "hypothesis_id": "GAP-004_hyp_3",
-      "valid_ids": [
-        "CHK-28283148-0",
-        "CHK-26353025-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-33635278-0",
-        "CHK-35076401-0",
-        "CHK-28722558-0",
-        "CHK-38913992-0",
-        "CHK-29516055-0",
-        "CHK-31702564-0",
-        "CHK-29584773-0",
-        "CHK-40241942-0",
-        "CHK-26301170-0",
-        "CHK-31431598-0",
-        "CHK-28292206-0",
-        "CHK-28925418-0",
-        "CHK-32012085-0",
-        "CHK-31155655-0",
-        "CHK-36789405-0",
-        "CHK-25980851-0",
-        "CHK-40231271-0",
-        "CHK-29184891-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 2,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-28283148-0"
-        ],
-        "contradictory_cited": [
-          "CHK-26353025-0"
-        ]
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "26353025",
-        "28283148"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 2,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.1,
-    "overall_passed": false,
-    "overall_score": 0.575,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.571338+00:00"
-  },
-  "GAP-005_hyp_1": {
-    "hypothesis_id": "GAP-005_hyp_1",
-    "reference_result": {
-      "hypothesis_id": "GAP-005_hyp_1",
-      "valid_ids": [
-        "CHK-28344359-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-27198107-0",
-        "CHK-26958246-0",
-        "CHK-30079115-0",
-        "CHK-32015795-0",
-        "CHK-24824311-0",
-        "CHK-36862494-0",
-        "CHK-30672738-0",
-        "CHK-25940254-0",
-        "CHK-27640159-0",
-        "CHK-29046271-0",
-        "CHK-25599627-0",
-        "CHK-27147515-0",
-        "CHK-25868685-0",
-        "CHK-28925418-0",
-        "CHK-34338763-0",
-        "CHK-30990458-0",
-        "CHK-40380634-0",
-        "CHK-34259640-0",
-        "CHK-27511612-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-28344359-0"
-        ],
-        "contradictory_cited": []
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "28344359"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.05,
-    "overall_passed": false,
-    "overall_score": 0.5625,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.587083+00:00"
-  },
-  "GAP-005_hyp_2": {
-    "hypothesis_id": "GAP-005_hyp_2",
-    "reference_result": {
-      "hypothesis_id": "GAP-005_hyp_2",
-      "valid_ids": [
-        "CHK-30672738-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-27198107-0",
-        "CHK-26958246-0",
-        "CHK-30079115-0",
-        "CHK-32015795-0",
-        "CHK-24824311-0",
-        "CHK-28344359-0",
-        "CHK-36862494-0",
-        "CHK-25940254-0",
-        "CHK-27640159-0",
-        "CHK-29046271-0",
-        "CHK-25599627-0",
-        "CHK-27147515-0",
-        "CHK-25868685-0",
-        "CHK-28925418-0",
-        "CHK-34338763-0",
-        "CHK-30990458-0",
-        "CHK-40380634-0",
-        "CHK-34259640-0",
-        "CHK-27511612-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 1,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-30672738-0"
-        ],
-        "contradictory_cited": []
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "30672738"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 1,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.05,
-    "overall_passed": false,
-    "overall_score": 0.5625,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.602777+00:00"
-  },
-  "GAP-005_hyp_3": {
-    "hypothesis_id": "GAP-005_hyp_3",
-    "reference_result": {
-      "hypothesis_id": "GAP-005_hyp_3",
-      "valid_ids": [
-        "CHK-25940254-0",
-        "CHK-30990458-0"
-      ],
-      "invalid_ids": [],
-      "missing_ids": [
-        "CHK-27198107-0",
-        "CHK-26958246-0",
-        "CHK-30079115-0",
-        "CHK-32015795-0",
-        "CHK-24824311-0",
-        "CHK-28344359-0",
-        "CHK-36862494-0",
-        "CHK-30672738-0",
-        "CHK-27640159-0",
-        "CHK-29046271-0",
-        "CHK-25599627-0",
-        "CHK-27147515-0",
-        "CHK-25868685-0",
-        "CHK-28925418-0",
-        "CHK-34338763-0",
-        "CHK-40380634-0",
-        "CHK-34259640-0",
-        "CHK-27511612-0"
-      ],
-      "fabricated_count": 0,
-      "verification_status": "passed",
-      "total_cited": 2,
-      "total_pool": 20,
-      "details": {
-        "supporting_cited": [
-          "CHK-25940254-0"
-        ],
-        "contradictory_cited": [
-          "CHK-30990458-0"
-        ]
-      }
-    },
-    "content_grounded": false,
-    "content_similarity": 0.0,
-    "corpus_pmid_check": {
-      "real_pmids": [
-        "25940254",
-        "30990458"
-      ],
-      "unknown_pmids": [],
-      "all_valid": true,
-      "total_checked": 2,
-      "consistency_score": 1.0
-    },
-    "evidence_coverage": 0.1,
-    "overall_passed": false,
-    "overall_score": 0.575,
-    "flags": [
-      "insufficient_content_grounding"
-    ],
-    "timestamp": "2026-10-18T05:35:31.627702+00:00"
+    "timestamp": "2026-10-29T06:32:01.762565+00:00"
   }
 }
