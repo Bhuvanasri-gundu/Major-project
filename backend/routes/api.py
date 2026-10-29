@@ -37,14 +37,20 @@ def health_check():
 
 
 @router.get("/suggestions", response_model=SuggestionsResponse)
-def get_theme_suggestions(q: str = Query(..., min_length=2, description="Search query string")):
+def get_theme_suggestions(
+    q: Optional[str] = Query(None, description="Search query string"),
+    query: Optional[str] = Query(None, description="Alternative search query parameter"),
+):
     """
     Live theme suggestions derived from actual candidate research gaps,
     MeSH concepts, and discovery topics.
     """
+    search_term = (q or query or "").strip()
+    if len(search_term) < 2:
+        return SuggestionsResponse(query=search_term, suggestions=[], count=0)
     try:
         matcher = get_theme_matcher()
-        results = matcher.get_live_suggestions(q, limit=8)
+        results = matcher.get_live_suggestions(search_term, limit=8)
         items = [
             SuggestionItem(
                 text=r["text"],
@@ -55,9 +61,9 @@ def get_theme_suggestions(q: str = Query(..., min_length=2, description="Search 
             )
             for r in results
         ]
-        return SuggestionsResponse(query=q, count=len(items), suggestions=items)
+        return SuggestionsResponse(query=search_term, count=len(items), suggestions=items)
     except Exception as e:
-        logger.error("Error generating suggestions for query '%s': %s", q, e)
+        logger.error("Error generating suggestions for query '%s': %s", search_term, e)
         raise HTTPException(status_code=500, detail="Failed to fetch theme suggestions from backend data.")
 
 

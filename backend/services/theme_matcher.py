@@ -117,7 +117,7 @@ class ThemeMatcher:
 
             if score > 0:
                 suggestions.append({
-                    "text": f"{g['concept_a']} ↔ {g['concept_b']}",
+                    "text": f"{g['concept_a']} - {g['concept_b']}",
                     "type": "gap",
                     "category": "Research Gap",
                     "details": f"GapScore: {g['gap_score']:.2f} · Joint Papers: {g['papers_joint']}",
