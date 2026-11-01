@@ -4,6 +4,7 @@ import type {
   GenerateRequest,
   RunResponse,
   SuggestionsResponse,
+  HypothesisOutput,
   MatchedGap,
   EvaluationData,
 } from '../types';
@@ -37,7 +38,6 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
         errorDetail = errorJson.detail;
       }
     } catch {
-      // fallback to status text
       errorDetail = response.statusText || errorDetail;
     }
     throw new ApiError(errorDetail, response.status);
@@ -74,6 +74,16 @@ export const api = {
   // Get latest run
   getLatestRun: async (): Promise<RunResponse> => {
     return request<RunResponse>('/runs/latest');
+  },
+
+  // Get single hypothesis from a run
+  getHypothesis: async (runId: string, hypothesisId: string): Promise<{ run: RunResponse; hypothesis: HypothesisOutput }> => {
+    const run = await api.getRun(runId);
+    const hypothesis = run.hypotheses.find((h) => h.hypothesis_id === hypothesisId);
+    if (!hypothesis) {
+      throw new ApiError(`Hypothesis '${hypothesisId}' not found in run '${runId}'.`, 404);
+    }
+    return { run, hypothesis };
   },
 
   // Get candidate gaps

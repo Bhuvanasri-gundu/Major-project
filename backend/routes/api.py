@@ -38,16 +38,16 @@ def health_check():
 
 @router.get("/suggestions", response_model=SuggestionsResponse)
 def get_theme_suggestions(
-    q: Optional[str] = Query(None, description="Search query string"),
-    query: Optional[str] = Query(None, description="Alternative search query parameter"),
+    q: Optional[str] = Query(None, min_length=2, description="Search query string"),
+    query: Optional[str] = Query(None, min_length=2, description="Alternative search query parameter"),
 ):
     """
     Live theme suggestions derived from actual candidate research gaps,
     MeSH concepts, and discovery topics.
     """
     search_term = (q or query or "").strip()
-    if len(search_term) < 2:
-        return SuggestionsResponse(query=search_term, suggestions=[], count=0)
+    if not search_term or len(search_term) < 2:
+        raise HTTPException(status_code=422, detail="Search query must contain at least 2 characters.")
     try:
         matcher = get_theme_matcher()
         results = matcher.get_live_suggestions(search_term, limit=8)

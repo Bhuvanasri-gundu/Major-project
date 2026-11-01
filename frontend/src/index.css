@@ -1,24 +1,105 @@
 @import "tailwindcss";
 
+/* ===== Stitch Design System: Custom Theme ===== */
+@theme {
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Stitch palette */
+  --color-studio-900: #0f1419;
+  --color-studio-800: #1a1f2e;
+  --color-studio-700: #2d3748;
+  --color-studio-600: #4a5568;
+  --color-studio-500: #718096;
+  --color-studio-400: #a0aec0;
+  --color-studio-300: #cbd5e0;
+  --color-studio-200: #e2e8f0;
+  --color-studio-100: #edf2f7;
+  --color-studio-50: #f7fafc;
+
+  --color-teal-accent: #0d9488;
+  --color-teal-light: #ccfbf1;
+  --color-teal-dark: #065f46;
+}
+
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 antialiased font-sans;
+    font-family: var(--font-sans);
+    @apply bg-white text-studio-900 antialiased;
     min-height: 100vh;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
   }
 }
 
-/* Custom scrollbars for clean academic dashboards */
+/* Serif heading utility */
+.font-heading-serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+/* Monospace utility */
+.font-code {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  letter-spacing: -0.02em;
+}
+
+/* Stitch kicker text */
+.stitch-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-studio-500);
+}
+
+/* Stitch card */
+.stitch-card {
+  @apply bg-white border border-studio-200 rounded-lg;
+}
+
+/* Pipeline stage badge */
+.stage-badge {
+  @apply inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-full;
+}
+
+/* Tab underline */
+.stitch-tab {
+  @apply px-4 py-2 text-sm font-medium text-studio-500 border-b-2 border-transparent cursor-pointer transition-colors;
+}
+.stitch-tab-active {
+  @apply text-studio-900 border-studio-900;
+}
+
+/* Evidence metric pill */
+.metric-pill {
+  @apply inline-flex items-center gap-1 text-xs font-medium;
+}
+.metric-pill::before {
+  content: '';
+  @apply w-1.5 h-1.5 rounded-full;
+}
+
+/* Custom scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #cbd5e0;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #a0aec0;
 }
