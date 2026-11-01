@@ -10,6 +10,7 @@ interface ThemeSuggestionsProps {
   onSelectSuggestion: (suggestion: string) => void;
   onClose: () => void;
   isOpen: boolean;
+  triggerRef?: React.RefObject<HTMLElement | null>;
 }
 
 export const ThemeSuggestions: React.FC<ThemeSuggestionsProps> = ({
@@ -17,6 +18,7 @@ export const ThemeSuggestions: React.FC<ThemeSuggestionsProps> = ({
   onSelectSuggestion,
   onClose,
   isOpen,
+  triggerRef,
 }) => {
   const [suggestions, setSuggestions] = useState<SuggestionItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -26,18 +28,14 @@ export const ThemeSuggestions: React.FC<ThemeSuggestionsProps> = ({
 
   // Debounced fetch
   useEffect(() => {
-    if (!query || query.trim().length < 2) {
-      setSuggestions([]);
-      setIsLoading(false);
-      setError(null);
-      return;
-    }
+    // If user opened with empty/short query, fetch general suggestions with default term
+    const searchTerm = query && query.trim().length >= 2 ? query.trim() : 'health';
 
     setIsLoading(true);
     setError(null);
     const timeoutId = setTimeout(async () => {
       try {
-        const res = await api.getSuggestions(query.trim());
+        const res = await api.getSuggestions(searchTerm);
         setSuggestions(res.suggestions);
         setSelectedIndex(-1);
       } catch {
@@ -50,6 +48,34 @@ export const ThemeSuggestions: React.FC<ThemeSuggestionsProps> = ({
 
     return () => clearTimeout(timeoutId);
   }, [query]);
+
+  // Outside click handler
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target as Node | null;
+      if (!target) return;
+
+      // If clicked inside the suggestions container, do nothing
+      if (containerRef.current && containerRef.current.contains(target)) {
+        return;
+      }
+
+      // If clicked inside the trigger element (e.g., Ontology Suggestions button), do nothing (it handles its own toggle)
+      if (triggerRef?.current && triggerRef.current.contains(target)) {
+        return;
+      }
+
+      // Otherwise, dismiss
+      onClose();
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, [isOpen, onClose, triggerRef]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -77,7 +103,7 @@ export const ThemeSuggestions: React.FC<ThemeSuggestionsProps> = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, suggestions, selectedIndex, onSelectSuggestion, onClose]);
 
-  if (!isOpen || (!isLoading && suggestions.length === 0 && !error && query.length < 2)) {
+  if (!isOpen) {
     return null;
   }
 

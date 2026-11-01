@@ -1,6 +1,6 @@
 // frontend/src/pages/GeneratePage.tsx — Screen 1: Monograph Studio (Stitch Design)
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   FileText,
@@ -22,14 +22,15 @@ import type { RunResponse } from '../types';
 export const GeneratePage: React.FC = () => {
   const navigate = useNavigate();
 
-  // Form State
+  // Form State - strictly empty by default
   const [theme, setTheme] = useState('');
   const [population, setPopulation] = useState('');
   const [objective, setObjective] = useState('');
   const [hypothesisCount, setHypothesisCount] = useState<number>(3);
 
-  // Suggestions state
+  // Suggestions state & trigger ref for outside-click dismissal
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const suggestionsTriggerRef = useRef<HTMLButtonElement>(null);
 
   // Execution & Output State
   const [isGenerating, setIsGenerating] = useState(false);
@@ -42,18 +43,14 @@ export const GeneratePage: React.FC = () => {
   // Collapsible about section
   const [aboutOpen, setAboutOpen] = useState(false);
 
-  // Load latest run on initial mount if available so output is displayed
+  // Load latest run on initial mount ONLY for displaying results in workspace link/cards if present,
+  // but NEVER pre-fill the input fields with prior text
   useEffect(() => {
     const fetchInitial = async () => {
       try {
         const latest = await api.getLatestRun();
         if (latest) {
           setCurrentRun(latest);
-          if (!theme && latest.theme) {
-            setTheme(latest.theme);
-            setPopulation(latest.population === 'Unspecified' ? '' : latest.population);
-            setObjective(latest.objective === 'Bridge literature gap' ? '' : latest.objective);
-          }
         }
       } catch {
         // no prior run, start empty
@@ -196,9 +193,10 @@ export const GeneratePage: React.FC = () => {
                   Research theme <span className="text-rose-500">*</span>
                 </label>
                 <button
+                  ref={suggestionsTriggerRef}
                   type="button"
                   onClick={() => setShowSuggestions(!showSuggestions)}
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-teal-accent hover:underline"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-teal-accent hover:underline cursor-pointer"
                 >
                   <Sparkles className="w-3 h-3" />
                   <span>Ontology Suggestions</span>
@@ -212,17 +210,18 @@ export const GeneratePage: React.FC = () => {
                   value={theme}
                   onChange={handleThemeChange}
                   onFocus={() => theme.trim().length >= 2 && setShowSuggestions(true)}
-                  placeholder="Describe your mHealth research theme or the research problem you want to investigate..."
+                  placeholder="e.g., JITAI intervention timing for diabetes self-management"
                   className={`w-full rounded border p-3 text-sm text-studio-900 placeholder:text-studio-400 focus:outline-none focus:ring-1 focus:ring-studio-900 transition resize-y ${
                     themeError ? 'border-rose-300' : 'border-studio-200'
                   }`}
                   disabled={isGenerating}
                 />
 
-                {/* Theme Suggestions Dropdown */}
+                {/* Theme Suggestions Dropdown with triggerRef for outside-click dismiss */}
                 <ThemeSuggestions
                   query={theme}
                   isOpen={showSuggestions}
+                  triggerRef={suggestionsTriggerRef}
                   onSelectSuggestion={handleSelectSuggestion}
                   onClose={() => setShowSuggestions(false)}
                 />
@@ -277,7 +276,7 @@ export const GeneratePage: React.FC = () => {
                 rows={2}
                 value={objective}
                 onChange={(e) => setObjective(e.target.value)}
-                placeholder="What would you like to understand or investigate?"
+                placeholder="e.g., Identify factors influencing intervention adherence"
                 className="w-full rounded border border-studio-200 p-2.5 text-sm text-studio-900 placeholder:text-studio-400 focus:outline-none focus:ring-1 focus:ring-studio-900 resize-none"
                 disabled={isGenerating}
               />
