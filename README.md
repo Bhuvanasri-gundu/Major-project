@@ -7,7 +7,7 @@
 [![React 19](https://img.shields.io/badge/React-19.0-61dafb.svg)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-purple.svg)](https://vitejs.dev/)
-[![Tests](https://img.shields.io/badge/Tests-37%2F37%20Passed-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Tests-45%2F45%20Passed-brightgreen.svg)]()
 
 > **B.Tech Major Project** in Computer Science & Engineering (Artificial Intelligence & Machine Learning)  
 > An automated biomedical research discovery system that mines 12,642 PubMed articles (2015–2025), identifies empirical literature gaps via centroid-debiased semantic proximity and longitudinal growth velocity, and synthesizes evidence-grounded scientific hypotheses with 100% citation traceability.
@@ -19,11 +19,12 @@
 2. [End-to-End System Architecture](#2-end-to-end-system-architecture)
 3. [Mathematical Formulations](#3-mathematical-formulations)
 4. [Project Structure](#4-project-structure)
-5. [Quickstart & Reproduction Guide](#5-quickstart--reproduction-guide)
-6. [Interactive Research Platform (React 19 + FastAPI)](#6-interactive-research-platform-react-19--fastapi)
-7. [Benchmark Evaluation Results](#7-benchmark-evaluation-results)
-8. [Automated Testing & Quality Verification](#8-automated-testing--quality-verification)
-9. [Academic Reports & Deliverables](#9-academic-reports--deliverables)
+5. [Academic Research Notebook Suite (01–14)](#5-academic-research-notebook-suite-0114)
+6. [Quickstart & Reproduction Guide](#6-quickstart--reproduction-guide)
+7. [Interactive Research Platform (React 19 + FastAPI)](#7-interactive-research-platform-react-19--fastapi)
+8. [Benchmark Evaluation Results](#8-benchmark-evaluation-results)
+9. [Automated Testing & Quality Verification](#9-automated-testing--quality-verification)
+10. [Academic Reports & Deliverables](#10-academic-reports--deliverables)
 
 ---
 
@@ -107,19 +108,20 @@ E:\Major_Project_Implementation\
 ├── run_phase1.py                 # Phase 1 master pipeline runner
 ├── run_phase2.py                 # Phase 2 master pipeline runner
 ├── run_tests.py                  # Master test suite runner (45 tests)
+│
+├── frontend/                     # React 19 + TypeScript + Vite + Tailwind UI
+│   ├── src/pages/                # Screen 1 (GeneratePage) & Screen 2 (WorkspacePage)
+│   ├── src/components/           # Modular components (Suggestions, Cards, Validation Tabs)
+│   └── src/services/api.ts       # Typed API client
+│
 ├── backend/                      # Production FastAPI application & RAG orchestration
 │   ├── app.py                    # FastAPI entrypoint with CORS & routes
 │   ├── schemas.py                # Pydantic v2 data models
 │   ├── routes/api.py             # REST endpoints (health, suggestions, generate, runs)
 │   └── services/                 # Theme matcher, pipeline service, evaluation service
-├── frontend/                     # React 19 + TypeScript + Vite + Tailwind UI
-│   ├── src/pages/                # Screen 1 (GeneratePage) & Screen 2 (WorkspacePage)
-│   ├── src/components/           # Modular components (Suggestions, Cards, Validation Tabs)
-│   └── src/services/api.ts       # Typed API client
-├── legacy_streamlit_app.py       # Archived Streamlit prototype
 │
 ├── src/
-│   ├── phase2/                   # Phase 2 modules (RAG, Generation, Validation, Ranking)
+│   ├── phase2/                   # Canonical Phase 2 modules (RAG, Generation, Validation, Ranking)
 │   │   ├── gap_preparation.py
 │   │   ├── chunking.py
 │   │   ├── retrieval.py
@@ -130,23 +132,94 @@ E:\Major_Project_Implementation\
 │   │   ├── rule_checks.py
 │   │   ├── ranking.py
 │   │   └── deduplication.py
-│   └── phase3/                   # Phase 3 evaluation & benchmarking
+│   └── phase3/                   # Canonical Phase 3 evaluation & benchmarking
 │       ├── retrieval_eval.py
 │       ├── grounding_eval.py
 │       ├── baseline_comparison.py
 │       ├── ablation_study.py
 │       └── run_evaluation.py
 │
-├── tests/                        # 9 Modular test suites (100% pass)
-├── outputs/                      # Verified output CSVs and JSONs
+├── notebooks/                    # Complete 14-Notebook Academic Research Suite
+│   ├── README.md                 # Execution order, input/output, runtime guide
+│   ├── 01_pubmed_data_extraction_and_cleaning.ipynb
+│   ├── 02_data_validation.ipynb
+│   ├── 03_relevance_screening.ipynb
+│   ├── 04_preprocessing_embeddings.ipynb
+│   ├── 05_bertopic_topic_discovery.ipynb
+│   ├── 06_concept_mesh_mapping.ipynb
+│   ├── 07_temporal_semantic_gap_detection.ipynb
+│   ├── 08_evidence_chunking_and_faiss_retrieval.ipynb
+│   ├── 09_evidence_grounded_hypothesis_generation.ipynb
+│   ├── 10_citation_verification_and_traceability.ipynb
+│   ├── 11_deberta_nli_semantic_validation.ipynb
+│   ├── 12_llm_judge_and_rule_checks.ipynb
+│   ├── 13_multi_criteria_ranking_and_deduplication.ipynb
+│   └── 14_project_evaluation_and_ablations.ipynb
+│
+├── data/                         # Literature dataset & screening metadata
+│   ├── README.md                 # Dataset provenance, schema, screening criteria
+│   ├── pubmed_mhealth_raw.csv    # Raw PubMed records (14,905 papers)
+│   └── pubmed_mhealth_filtered.csv # Screened corpus (12,642 papers)
+│
+├── outputs/                      # Verified output CSVs, JSONs, and FAISS index
+│   ├── README.md                 # Comprehensive artifact catalog (Phase 1, 2, 3)
+│   ├── candidate_research_gaps.csv
+│   ├── preprocessed_corpus.csv
+│   ├── document_embeddings_specter2.npy
+│   ├── concept_embeddings_specter2.npy
+│   ├── faiss_index/              # faiss_chunk_index.bin & faiss_chunk_metadata.json
+│   ├── generated_hypotheses.json
+│   ├── verification_results.json
+│   ├── nli_results.json
+│   ├── judge_results.json
+│   ├── rule_check_results.json
+│   ├── ranked_hypotheses.csv
+│   └── phase3_evaluation_summary.csv
+│
+├── presentations/                # Academic defense slide decks
+│   ├── updated_presentation.pptx
+│   ├── mhealth_presentation_with_concepts.pptx
+│   └── mhealth_presentation_with_editable_slide.pptx
+│
+├── scripts/                      # Utility and migration scripts
+│   ├── create_phase2_3_notebooks.py
+│   ├── legacy_streamlit_app.py   # Archived Streamlit prototype
+│   └── phase1_final_audit.py     # Phase 1 verification script
+│
+├── tests/                        # 9 Modular test suites (45/45 passed, 100% success)
 ├── models/bertopic_model/        # Reusable trained BERTopic artifacts
 ├── figures/                      # Publication-grade figures
-└── docs/                         # Detailed reports (Phase 2, Phase 3, Final, Test, Architecture)
+└── docs/                         # Detailed academic reports and architecture docs
 ```
 
 ---
 
-## 5. Quickstart & Reproduction Guide
+## 5. Academic Research Notebook Suite (01–14)
+
+The project includes an end-to-end, 14-part interactive notebook collection designed for faculty walkthroughs, research demonstrations, and educational inspection. Following sound software engineering principles, production code resides in canonical Python modules (`src/`), while notebooks import these modules to demonstrate the exact workflow step-by-step using verified artifacts:
+
+| # | Notebook Name | Phase | Focus / Key Artifacts Loaded |
+|---|---|---|---|
+| `01` | [01_pubmed_data_extraction_and_cleaning.ipynb](notebooks/01_pubmed_data_extraction_and_cleaning.ipynb) | Phase 1 | PubMed Entrez extraction, raw CSV validation (14,905 papers) |
+| `02` | [02_data_validation.ipynb](notebooks/02_data_validation.ipynb) | Phase 1 | Missing value audits, temporal distribution (2015–2025) |
+| `03` | [03_relevance_screening.ipynb](notebooks/03_relevance_screening.ipynb) | Phase 1 | Medical relevance filter (12,642 papers retained) |
+| `04` | [04_preprocessing_embeddings.ipynb](notebooks/04_preprocessing_embeddings.ipynb) | Phase 1 | Title+Abstract concatenation, SPECTER2 dense embeddings (768-d) |
+| `05` | [05_bertopic_topic_discovery.ipynb](notebooks/05_bertopic_topic_discovery.ipynb) | Phase 1 | BERTopic discovery (63 topics + outlier), c-TF-IDF keywords |
+| `06` | [06_concept_mesh_mapping.ipynb](notebooks/06_concept_mesh_mapping.ipynb) | Phase 1 | 2,786 MeSH biomedical concepts, co-occurrence matrices |
+| `07` | [07_temporal_semantic_gap_detection.ipynb](notebooks/07_temporal_semantic_gap_detection.ipynb) | Phase 1 | Centroid debiasing, Jaccard penalty, Top 50 Candidate Gaps |
+| `08` | [08_evidence_chunking_and_faiss_retrieval.ipynb](notebooks/08_evidence_chunking_and_faiss_retrieval.ipynb) | Phase 2 | 12,776 passages, FAISS IndexFlatIP, diversity penalization |
+| `09` | [09_evidence_grounded_hypothesis_generation.ipynb](notebooks/09_evidence_grounded_hypothesis_generation.ipynb) | Phase 2 | Gemini LLM structured hypothesis synthesis with passage injection |
+| `10` | [10_citation_verification_and_traceability.ipynb](notebooks/10_citation_verification_and_traceability.ipynb) | Phase 2 | Deterministic chunk ID & PMID verification (100% traceability) |
+| `11` | [11_deberta_nli_semantic_validation.ipynb](notebooks/11_deberta_nli_semantic_validation.ipynb) | Phase 2 | DeBERTa-v3 cross-encoder premise-hypothesis NLI inference |
+| `12` | [12_llm_judge_and_rule_checks.ipynb](notebooks/12_llm_judge_and_rule_checks.ipynb) | Phase 2 | 6-rubric LLM Judge & 9 rule-based structural checks |
+| `13` | [13_multi_criteria_ranking_and_deduplication.ipynb](notebooks/13_multi_criteria_ranking_and_deduplication.ipynb) | Phase 2 | Multi-criteria RankScore, tiering, semantic deduplication |
+| `14` | [14_project_evaluation_and_ablations.ipynb](notebooks/14_project_evaluation_and_ablations.ipynb) | Phase 3 | P@K, MRR, nDCG@K, baseline comparisons, and ablation study |
+
+*For complete execution instructions and runtime recommendations, see [`notebooks/README.md`](notebooks/README.md).*
+
+---
+
+## 6. Quickstart & Reproduction Guide
 
 ### Environment Setup
 ```powershell
@@ -180,11 +253,11 @@ Outputs will be written to `outputs/phase3_evaluation_results.json` and `outputs
 ```powershell
 python run_tests.py
 ```
-Executes all 37 unit and integration tests and writes `TEST_REPORT.md`.
+Executes all 45 unit and integration tests and writes `TEST_REPORT.md`.
 
 ---
 
-## 6. Interactive Research Platform (React 19 + FastAPI)
+## 7. Interactive Research Platform (React 19 + FastAPI)
 
 The application provides a clean, professional academic research interface built with **React 19**, **TypeScript**, **Tailwind CSS v4**, and **FastAPI**, strictly organized into **TWO primary screens**.
 
@@ -228,7 +301,7 @@ A unified academic dossier presenting all research and verification artifacts fo
   5. *Ranking & Deduplication*: Multi-criteria composite rank score breakdown, priority score, grounding score, tier assignment, and deduplication status.
 - **Section 5: Pipeline Evaluation (Project-Level)**: Collapsible benchmarks showing P@5, MRR, nDCG@10, citation validity rates, baseline comparisons, and ablation study.
 
-## 7. Benchmark Evaluation Results
+## 8. Benchmark Evaluation Results
 
 Evaluated on the empirical mHealth corpus against PubMed MeSH ground truth:
 
@@ -248,7 +321,7 @@ Evaluated on the empirical mHealth corpus against PubMed MeSH ground truth:
 
 ---
 
-## 8. Automated Testing & Quality Verification
+## 9. Automated Testing & Quality Verification
 
 All 45 unit and integration tests execute cleanly with **100.0% success rate**:
 
@@ -275,7 +348,7 @@ Test coverage includes:
 
 ---
 
-## 9. Academic Reports & Deliverables
+## 10. Academic Reports & Deliverables
 
 The repository includes complete, formal academic deliverables ready for project submission and viva defense:
 - **`FINAL_PROJECT_REPORT.md`**: Complete B.Tech Major Project Report with abstract, literature review, methodology, mathematical formulations, evaluation tables, and Viva Defense FAQ.
