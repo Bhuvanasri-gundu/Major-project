@@ -192,12 +192,12 @@ phase2:
 
   # ------ LLM (Hypothesis Generation & Judge) ------
   llm:
-    model_name: "gemini-3.1-flash-lite"   # Gemini model for generation
+    model_name: "gemini-3.5-flash-lite"   # Gemini model for generation
     temperature: 0.3                 # lower = more focused
     max_output_tokens: 4096
     max_hypotheses_per_gap: 3
     retry_attempts: 3
-    retry_delay_seconds: 5
+    retry_delay_seconds: 1
     request_timeout: 60
     use_mock: false                  # set true for testing without API
 

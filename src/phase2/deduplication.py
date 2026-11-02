@@ -220,7 +220,10 @@ class SemanticDeduplicator:
         try:
             from sentence_transformers import SentenceTransformer
             logger.info("Loading deduplication model '%s' on %s...", self.model_name, self.device)
-            self.model = SentenceTransformer(self.model_name, device=self.device)
+            try:
+                self.model = SentenceTransformer(self.model_name, device=self.device, local_files_only=True)
+            except Exception:
+                self.model = SentenceTransformer(self.model_name, device=self.device)
             logger.info("Deduplication model loaded successfully.")
         except Exception as exc:
             logger.warning(

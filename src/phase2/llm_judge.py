@@ -225,7 +225,7 @@ class LLMJudge:
             judge_cfg.get("model_name")
             or llm_cfg.get("model_name")
             or phase2_cfg.get("judge_model")
-            or "gemini-3.1-flash-lite"
+            or "gemini-3.5-flash-lite"
         )
         self.model_name = model_name or default_model
         self.api_key = api_key or os.environ.get("GEMINI_API_KEY")

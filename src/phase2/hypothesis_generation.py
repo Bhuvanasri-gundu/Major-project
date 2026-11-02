@@ -162,7 +162,7 @@ class HypothesisGenerator:
         self.model_name = (
             model_name
             or llm_cfg.get("model_name")
-            or "gemini-3.1-flash-lite"
+            or "gemini-3.5-flash-lite"
         )
 
         # Hyperparameters
@@ -172,7 +172,7 @@ class HypothesisGenerator:
         self.temperature = float(llm_cfg.get("temperature", 0.3))
         self.max_output_tokens = int(llm_cfg.get("max_output_tokens", 4096))
         self.retry_attempts = int(llm_cfg.get("retry_attempts", 3))
-        self.retry_delay_seconds = float(llm_cfg.get("retry_delay_seconds", 5.0))
+        self.retry_delay_seconds = float(llm_cfg.get("retry_delay_seconds", 1.0))
         self.request_timeout = float(llm_cfg.get("request_timeout", 60.0))
         self.use_mock = (
             use_mock if use_mock is not None else bool(llm_cfg.get("use_mock", False))

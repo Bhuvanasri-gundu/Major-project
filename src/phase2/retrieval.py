@@ -180,7 +180,10 @@ class EvidenceRetriever:
                 self._device,
             )
             from sentence_transformers import SentenceTransformer
-            self._model = SentenceTransformer(self.embedding_model_name, device=self._device)
+            try:
+                self._model = SentenceTransformer(self.embedding_model_name, device=self._device, local_files_only=True)
+            except Exception:
+                self._model = SentenceTransformer(self.embedding_model_name, device=self._device)
         return self._model
 
     def build_index(

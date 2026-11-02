@@ -66,10 +66,12 @@ class PipelineService:
             self._judge = LLMJudge(use_mock=False, api_key=api_key)
             logger.info("LLMJudge initialized.")
 
-            # 4. Semantic Deduplicator
+            # 4. Semantic Deduplicator (Reusing retriever's SentenceTransformer)
             from src.phase2.deduplication import SemanticDeduplicator
             self._deduplicator = SemanticDeduplicator()
-            logger.info("SemanticDeduplicator initialized.")
+            if self._retriever and hasattr(self._retriever, "_model") and self._retriever._model is not None:
+                self._deduplicator.model = self._retriever._model
+            logger.info("SemanticDeduplicator initialized with shared embedding model.")
         except Exception as e:
             logger.error("Failed to initialize pipeline services: %s", e, exc_info=True)
 
@@ -333,14 +335,21 @@ class PipelineService:
             logger.warning("Rule checks error: %s", e)
             warnings.append(f"Rule check execution error: {str(e)}")
 
-        # 5c. LLM Judge
+        # 5c. LLM Judge (Parallelized concurrent evaluation)
         judge_results = {}
-        if self._judge:
+        if self._judge and raw_hypotheses:
             try:
-                for h in raw_hypotheses:
+                from concurrent.futures import ThreadPoolExecutor
+
+                def _eval_single(h):
                     hid = h.hypothesis_id if hasattr(h, "hypothesis_id") else h.get("hypothesis_id")
-                    j_res = self._judge.evaluate_hypothesis(h, primary_gap, evidence_passages)
-                    judge_results[hid] = j_res
+                    return hid, self._judge.evaluate_hypothesis(h, primary_gap, evidence_passages)
+
+                max_workers = min(len(raw_hypotheses), 4)
+                with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                    for hid, j_res in executor.map(_eval_single, raw_hypotheses):
+                        judge_results[hid] = j_res
+
                 stages_completed.append("llm_judge")
             except Exception as e:
                 logger.warning("LLM judge evaluation failed: %s", e)

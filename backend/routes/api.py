@@ -30,7 +30,7 @@ def health_check():
         "status": "healthy",
         "service": "Ontology-Guided Hypothesis Generation API",
         "gemini_api_configured": has_gemini,
-        "configured_model": os.environ.get("LLM_MODEL_NAME", "gemini-3.1-flash-lite"),
+        "configured_model": os.environ.get("LLM_MODEL_NAME", "gemini-3.5-flash-lite"),
         "corpus_screened_papers": 12642,
         "candidate_gaps_count": 50,
     }
