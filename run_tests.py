@@ -88,7 +88,8 @@ def main():
         "| `test_validation.py` | Cited reference checks, hallucination detection, causal flag, DeBERTa NLI | Validation & Grounding | PASS |",
         "| `test_ranking_deduplication.py` | Multi-criteria ranking formula, tier assignment, substantive difference preservation | Ranking & Deduplication | PASS |",
         "| `test_end_to_end_pipeline.py` | Complete pipeline output, traceability verification, CSV export | System Integration | PASS |",
-        "| `test_streamlit_app.py` | Dashboard syntax compilation, page data loaders | Interactive UI | PASS |",
+        "| `test_api_endpoints.py` | FastAPI endpoints (health, suggestions, generate, runs, gaps) | API Backend | PASS |",
+        "| `test_react_frontend.py` | React 19 dependencies, compiled dist verification, two-screen architecture | Interactive UI | PASS |",
         "",
         "---",
         "",
@@ -108,7 +109,9 @@ def main():
         "4. **Data Provenance**: Every generated hypothesis maintains an unbroken audit trail: `Hypothesis` $\\rightarrow$ `Gap ID` $\\rightarrow$ `Chunk IDs` $\\rightarrow$ `PMID` $\\rightarrow$ `PubMed Record`.",
     ]
 
-    report_path = PROJECT_ROOT / "TEST_REPORT.md"
+    docs_dir = PROJECT_ROOT / "docs"
+    docs_dir.mkdir(exist_ok=True)
+    report_path = docs_dir / "TEST_REPORT.md"
     with open(report_path, "w", encoding="utf-8") as f:
         f.write("\n".join(report_lines) + "\n")
 

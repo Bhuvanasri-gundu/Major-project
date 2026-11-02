@@ -1,4 +1,4 @@
-// frontend/src/App.tsx — Stitch three-screen application with shared layout
+// frontend/src/App.tsx — Two-screen research platform with shared layout
 
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Header } from './components/Header';
 import { GeneratePage } from './pages/GeneratePage';
 import { WorkspacePage } from './pages/WorkspacePage';
-import { ValidationPage } from './pages/ValidationPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -28,12 +27,9 @@ export const App: React.FC = () => {
               {/* Screen 1: Generate Hypotheses — Monograph Studio */}
               <Route path="/" element={<GeneratePage />} />
 
-              {/* Screen 2: Research & Validation Workspace */}
+              {/* Screen 2: Complete Research & Validation Workspace */}
               <Route path="/workspace/:runId" element={<WorkspacePage />} />
               <Route path="/workspace" element={<Navigate to="/workspace/latest" replace />} />
-
-              {/* Screen 3: Dedicated Scientific Validation */}
-              <Route path="/workspace/:runId/hypotheses/:hypothesisId" element={<ValidationPage />} />
 
               {/* Fallback */}
               <Route path="*" element={<Navigate to="/" replace />} />

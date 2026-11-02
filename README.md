@@ -186,10 +186,18 @@ E:\Major_Project_Implementation\
 │   ├── legacy_streamlit_app.py   # Archived Streamlit prototype
 │   └── phase1_final_audit.py     # Phase 1 verification script
 │
-├── tests/                        # 9 Modular test suites (45/45 passed, 100% success)
-├── models/bertopic_model/        # Reusable trained BERTopic artifacts
+├── tests/                        # 10 Modular test suites (45/45 passed, 100% success)
+├── models/                       # Model storage and serialized model packages
+│   ├── README.md                 # Model registry, provenance, and loading guide
+│   └── bertopic_model/           # Fitted official BERTopic model (safetensors)
 ├── figures/                      # Publication-grade figures
 └── docs/                         # Detailed academic reports and architecture docs
+    ├── README.md                 # Documentation registry and reading guide
+    ├── FINAL_PROJECT_REPORT.md   # Complete B.Tech Major Project Report
+    ├── PHASE2_REPORT.md          # Phase 2 pipeline and validation report
+    ├── PHASE3_EVALUATION_REPORT.md # Phase 3 IR and ablation evaluation report
+    ├── ARCHITECTURE.md           # Technical specs & Mermaid diagrams
+    └── TEST_REPORT.md            # Automated test audit report
 ```
 
 ---

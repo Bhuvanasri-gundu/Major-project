@@ -444,7 +444,7 @@ export const GeneratePage: React.FC = () => {
                     <button
                       type="button"
                       onClick={() =>
-                        navigate(`/workspace/${activeRunId}/hypotheses/${h.hypothesis_id}`)
+                        navigate(`/workspace/${activeRunId}?hypothesis=${h.hypothesis_id}`)
                       }
                       className="text-teal-accent hover:underline font-semibold flex items-center gap-1"
                     >

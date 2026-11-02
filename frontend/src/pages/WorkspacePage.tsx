@@ -408,7 +408,11 @@ export const WorkspacePage: React.FC = () => {
                   setSelectedHypothesisId(hyp.hypothesis_id);
                   setActiveTab('overview');
                 }}
-                onInspect={() => navigate(`/workspace/${run.run_id}/hypotheses/${hyp.hypothesis_id}`)}
+                onInspect={() => {
+                  setSelectedHypothesisId(hyp.hypothesis_id);
+                  setActiveTab('overview');
+                  document.getElementById('validation-inspector')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               />
             ))}
             {run.hypotheses.length === 0 && (
@@ -435,9 +439,6 @@ export const WorkspacePage: React.FC = () => {
           run={run}
           activeTab={activeTab}
           onTabChange={setActiveTab}
-          onNavigateToFull={() =>
-            navigate(`/workspace/${run.run_id}/hypotheses/${selectedHypothesis.hypothesis_id}`)
-          }
         />
       )}
     </div>
@@ -664,7 +665,6 @@ interface InspectorSectionProps {
   run: RunResponse;
   activeTab: InspectorTab;
   onTabChange: (tab: InspectorTab) => void;
-  onNavigateToFull: () => void;
 }
 
 const InspectorSection: React.FC<InspectorSectionProps> = ({
@@ -672,10 +672,9 @@ const InspectorSection: React.FC<InspectorSectionProps> = ({
   run,
   activeTab,
   onTabChange,
-  onNavigateToFull,
 }) => {
   return (
-    <section className="stitch-card overflow-hidden">
+    <section id="validation-inspector" className="stitch-card overflow-hidden">
       {/* Inspector header */}
       <div className="px-5 py-4 border-b border-studio-200 flex items-center justify-between flex-wrap gap-2">
         <div className="space-y-0.5">
@@ -689,14 +688,11 @@ const InspectorSection: React.FC<InspectorSectionProps> = ({
             Scientific Validation & Grounding Monograph
           </h2>
         </div>
-        <button
-          type="button"
-          onClick={onNavigateToFull}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold text-teal-accent hover:text-white hover:bg-teal-accent border border-teal-accent/30 transition"
-        >
-          Full Validation View
-          <ExternalLink className="w-3 h-3" />
-        </button>
+        <div className="flex items-center gap-2">
+          <span className="text-[11px] font-code text-studio-500 bg-studio-100 px-2.5 py-1 rounded border border-studio-200">
+            5-Tab Audit Ledger
+          </span>
+        </div>
       </div>
 
       {/* Tabs */}

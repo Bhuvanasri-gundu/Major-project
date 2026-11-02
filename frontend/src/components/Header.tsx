@@ -13,8 +13,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRunId, pipelineActive = t
   const location = useLocation();
 
   const isGenerate = location.pathname === '/';
-  const isWorkspace = location.pathname.startsWith('/workspace') && !location.pathname.includes('/hypotheses/');
-  const isValidation = location.pathname.includes('/hypotheses/');
+  const isWorkspace = location.pathname.startsWith('/workspace');
 
   const targetRunId = currentRunId || 'latest';
 
@@ -68,11 +67,6 @@ export const Header: React.FC<HeaderProps> = ({ currentRunId, pipelineActive = t
             >
               Research & Validation Workspace
             </Link>
-            {isValidation && (
-              <span className="px-4 py-4 text-sm font-semibold text-studio-900 border-b-2 border-studio-900">
-                Scientific Validation
-              </span>
-            )}
           </nav>
 
           {/* Right: Status & actions */}

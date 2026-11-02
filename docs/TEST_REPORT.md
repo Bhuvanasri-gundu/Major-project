@@ -1,9 +1,9 @@
 # Comprehensive Test Execution Report
 
 **Project:** Temporal-Semantic Gap-Guided Evidence-Grounded Hypothesis Generation in mHealth Research  
-**Execution Date:** 2026-11-01 21:27:41  
+**Execution Date:** 2026-11-02 11:21:19  
 **Test Runner:** Python Standard `unittest` Suite  
-**Total Execution Time:** 60.29 seconds  
+**Total Execution Time:** 97.28 seconds  
 
 ---
 
@@ -33,7 +33,8 @@
 | `test_validation.py` | Cited reference checks, hallucination detection, causal flag, DeBERTa NLI | Validation & Grounding | PASS |
 | `test_ranking_deduplication.py` | Multi-criteria ranking formula, tier assignment, substantive difference preservation | Ranking & Deduplication | PASS |
 | `test_end_to_end_pipeline.py` | Complete pipeline output, traceability verification, CSV export | System Integration | PASS |
-| `test_streamlit_app.py` | Dashboard syntax compilation, page data loaders | Interactive UI | PASS |
+| `test_api_endpoints.py` | FastAPI endpoints (health, suggestions, generate, runs, gaps) | API Backend | PASS |
+| `test_react_frontend.py` | React 19 dependencies, compiled dist verification, two-screen architecture | Interactive UI | PASS |
 
 ---
 
@@ -88,7 +89,7 @@ test_rule_checks_flag_unsupported_causal (test_validation.TestValidation.test_ru
 test_rule_checks_pass (test_validation.TestValidation.test_rule_checks_pass) ... ok
 
 ----------------------------------------------------------------------
-Ran 45 tests in 44.871s
+Ran 45 tests in 82.534s
 
 OK
 ```
