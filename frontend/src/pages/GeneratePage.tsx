@@ -1,6 +1,6 @@
 // frontend/src/pages/GeneratePage.tsx — Screen 1: Monograph Studio (Stitch Design)
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   FileText,
@@ -43,21 +43,7 @@ export const GeneratePage: React.FC = () => {
   // Collapsible about section
   const [aboutOpen, setAboutOpen] = useState(false);
 
-  // Load latest run on initial mount ONLY for displaying results in workspace link/cards if present,
-  // but NEVER pre-fill the input fields with prior text
-  useEffect(() => {
-    const fetchInitial = async () => {
-      try {
-        const latest = await api.getLatestRun();
-        if (latest) {
-          setCurrentRun(latest);
-        }
-      } catch {
-        // no prior run, start empty
-      }
-    };
-    fetchInitial();
-  }, []);
+
 
   const handleThemeChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const val = e.target.value;
