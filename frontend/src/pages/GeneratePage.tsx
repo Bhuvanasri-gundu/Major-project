@@ -102,7 +102,7 @@ export const GeneratePage: React.FC = () => {
       <div className="space-y-1.5 pt-2">
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-teal-accent">
           <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
-          <span>HYPOTHESIS GENERATION WORKSPACE • MONOGRAPH STUDIO</span>
+          <span>HYPOTHESIS GENERATION WORKSPACE</span>
         </div>
         <h1 className="font-heading-serif text-3xl sm:text-4xl text-studio-900 font-bold tracking-tight">
           What would you like to investigate?
