@@ -82,8 +82,8 @@ ax.add_patch(patches.FancyBboxPatch((1.15, 1.05), 6.25, 1.6,
                                    boxstyle="round,pad=0.1,rounding_size=0.08",
                                    facecolor='#fef9e7', edgecolor='#f59e0b', linewidth=1.5))
 ax.text(1.35, 2.25, "EASY MEMORY KEY:", fontsize=11.5, fontweight='bold', color='#b45309')
-ax.text(1.35, 1.75, "★  Topics  =  Research Area  (e.g., Topic 1: HIV Care)", fontsize=12.5, fontweight='bold', color='#1f2937')
-ax.text(1.35, 1.30, "★  Concepts  =  Important Medical Ideas  (e.g., medication adherence)", fontsize=12.5, fontweight='bold', color='#1f2937')
+ax.text(1.35, 1.75, "*  Topics  =  Research Area  (e.g., Topic 1: HIV Care)", fontsize=12.5, fontweight='bold', color='#1f2937')
+ax.text(1.35, 1.30, "*  Concepts  =  Important Medical Ideas  (e.g., medication adherence)", fontsize=12.5, fontweight='bold', color='#1f2937')
 
 
 # ==============================================================

@@ -501,7 +501,7 @@ print(f"  Warnings: {sample_res.get('warning_count', 0)}")
 print(f"  Failed: {sample_res.get('failed_count', 0)}")
 
 for check in sample_res.get("checks", []):
-    status_icon = "✓" if check.get("status") == "pass" else ("⚠" if check.get("status") == "warning" else "✗")
+    status_icon = "[OK]" if check.get("status") == "pass" else ("[WARN]" if check.get("status") == "warning" else "[FAIL]")
     print(f"  [{status_icon}] {check.get('check_name'):<32}: {check.get('status').upper()} - {check.get('message')}")
 """)
 ]

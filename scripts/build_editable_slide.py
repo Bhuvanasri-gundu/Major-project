@@ -224,13 +224,13 @@ p.font.bold = True
 p.font.color.rgb = CLR_GOLD
 
 p = tf_mem.add_paragraph()
-p.text = "★  Topics  =  Research Area   (e.g., Topic 1: HIV Prevention & Care)"
+p.text = "*  Topics  =  Research Area   (e.g., Topic 1: HIV Prevention & Care)"
 p.font.size = Pt(13)
 p.font.bold = True
 p.font.color.rgb = CLR_DARK
 
 p = tf_mem.add_paragraph()
-p.text = "★  Concepts  =  Important Medical Ideas   (e.g., medication adherence)"
+p.text = "*  Concepts  =  Important Medical Ideas   (e.g., medication adherence)"
 p.font.size = Pt(13)
 p.font.bold = True
 p.font.color.rgb = CLR_DARK

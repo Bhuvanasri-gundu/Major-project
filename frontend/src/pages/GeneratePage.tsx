@@ -378,7 +378,7 @@ export const GeneratePage: React.FC = () => {
               </div>
 
               <div className="max-w-xs text-left bg-studio-50 border border-studio-200 rounded p-3 text-[11px] text-studio-600 space-y-1">
-                <span className="font-semibold text-studio-800 block">💡 Tip:</span>
+                <span className="font-semibold text-studio-800 block">Tip:</span>
                 Providing an explicit target population helps focus evidence retrieval against relevant randomized controlled trials.
               </div>
             </div>

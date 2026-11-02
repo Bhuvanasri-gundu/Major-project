@@ -38,7 +38,7 @@ logger = logging.getLogger(__name__)
 # ============================================================
 st.set_page_config(
     page_title="mHealth Research Gap Analyzer",
-    page_icon="🔬",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -111,17 +111,17 @@ def safe_get(d, key, default=""):
 # SIDEBAR NAVIGATION
 # ============================================================
 
-st.sidebar.title("🔬 mHealth Research")
+st.sidebar.title(" mHealth Research")
 st.sidebar.caption("Gap-Guided Hypothesis Generation")
 
 pages = [
-    "📋 Project Overview",
-    "🔍 Research Gap Explorer",
-    "📄 Evidence Explorer",
-    "⚡ Hypothesis Generation",
-    "✅ Hypothesis Validation",
-    "🏆 Ranked Results",
-    "📥 Export",
+    " Project Overview",
+    " Research Gap Explorer",
+    " Evidence Explorer",
+    " Hypothesis Generation",
+    "[PASS] Hypothesis Validation",
+    " Ranked Results",
+    " Export",
 ]
 
 page = st.sidebar.radio("Navigate", pages, label_visibility="collapsed")
@@ -129,13 +129,13 @@ page = st.sidebar.radio("Navigate", pages, label_visibility="collapsed")
 # AI disclaimer
 st.sidebar.divider()
 st.sidebar.warning(
-    "⚠️ **Important**: AI-generated hypotheses are computational "
+    "[WARN] **Important**: AI-generated hypotheses are computational "
     "suggestions requiring expert review and empirical testing. "
     "They are NOT validated scientific claims."
 )
 
 # API Configuration in Sidebar
-with st.sidebar.expander("🔑 Gemini API Settings", expanded=False):
+with st.sidebar.expander(" Gemini API Settings", expanded=False):
     st.caption("Optional: Set your key here or via `.env` file / environment variable.")
     sidebar_key = st.text_input(
         "GEMINI_API_KEY",
@@ -153,22 +153,22 @@ p2_summary = load_json(OUTPUTS_DIR / "phase2_summary.json")
 if p2_summary:
     st.sidebar.divider()
     st.sidebar.subheader("Pipeline Status")
-    st.sidebar.success(f"✅ Phase 2 Complete")
+    st.sidebar.success(f"[PASS] Phase 2 Complete")
     st.sidebar.metric("Hypotheses Generated", p2_summary.get("hypotheses_generated", 0))
     st.sidebar.metric("Gaps Processed", p2_summary.get("gaps_processed", 0))
     if p2_summary.get("mock_mode"):
-        st.sidebar.info("🔧 Mock Mode (demo data)")
+        st.sidebar.info(" Mock Mode (demo data)")
 else:
     st.sidebar.divider()
-    st.sidebar.info("ℹ️ Run Phase 2 pipeline first:\n`python run_phase2.py --mock`")
+    st.sidebar.info(" Run Phase 2 pipeline first:\n`python run_phase2.py --mock`")
 
 
 # ============================================================
 # PAGE: PROJECT OVERVIEW
 # ============================================================
 
-if page == "📋 Project Overview":
-    st.title("🧬 Temporal-Semantic Gap-Guided Evidence-Grounded Hypothesis Generation")
+if page == " Project Overview":
+    st.title(" Temporal-Semantic Gap-Guided Evidence-Grounded Hypothesis Generation")
     st.subheader("in mHealth Research")
 
     st.markdown("""
@@ -184,18 +184,18 @@ if page == "📋 Project Overview":
     p1 = load_json(OUTPUTS_DIR / "phase1_summary.json")
     if p1:
         with col1:
-            st.metric("📚 PubMed Papers", f"{p1.get('screened_records', 0):,}")
-            st.metric("🏷️ Topics Discovered", p1.get("num_topics", 0))
+            st.metric(" PubMed Papers", f"{p1.get('screened_records', 0):,}")
+            st.metric(" Topics Discovered", p1.get("num_topics", 0))
         with col2:
-            st.metric("🧪 Biomedical Concepts", f"{p1.get('num_concepts_quality_filtered', 0):,}")
-            st.metric("📊 Candidate Gaps", p1.get("num_candidate_gaps_genuine", 0))
+            st.metric(" Biomedical Concepts", f"{p1.get('num_concepts_quality_filtered', 0):,}")
+            st.metric(" Candidate Gaps", p1.get("num_candidate_gaps_genuine", 0))
         with col3:
             if p2_summary:
-                st.metric("💡 Hypotheses Generated", p2_summary.get("hypotheses_generated", 0))
-                st.metric("✅ Validated", p2_summary.get("hypotheses_verified", 0))
+                st.metric(" Hypotheses Generated", p2_summary.get("hypotheses_generated", 0))
+                st.metric("[PASS] Validated", p2_summary.get("hypotheses_verified", 0))
             else:
-                st.metric("💡 Hypotheses", "—")
-                st.metric("✅ Validated", "—")
+                st.metric(" Hypotheses", "—")
+                st.metric("[PASS] Validated", "—")
 
     st.markdown("### Pipeline Architecture")
     st.markdown("""
@@ -252,7 +252,7 @@ if page == "📋 Project Overview":
     # Show Phase 3 Benchmark Evaluation Table
     eval_csv_path = OUTPUTS_DIR / "phase3_evaluation_summary.csv"
     if eval_csv_path.exists():
-        st.markdown("### 📊 Phase 3 Empirical Benchmark Performance")
+        st.markdown("###  Phase 3 Empirical Benchmark Performance")
         eval_df = load_csv(eval_csv_path)
         if eval_df is not None:
             st.dataframe(eval_df, use_container_width=True, hide_index=True)
@@ -262,8 +262,8 @@ if page == "📋 Project Overview":
 # PAGE: RESEARCH GAP EXPLORER
 # ============================================================
 
-elif page == "🔍 Research Gap Explorer":
-    st.title("🔍 Research Gap Explorer")
+elif page == " Research Gap Explorer":
+    st.title(" Research Gap Explorer")
     st.caption("Browse and filter candidate research gaps identified in Phase 1")
 
     p1_data = load_phase1_data()
@@ -309,7 +309,7 @@ elif page == "🔍 Research Gap Explorer":
 
     for idx, (_, gap) in enumerate(display_gaps.iterrows()):
         is_genuine = gap.get("quality_status", "") == "genuine_substantive_gap"
-        icon = "✅" if is_genuine else "⚠️"
+        icon = "[PASS]" if is_genuine else "[WARN]"
         label = "Genuine Gap" if is_genuine else "Synonym/Variant"
 
         with st.expander(
@@ -347,8 +347,8 @@ elif page == "🔍 Research Gap Explorer":
 # PAGE: EVIDENCE EXPLORER
 # ============================================================
 
-elif page == "📄 Evidence Explorer":
-    st.title("📄 Evidence Explorer")
+elif page == " Evidence Explorer":
+    st.title(" Evidence Explorer")
     st.caption("View retrieved evidence passages for each research gap")
 
     p2_data = load_phase2_data()
@@ -376,7 +376,7 @@ elif page == "📄 Evidence Explorer":
             text = safe_get(ev, "text_content", "")
 
             with st.expander(
-                f"📄 [{i+1}] {title[:80]}... (Score: {score:.3f}, {year})",
+                f" [{i+1}] {title[:80]}... (Score: {score:.3f}, {year})",
                 expanded=(i < 3)
             ):
                 cols = st.columns([3, 1, 1, 1])
@@ -386,7 +386,7 @@ elif page == "📄 Evidence Explorer":
                 cols[3].write(f"**Type**: {content_type}")
 
                 if content_type == "abstract":
-                    st.caption("📝 Source: Paper abstract (not full text)")
+                    st.caption(" Source: Paper abstract (not full text)")
 
                 st.markdown(f"> {text[:500]}..." if len(text) > 500 else f"> {text}")
 
@@ -401,8 +401,8 @@ elif page == "📄 Evidence Explorer":
 # PAGE: HYPOTHESIS GENERATION
 # ============================================================
 
-elif page == "⚡ Hypothesis Generation":
-    st.title("⚡ Hypothesis Generation")
+elif page == " Hypothesis Generation":
+    st.title(" Hypothesis Generation")
     st.caption("Generate evidence-grounded research hypotheses from identified gaps")
 
     p1_data = load_phase1_data()
@@ -410,7 +410,7 @@ elif page == "⚡ Hypothesis Generation":
 
     # Show existing hypotheses if available
     if p2_data["hypotheses"]:
-        st.success(f"✅ {len(p2_data['hypotheses'])} hypotheses already generated")
+        st.success(f"[PASS] {len(p2_data['hypotheses'])} hypotheses already generated")
 
         # Group by gap
         gap_groups = {}
@@ -419,12 +419,12 @@ elif page == "⚡ Hypothesis Generation":
             gap_groups.setdefault(gid, []).append(h)
 
         for gap_id, hyps in gap_groups.items():
-            st.subheader(f"📌 {gap_id}")
+            st.subheader(f" {gap_id}")
             for h in hyps:
                 hyp_id = safe_get(h, "hypothesis_id", "")
                 statement = safe_get(h, "hypothesis", "No hypothesis text")
 
-                with st.expander(f"💡 {hyp_id}: {statement[:100]}..."):
+                with st.expander(f" {hyp_id}: {statement[:100]}..."):
                     st.markdown(f"**Hypothesis**: {statement}")
                     st.markdown(f"**Research Question**: {safe_get(h, 'research_question', 'N/A')}")
 
@@ -462,7 +462,7 @@ elif page == "⚡ Hypothesis Generation":
                              f"Generated: {safe_get(h, 'generation_timestamp', 'N/A')}")
     # Interactive On-Demand Generation Section
     st.divider()
-    st.subheader("🧪 Generate New Hypotheses On-Demand")
+    st.subheader(" Generate New Hypotheses On-Demand")
     st.caption("Select any candidate research gap and synthesize evidence-grounded hypotheses interactively.")
 
     gaps = p1_data.get("gaps")
@@ -482,7 +482,7 @@ elif page == "⚡ Hypothesis Generation":
         with col_g2:
             num_hyp = st.slider("Number of Hypotheses", 1, 3, 2, key="num_hyp_slider")
 
-        if st.button("🚀 Synthesize Hypotheses Now", type="primary", key="btn_gen_now"):
+        if st.button(" Synthesize Hypotheses Now", type="primary", key="btn_gen_now"):
             with st.spinner("Retrieving grounded evidence from FAISS index and generating hypotheses..."):
                 try:
                     from src.phase2.retrieval import EvidenceRetriever
@@ -502,7 +502,7 @@ elif page == "⚡ Hypothesis Generation":
 
                     for nh_idx, nh in enumerate(live_hyps, 1):
                         nh_dict = nh.to_dict() if hasattr(nh, "to_dict") else nh
-                        with st.expander(f"✨ New Hypothesis #{nh_idx}: {safe_get(nh_dict, 'hypothesis')[:80]}...", expanded=True):
+                        with st.expander(f" New Hypothesis #{nh_idx}: {safe_get(nh_dict, 'hypothesis')[:80]}...", expanded=True):
                             st.markdown(f"**Hypothesis**: {safe_get(nh_dict, 'hypothesis')}")
                             st.markdown(f"**Research Question**: {safe_get(nh_dict, 'research_question')}")
                             c1, c2 = st.columns(2)
@@ -524,8 +524,8 @@ elif page == "⚡ Hypothesis Generation":
 # PAGE: HYPOTHESIS VALIDATION
 # ============================================================
 
-elif page == "✅ Hypothesis Validation":
-    st.title("✅ Hypothesis Validation")
+elif page == "[PASS] Hypothesis Validation":
+    st.title("[PASS] Hypothesis Validation")
     st.caption("View evidence verification, NLI, LLM-judge, and rule-based validation results")
 
     p2_data = load_phase2_data()
@@ -545,14 +545,14 @@ elif page == "✅ Hypothesis Validation":
 
     st.subheader(f"Validation Results: {hyp_id}")
 
-    tabs = st.tabs(["📋 Evidence Check", "🧪 NLI", "⚖️ LLM Judge", "📝 Rule Checks"])
+    tabs = st.tabs([" Evidence Check", " NLI", " LLM Judge", " Rule Checks"])
 
     # Tab 1: Evidence Verification
     with tabs[0]:
         verif = (p2_data.get("verification") or {}).get(hyp_id, {})
         if verif:
             status = safe_get(verif, "verification_status", "unknown")
-            icon = "✅" if status == "passed" else "⚠️" if status == "partial" else "❌"
+            icon = "[PASS]" if status == "passed" else "[WARN]" if status == "partial" else "[FAIL]"
             st.markdown(f"### {icon} Verification Status: **{status}**")
 
             cols = st.columns(3)
@@ -563,7 +563,7 @@ elif page == "✅ Hypothesis Validation":
             if safe_get(verif, "invalid_ids", []):
                 st.error(f"Invalid evidence IDs: {safe_get(verif, 'invalid_ids', [])}")
             if safe_get(verif, "fabricated_count", 0) > 0:
-                st.error(f"⚠️ {safe_get(verif, 'fabricated_count', 0)} potentially fabricated references detected!")
+                st.error(f"[WARN] {safe_get(verif, 'fabricated_count', 0)} potentially fabricated references detected!")
         else:
             st.info("Evidence verification not run for this hypothesis")
 
@@ -574,7 +574,7 @@ elif page == "✅ Hypothesis Validation":
             alignment = safe_get(nli, "overall_alignment", "unknown")
             score = safe_get(nli, "alignment_score", 0)
 
-            color = "🟢" if alignment == "supported" else "🔴" if alignment == "contradicted" else "🟡"
+            color = "[PASS]" if alignment == "supported" else "[FAIL]" if alignment == "contradicted" else "[WARN]"
             st.markdown(f"### {color} NLI Alignment: **{alignment}** (score: {score:.3f})")
 
             cols = st.columns(3)
@@ -588,11 +588,11 @@ elif page == "✅ Hypothesis Validation":
                 for pr in passage_results:
                     label = safe_get(pr, "label", "unknown")
                     eid = safe_get(pr, "evidence_id", "")
-                    icon = "✅" if label == "entailment" else "❌" if label == "contradiction" else "➖"
+                    icon = "[PASS]" if label == "entailment" else "[FAIL]" if label == "contradiction" else "[-]"
                     st.markdown(f"  {icon} `{eid}`: {label}")
 
             st.caption(f"Model: {safe_get(nli, 'model_used', 'N/A')}")
-            st.caption("⚠️ NLI results are automated alignment signals, not proof of scientific truth.")
+            st.caption("[WARN] NLI results are automated alignment signals, not proof of scientific truth.")
         else:
             st.info("NLI validation not available for this hypothesis")
 
@@ -601,7 +601,7 @@ elif page == "✅ Hypothesis Validation":
         judge = (p2_data.get("judge_results") or {}).get(hyp_id, {})
         if judge:
             st.markdown("### LLM Quality Assessment")
-            st.caption("⚠️ These are automated LLM assessments, not expert evaluations.")
+            st.caption("[WARN] These are automated LLM assessments, not expert evaluations.")
 
             dims = [
                 ("relevance_to_gap", "Relevance to Gap"),
@@ -644,7 +644,7 @@ elif page == "✅ Hypothesis Validation":
         rules = (p2_data.get("rule_results") or {}).get(hyp_id, {})
         if rules:
             status = safe_get(rules, "overall_status", "unknown")
-            icon = "✅" if status == "pass" else "⚠️" if status == "warn" else "❌"
+            icon = "[PASS]" if status == "pass" else "[WARN]" if status == "warn" else "[FAIL]"
             st.markdown(f"### {icon} Rule Check Status: **{status}**")
 
             checks = safe_get(rules, "checks", [])
@@ -659,7 +659,7 @@ elif page == "✅ Hypothesis Validation":
 
             for check in checks:
                 s = safe_get(check, "status", "unknown")
-                icon = "✅" if s == "pass" else "❌" if s == "fail" else "⚠️"
+                icon = "[PASS]" if s == "pass" else "[FAIL]" if s == "fail" else "[WARN]"
                 st.markdown(f"  {icon} **{safe_get(check, 'check_name', '')}**: "
                           f"{safe_get(check, 'message', '')}")
         else:
@@ -670,8 +670,8 @@ elif page == "✅ Hypothesis Validation":
 # PAGE: RANKED RESULTS
 # ============================================================
 
-elif page == "🏆 Ranked Results":
-    st.title("🏆 Ranked Hypothesis Results")
+elif page == " Ranked Results":
+    st.title(" Ranked Hypothesis Results")
     st.caption("Final ranked and deduplicated hypotheses with full traceability")
 
     p2_data = load_phase2_data()
@@ -719,7 +719,7 @@ elif page == "🏆 Ranked Results":
         score = safe_get(rank, "rank_score", 0)
         position = safe_get(rank, "rank_position", i + 1)
 
-        tier_icon = "🥇" if tier == "high" else "🥈" if tier == "medium" else "🥉"
+        tier_icon = "[Tier 1]" if tier == "high" else "[Tier 2]" if tier == "medium" else "[Tier 3]"
         statement = safe_get(hyp, "hypothesis", "No text")
 
         with st.expander(
@@ -746,7 +746,7 @@ elif page == "🏆 Ranked Results":
 
             # Traceability
             st.markdown("---")
-            st.markdown("**📍 Traceability Path**")
+            st.markdown("** Traceability Path**")
             gap_id = safe_get(hyp, "gap_id", "")
             st.markdown(f"Hypothesis `{hyp_id}` → Gap `{gap_id}` → Evidence passages: "
                        f"{safe_get(hyp, 'supporting_evidence_ids', [])}")
@@ -762,8 +762,8 @@ elif page == "🏆 Ranked Results":
 # PAGE: EXPORT
 # ============================================================
 
-elif page == "📥 Export":
-    st.title("📥 Export Results")
+elif page == " Export":
+    st.title(" Export Results")
     st.caption("Download hypotheses, evidence, and validation results")
 
     p2_data = load_phase2_data()
@@ -776,7 +776,7 @@ elif page == "📥 Export":
         with open(final_csv_path, "r", encoding="utf-8-sig") as f:
             csv_data = f.read()
         st.download_button(
-            "📥 Download Final Hypotheses (CSV)",
+            " Download Final Hypotheses (CSV)",
             csv_data,
             file_name="mhealth_hypotheses.csv",
             mime="text/csv",
@@ -788,7 +788,7 @@ elif page == "📥 Export":
         with open(eval_csv_path, "r", encoding="utf-8-sig") as f:
             eval_csv_data = f.read()
         st.download_button(
-            "📊 Download Phase 3 Evaluation Metrics (CSV)",
+            " Download Phase 3 Evaluation Metrics (CSV)",
             eval_csv_data,
             file_name="phase3_evaluation_summary.csv",
             mime="text/csv",
@@ -813,18 +813,18 @@ elif page == "📥 Export":
             with open(fpath, "r", encoding="utf-8") as f:
                 data = f.read()
             st.download_button(
-                f"📥 {label} (JSON)",
+                f" {label} (JSON)",
                 data,
                 file_name=fname,
                 mime="application/json",
                 key=fname,
             )
         else:
-            st.caption(f"  ⏳ {label} — not yet generated")
+            st.caption(f"   {label} — not yet generated")
 
     st.divider()
     st.warning(
-        "⚠️ Exported results are AI-generated research candidates. "
+        "[WARN] Exported results are AI-generated research candidates. "
         "They require expert review and empirical validation before "
         "use in any scientific publication or clinical application."
     )
