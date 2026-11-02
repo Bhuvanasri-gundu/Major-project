@@ -198,8 +198,19 @@ export const WorkspacePage: React.FC = () => {
   const stagesCompleted = run.stages_completed || [];
 
   const isStageComplete = (stageKey: string): boolean => {
-    const normalized = stageKey.toLowerCase().replace(/[_\s]/g, '');
-    return stagesCompleted.some((s) => s.toLowerCase().replace(/[_\s]/g, '').includes(normalized));
+    const STAGE_ALIASES: Record<string, string[]> = {
+      gap_matching: ['gap_matching', 'gaps', 'gap'],
+      literature_retrieval: ['literature_retrieval', 'evidence_retrieval', 'retrieval'],
+      generation: ['hypothesis_generation', 'generation', 'gemini'],
+      dual_validation: ['dual_validation', 'evidence_verification', 'rule_checks', 'llm_judge', 'validation'],
+      ranking: ['ranking', 'deduplication', 'rank'],
+    };
+
+    const aliases = STAGE_ALIASES[stageKey] || [stageKey];
+    return stagesCompleted.some((completed) => {
+      const normCompleted = completed.toLowerCase().replace(/[_\s]/g, '');
+      return aliases.some((alias) => normCompleted.includes(alias.toLowerCase().replace(/[_\s]/g, '')));
+    });
   };
 
   // For the pipeline stats row

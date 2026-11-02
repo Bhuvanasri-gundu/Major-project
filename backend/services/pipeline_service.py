@@ -223,6 +223,7 @@ class PipelineService:
             try:
                 evidence_passages = self._retriever.retrieve_for_gap(primary_gap, top_k=10)
                 stages_completed.append("evidence_retrieval")
+                stages_completed.append("literature_retrieval")
                 logger.info("Retrieved %d evidence passages for gap %s", len(evidence_passages), primary_gap["gap_id"])
             except Exception as e:
                 logger.error("Evidence retrieval failed: %s", e)
@@ -345,16 +346,17 @@ class PipelineService:
                 logger.warning("LLM judge evaluation failed: %s", e)
                 warnings.append(f"LLM judge evaluation issue: {str(e)}")
 
+        stages_completed.append("dual_validation")
+
         # 5d. Ranking
         rankings = {}
         try:
             from src.phase2.ranking import rank_hypotheses
             ranked_list = rank_hypotheses(
                 hypotheses=raw_hypotheses,
-                verification_results=verification_results,
+                verifications=verification_results,
                 judge_results=judge_results,
                 rule_results=rule_results,
-                gaps_df=None,
             )
             for r in ranked_list:
                 rid = r.hypothesis_id if hasattr(r, "hypothesis_id") else r.get("hypothesis_id")
