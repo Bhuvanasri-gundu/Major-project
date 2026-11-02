@@ -38,10 +38,6 @@ export const Header: React.FC<HeaderProps> = ({ currentRunId }) => {
                 </div>
               </div>
             </Link>
-
-            <span className="text-[10px] font-code bg-studio-100 text-studio-600 px-2 py-0.5 rounded border border-studio-200">
-              V2.4-MONOGRAPH
-            </span>
           </div>
 
           {/* Right: Navigation tabs */}
