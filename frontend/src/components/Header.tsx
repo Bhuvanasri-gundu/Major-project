@@ -1,15 +1,14 @@
-// frontend/src/components/Header.tsx — Stitch design header with nav tabs & pipeline status
+// frontend/src/components/Header.tsx - Clean design header with nav tabs
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Download, User } from 'lucide-react';
 
 interface HeaderProps {
   currentRunId?: string;
   pipelineActive?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ currentRunId, pipelineActive = true }) => {
+export const Header: React.FC<HeaderProps> = ({ currentRunId }) => {
   const location = useLocation();
 
   const isGenerate = location.pathname === '/';
@@ -32,7 +31,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRunId, pipelineActive = t
               </div>
               <div>
                 <div className="text-sm font-semibold text-studio-900 leading-tight">
-                  mHealth Research Studio
+                  mHealth Research
                 </div>
                 <div className="text-[10px] text-studio-500 leading-tight">
                   Evidence-grounded hypothesis generation & gap discovery
@@ -45,7 +44,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRunId, pipelineActive = t
             </span>
           </div>
 
-          {/* Center: Navigation tabs */}
+          {/* Right: Navigation tabs */}
           <nav className="flex items-center gap-0">
             <Link
               to="/"
@@ -68,26 +67,6 @@ export const Header: React.FC<HeaderProps> = ({ currentRunId, pipelineActive = t
               Research & Validation Workspace
             </Link>
           </nav>
-
-          {/* Right: Status & actions */}
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 text-xs text-studio-600">
-              <span className={`w-2 h-2 rounded-full ${pipelineActive ? 'bg-teal-accent' : 'bg-studio-400'}`} />
-              <span className="font-medium">Synthesis Pipeline:</span>
-              <span className={pipelineActive ? 'text-teal-accent font-semibold' : 'text-studio-400'}>
-                {pipelineActive ? 'Active' : 'Idle'}
-              </span>
-            </div>
-
-            <button className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-studio-700 border border-studio-200 rounded hover:bg-studio-50 transition">
-              <Download className="w-3.5 h-3.5" />
-              Export Report
-            </button>
-
-            <div className="w-8 h-8 bg-studio-100 rounded-full flex items-center justify-center">
-              <User className="w-4 h-4 text-studio-500" />
-            </div>
-          </div>
         </div>
       </div>
     </header>

@@ -9,12 +9,10 @@ import {
   CheckCircle2,
   ChevronDown,
   ChevronRight,
-  FileText,
   Shield,
   Search,
   BarChart3,
   ExternalLink,
-  Copy,
   BookOpen,
   FlaskConical,
   CircleDot,
@@ -48,17 +46,6 @@ function formatTimestamp(iso?: string): string {
 
 function truncate(str: string, max: number): string {
   return str.length > max ? str.slice(0, max) + '…' : str;
-}
-
-function computeRunHash(runId: string): string {
-  // Simple deterministic hash for display based on run_id
-  let hash = 0;
-  for (let i = 0; i < runId.length; i++) {
-    const chr = runId.charCodeAt(i);
-    hash = ((hash << 5) - hash) + chr;
-    hash |= 0;
-  }
-  return Math.abs(hash).toString(16).padStart(12, '0').slice(0, 12);
 }
 
 function tierColor(tier?: string): string {
@@ -193,7 +180,6 @@ export const WorkspacePage: React.FC = () => {
 
   // ── Derived values ─────────────────────────────────────────────────────
 
-  const hashDisplay = `sha256:${computeRunHash(run.run_id)}...`;
   const gapCount = run.matched_gaps.length;
   const stagesCompleted = run.stages_completed || [];
 
@@ -236,25 +222,6 @@ export const WorkspacePage: React.FC = () => {
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to generation stream</span>
           </Link>
-
-          <div className="flex items-center gap-3">
-            <span className="font-code text-studio-400 text-xs">HASH: {hashDisplay}</span>
-            <button
-              type="button"
-              onClick={() => navigator.clipboard?.writeText(run.run_id)}
-              className="p-1.5 text-studio-400 hover:text-studio-600 transition"
-              title="Copy run ID"
-            >
-              <Copy className="w-3.5 h-3.5" />
-            </button>
-            <button
-              type="button"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold text-white bg-studio-800 hover:bg-studio-900 transition"
-            >
-              <FileText className="w-3.5 h-3.5" />
-              Export Monograph Report
-            </button>
-          </div>
         </div>
 
         {/* Title block */}
@@ -272,17 +239,6 @@ export const WorkspacePage: React.FC = () => {
               <p className="stitch-kicker mb-1">Active Theme</p>
               <p className="text-sm font-medium text-studio-800 leading-snug">
                 {truncate(run.theme, 80)}
-              </p>
-            </div>
-
-            {/* Evaluator status badge */}
-            <div className="space-y-1.5 text-right">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-medium text-emerald-700">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                Evaluator Status: Evaluated & Audited
-              </div>
-              <p className="font-code text-xs text-studio-500">
-                Run ID: {run.run_id}
               </p>
             </div>
           </div>
