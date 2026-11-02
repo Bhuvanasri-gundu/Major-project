@@ -98,61 +98,6 @@ export const GeneratePage: React.FC = () => {
 
   return (
     <div className="max-w-[1280px] mx-auto px-6 py-4 space-y-6">
-      {/* Subheader / Evaluation Workbench State Bar */}
-      <div className="flex items-center justify-between border-b border-studio-200 pb-2.5 text-xs text-studio-500 flex-wrap gap-2">
-        <div className="flex items-center gap-2">
-          <span className="font-semibold text-studio-700 uppercase tracking-wider text-[11px]">
-            EVALUATION WORKBENCH STATE:
-          </span>
-          <div className="flex items-center gap-1.5 font-code text-[11px]">
-            <span
-              className={`px-2 py-0.5 rounded border ${
-                !currentRun && !isGenerating
-                  ? 'bg-studio-900 text-white border-studio-900 font-bold'
-                  : 'bg-studio-50 text-studio-600 border-studio-200'
-              }`}
-            >
-              1. Unpopulated Baseline
-            </span>
-            <span className="text-studio-300">→</span>
-            <span
-              className={`px-2 py-0.5 rounded border ${
-                isGenerating
-                  ? 'bg-studio-900 text-white border-studio-900 font-bold animate-pulse'
-                  : 'bg-studio-50 text-studio-600 border-studio-200'
-              }`}
-            >
-              2. Synthesis In-Flight
-            </span>
-            <span className="text-studio-300">→</span>
-            <span
-              className={`px-2 py-0.5 rounded border ${
-                currentRun && !isGenerating
-                  ? 'bg-teal-light text-teal-dark border-teal-accent/30 font-bold'
-                  : 'bg-studio-50 text-studio-600 border-studio-200'
-              }`}
-            >
-              3. Generated Scaffold Ready
-            </span>
-            <span className="text-studio-300">→</span>
-            <span className="px-2 py-0.5 rounded border bg-studio-50 text-studio-600 border-studio-200">
-              4. Required Field Validation
-            </span>
-          </div>
-        </div>
-
-        {currentRun && (
-          <button
-            type="button"
-            onClick={() => navigate(`/workspace/${activeRunId}`)}
-            className="inline-flex items-center gap-1 text-teal-accent hover:underline font-semibold"
-          >
-            <span>Open Complete Workspace</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        )}
-      </div>
-
       {/* Hero Header Section */}
       <div className="space-y-1.5 pt-2">
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-teal-accent">
