@@ -1,0 +1,33 @@
+{
+  "cold_start": {
+    "init_theme_matcher": 0.1484,
+    "init_faiss_load": 3.798,
+    "init_sentence_transformer": 16.9659,
+    "init_hypothesis_generator": 3.0693,
+    "init_llm_judge": 0.455,
+    "init_deberta_nli": 6.197,
+    "init_deduplicator": 0.1972
+  },
+  "cold_start_total_sec": 30.831,
+  "stage_latencies_sec": {
+    "gap_matching": 0.0004,
+    "query_formulation": 0.0,
+    "query_embedding_sequential": 0.5503,
+    "query_embedding_batched": 0.0403,
+    "faiss_search_sequential": 0.0061,
+    "faiss_search_batched": 0.0049,
+    "retrieval_for_gap_full": 0.0484,
+    "prompt_construction": 0.0001,
+    "gemini_generation_api": 18.7665,
+    "citation_verification": 0.0306,
+    "rule_checks": 0.0014,
+    "nli_validation_sequential": 2.8349,
+    "nli_validation_batched": 0.4496,
+    "llm_judge_parallel": 20.0409,
+    "ranking": 0.0009,
+    "deduplication": 1.3899,
+    "packaging": 0.0619,
+    "disk_persistence": 0.0024
+  },
+  "total_warm_latency_sec": 43.178
+}

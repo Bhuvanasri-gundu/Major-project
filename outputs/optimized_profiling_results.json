@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-11-04T15:27:48Z",
+  "device": "CUDA (NVIDIA GeForce RTX 4060 Laptop GPU)",
+  "cold_start": {
+    "components": {
+      "theme_matcher": 0.44583650000276975,
+      "faiss_index_load": 0.44820850000542123,
+      "sentence_transformer": 6.158473100003903,
+      "hypothesis_generator": 2.201418199998443,
+      "llm_judge": 0.45359270001063123,
+      "deberta_nli": 1.3442099999956554,
+      "deduplicator": 0.18195849999028724
+    },
+    "total_seconds": 11.23369750000711
+  },
+  "stage_timings": {
+    "gap_matching": 0.0005079000111436471,
+    "retrieval_first_call": 0.21347220000461675,
+    "retrieval_cached_call": 7.900000491645187e-05,
+    "gemini_generation_api": 24.581118400004925,
+    "citation_verification": 0.003581199998734519,
+    "rule_checks": 0.0014759000041522086,
+    "deberta_nli_batched": 2.7639457000041148,
+    "llm_judge_batched": 30.81211239998811,
+    "validation_parallel_total": 22.395899199997075,
+    "ranking": 0.0008373000018764287,
+    "deduplication": 1.396780299997772
+  },
+  "end_to_end": {
+    "warm_run_seconds": 54.75890739999886,
+    "cached_run_seconds": 0.02995290000399109,
+    "speedup_warm": 0.7885109847900452,
+    "speedup_cached": 1441.5298683682288
+  },
+  "memory": {
+    "ram_mb": 2016.51953125,
+    "vram_mb": 1363.84326171875,
+    "ram_growth_mb": 1523.83203125
+  },
+  "comparison": {
+    "baseline_warm_seconds": 43.178,
+    "optimized_warm_seconds": 54.75890739999886,
+    "reduction_percentage": -26.82
+  }
+}

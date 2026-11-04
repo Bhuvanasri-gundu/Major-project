@@ -1,9 +1,9 @@
 # Comprehensive Test Execution Report
 
 **Project:** Temporal-Semantic Gap-Guided Evidence-Grounded Hypothesis Generation in mHealth Research  
-**Execution Date:** 2026-11-02 22:32:03  
+**Execution Date:** 2026-11-04 20:54:14  
 **Test Runner:** Python Standard `unittest` Suite  
-**Total Execution Time:** 42.84 seconds  
+**Total Execution Time:** 22.16 seconds  
 
 ---
 
@@ -89,7 +89,7 @@ test_rule_checks_flag_unsupported_causal (test_validation.TestValidation.test_ru
 test_rule_checks_pass (test_validation.TestValidation.test_rule_checks_pass) ... ok
 
 ----------------------------------------------------------------------
-Ran 45 tests in 22.832s
+Ran 45 tests in 12.422s
 
 OK
 ```

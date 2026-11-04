@@ -19,12 +19,24 @@ if str(PROJECT_ROOT) not in sys.path:
 
 load_dotenv(PROJECT_ROOT / ".env", override=True)
 
+from contextlib import asynccontextmanager
+import asyncio
 from backend.routes.api import router as api_router
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logger.info("Initializing and pre-warming PipelineService models during application startup...")
+    from backend.services.pipeline_service import get_pipeline_service
+    # Run pre-warming in a worker thread so event loop remains responsive
+    await asyncio.to_thread(get_pipeline_service)
+    logger.info("PipelineService models successfully pre-warmed. Server ready for warm requests.")
+    yield
 
 app = FastAPI(
     title="Ontology-Guided Hypothesis Generation API",
     description="Evidence-grounded hypothesis generation in mHealth research",
     version="1.0.0",
+    lifespan=lifespan,
 )
 
 # Configure CORS for frontend access
