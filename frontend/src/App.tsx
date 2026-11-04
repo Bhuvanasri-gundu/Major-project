@@ -40,7 +40,7 @@ export const App: React.FC = () => {
           <footer className="border-t border-studio-200 bg-white">
             <div className="max-w-[1280px] mx-auto px-6 py-3 flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs text-studio-500">
-                <span className="font-semibold text-studio-700">mHealth Research Studio</span>
+                <span className="font-semibold text-studio-700">mHealth Research</span>
                 <span>•</span>
                 <span className="italic">Biomedical Literature Index & Confidence Ledger</span>
               </div>
